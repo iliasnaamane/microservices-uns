@@ -12,7 +12,7 @@ services:
       - MONGODB_ADDRESS=database
   database:
     image: mongo
-    container_name: tcs-database
+    container_name: database-container
     volumes:
       - "./mongo_data:/data/db"
     environment:

@@ -1,2 +1,3 @@
 # Dependency directory
-node_modules
+services/resource/node_modules
+deployment/mongo_data
