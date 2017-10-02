@@ -5,10 +5,11 @@ PUSH=true
 
 build() { # $1: directory, $2: image_name
   cd $1
-  docker build -t $2 .
-  if [ "$PUSH" = "true" ]; then docker push $2; fi
+  cd $2
+  docker build -t $3 .
+  if [ "$PUSH" = "true" ]; then docker push $3; fi
   cd ..
 }
 
 # Build docker images
-build resource iliasnaamane/tcs-businesstravel-image
+build resource carrental iliasnaamane/tcs-carrental

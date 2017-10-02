@@ -1,9 +1,9 @@
 version: "2"
 services:
-  businesstravel-resource-service:
+  tcs-carrental-service:
     command: npm start
-    container_name: tcs-businesstravel-container
-    image: iliasnaamane/tcs-businesstravel-image
+    container_name: tcs-carrental-resource-container
+    image: iliasnaamane/tcs-carrental
     ports:
       - "8080:8080"
     links:
@@ -16,6 +16,6 @@ services:
     volumes:
       - "./mongo_data:/data/db"
     environment:
-      - MONGODB_DATABASE=BusinessTravelDB
+      - MONGODB_DATABASE=CarRentDB
     ports:
       - "27017:27017"
