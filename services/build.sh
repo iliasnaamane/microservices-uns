@@ -1,15 +1,20 @@
 #!/bin/sh
 
-PUSH=true
-#PUSH=false
+#PUSH=true
+PUSH=false
 
 build() { # $1: directory, $2: image_name
   cd $1
-  cd $2
-  docker build -t $3 .
-  if [ "$PUSH" = "true" ]; then docker push $3; fi
+  docker build -t $2 .
   cd ..
 }
 
+# Compile services code
+mvn -q clean package
+
 # Build docker images
-build resource carrental iliasnaamane/tcs-carrental
+build hotelRPC result/hotel-rpc
+build carRPC result/car-rpc
+build vols result/vols-doc
+# build resource  petitroll/tcs-rest
+# build document  petitroll/tcs-doc

@@ -1,11 +1,32 @@
-version: "2"
+version: '2'
+
 services:
-  tcs-carrental-service:
-    command: npm start
-    container_name: tcs-carrental-resource-container
-    image: iliasnaamane/tcs-carrental
+
+  hotel-rpc:                
+    container_name: hotel-rpc
+    image: result/hotel-rpc
     ports:
-      - "8080:8080"
+      - "9010:8080"
+
+  car-rpc:
+    container_name: car-rpc
+    image: result/car-rpc
+    ports:
+      - "9020:8080"
+
+
+  vols-doc:
+    container_name: vols-doc
+    image: result/vols-doc
+    ports:
+      - "9030:8080"
+
+ tcs-businesstravel-service:
+    command: npm start
+    container_name: tcs-businesstravel-resource-container
+    image: iliasnaamane/tcs-businesstravel
+    ports:
+      - "9040:8080"
     links:
       - database
     environment:
@@ -16,6 +37,6 @@ services:
     volumes:
       - "./mongo_data:/data/db"
     environment:
-      - MONGODB_DATABASE=CarRentDB
+      - MONGODB_DATABASE=BusinessTravelDB
     ports:
       - "27017:27017"

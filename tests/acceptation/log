@@ -1,0 +1,25 @@
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running scenarios.RunCucumber
+Service deployer sur localhost:9020
+La place est Londre
+La duree est 10
+Taille de la liste = 0
+Taille de la liste = []
+Service deployer sur localhost:9010
+La place est Paris
+La duree est 10
+Element recuperer = Le Carton Confortable
+
+2 Scenarios ([32m2 passed[0m)
+10 Steps ([32m10 passed[0m)
+0m0,538s
+
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.993 sec - in scenarios.RunCucumber
+
+Results :
+
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0
+

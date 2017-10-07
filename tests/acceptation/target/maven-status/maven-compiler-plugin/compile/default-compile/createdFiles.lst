@@ -1,0 +1,15 @@
+car_rpc/GetCarsResponse.class
+car_rpc/CarRental.class
+hotel_rpc/Hotel.class
+car_rpc/GetCars.class
+hotel_rpc/ObjectFactory.class
+car_rpc/ObjectFactory.class
+hotel_rpc/ExternalHotelFinderService.class
+hotel_rpc/HotelService.class
+car_rpc/package-info.class
+hotel_rpc/Recherche.class
+car_rpc/Car.class
+car_rpc/ExternalCarRentalService.class
+hotel_rpc/package-info.class
+hotel_rpc/HotelFinder.class
+hotel_rpc/RechercheResponse.class

@@ -1,0 +1,27 @@
+{
+  "name": "project-microservices",
+  "version": "1.0.0",
+  "description": "Lab 1 Microservices",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ilias Naamane",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iliasnaamane/microservices-uns.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iliasnaamane/microservices-uns/issues"
+  },
+  "homepage": "https://github.com/iliasnaamane/microservices-uns#readme",
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.15.5",
+    "mongoose": "^4.11.13"
+  }
+}

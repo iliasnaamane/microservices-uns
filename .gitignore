@@ -1,4 +1,4 @@
 # Dependency directory
-services/resource/node_modules
+services/resourceBusinessTravel/node_modules
 deployment/mongo_data
 services/rpc/businesstravel
