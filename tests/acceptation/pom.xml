@@ -90,7 +90,7 @@
                                     <wsdl>${basedir}/src/main/resources/CAR.wsdl</wsdl>    
                                     <extraargs>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://informatique.polytech.unice.fr/soa1/cookbook/=car_rpc</extraarg>
+                                        <extraarg>http://informatique.polytech.unice.fr/soa1/cookbook/=stubs.car_rpc</extraarg>
                                     </extraargs>            
                                 </wsdlOption>
                             </wsdlOptions>

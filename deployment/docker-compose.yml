@@ -21,22 +21,4 @@ services:
     ports:
       - "9030:8080"
 
- tcs-businesstravel-service:
-    command: npm start
-    container_name: tcs-businesstravel-resource-container
-    image: iliasnaamane/tcs-businesstravel
-    ports:
-      - "9040:8080"
-    links:
-      - database
-    environment:
-      - MONGODB_ADDRESS=database
-  database:
-    image: mongo
-    container_name: database-container
-    volumes:
-      - "./mongo_data:/data/db"
-    environment:
-      - MONGODB_DATABASE=BusinessTravelDB
-    ports:
-      - "27017:27017"
+  

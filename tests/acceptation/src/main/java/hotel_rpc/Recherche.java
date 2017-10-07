@@ -18,6 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence&gt;
  *         &lt;element name="lieu" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="dure" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="arg2" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -29,12 +30,14 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "recherche", propOrder = {
     "lieu",
-    "dure"
+    "dure",
+    "arg2"
 })
 public class Recherche {
 
     protected String lieu;
     protected int dure;
+    protected boolean arg2;
 
     /**
      * Gets the value of the lieu property.
@@ -74,6 +77,22 @@ public class Recherche {
      */
     public void setDure(int value) {
         this.dure = value;
+    }
+
+    /**
+     * Gets the value of the arg2 property.
+     * 
+     */
+    public boolean isArg2() {
+        return arg2;
+    }
+
+    /**
+     * Sets the value of the arg2 property.
+     * 
+     */
+    public void setArg2(boolean value) {
+        this.arg2 = value;
     }
 
 }
