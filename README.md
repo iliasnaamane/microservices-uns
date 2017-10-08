@@ -32,13 +32,13 @@
 
   
 
-* [x] [Business Travels] (https://github.com/iliasnaamane/microservices-uns/blob/master/services/resourceBusinessTravel/Readme.md)
+* [x] [Business Travels](https://github.com/iliasnaamane/microservices-uns/blob/master/services/resourceBusinessTravel/Readme.md)
   * Employee can submit a business travel, Manager review a list of business travels, decline and also can approve.
   * The service use REST Architecture (resource paradigm)
   * Why REST? This service has 4 basic operations ( GET, POST, PUT, DELETE ). 
   GET -> to list , POST -> to submit a business travel , PUT -> to approve , DELETE-> to decline. So the simplest way is to use REST architecture to handle this 4 operations that REST inherited from the HTTP protocol. The resource would be /businesstravels.
 
-* [x] [Mailing Service] (https://developers.google.com/gmail/api/guides/sending)
+* [x] [Mailing Service](https://developers.google.com/gmail/api/guides/sending)
   * This service is useful when a Manager approve a business travel, a summary must be sent to the employee.
   * This service is considered as an extern service using an API
   * This feature doesn't belong to the business logic, so the use of an API such as GMAIL API would help us to have a good performance on this mailing service.
