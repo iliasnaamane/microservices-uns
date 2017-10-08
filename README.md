@@ -20,7 +20,7 @@
  
 
 * [x] Hotel Rents
-  * User can find alternative hotels for a given place and a given duration
+  * User can find alternative hotels for a given place and a given duration sorted by price ( ascending or descending ) depending on client choice ( boolean parameter )
   * The service use RPC paradigm using SOAP protocol.
   * Why RPC? ( Same arguments as Car Rents Service )
 
