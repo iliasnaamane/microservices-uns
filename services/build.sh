@@ -4,6 +4,7 @@
 PUSH=false
 
 build() { # $1: directory, $2: image_name
+  cd services
   cd $1
   docker build -t $2 .
   cd ..
