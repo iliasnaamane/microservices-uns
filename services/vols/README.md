@@ -1,7 +1,7 @@
 # Flights Service API ( Document based web service) :
 
 
-### the service Deal with POST request on : 
+### the service Deal with POST request on : localhost:9030/vols/webapi/vols 
  - produce and consumes 'application/json' data only 
  - answers `200` if everything went well, `400` elsewhere.
 
@@ -10,14 +10,14 @@
 The services follows a document approach, and handle the following events:
 
 
-  - One_Way_Price : GET One Way Flights Ordered By Price for a given date , origine and destination .
-	- One_Way_Stops : GET One Way One Way Flights Order By Number Of Stops for a given date , origine and destination;
-	- One_Way_Duration : One Way Flight Order By Duration for a given date , origine and destination;
-	- One_Way_Rating : One Way Flight Order By Rating for a given date , origine and destination;
-	- Return_Price : Round-trip Order By Price for a given date , origine and destination;
-	- Return_Rating : Round-trip Flight Order By Rating for a given date , origine and destination;
-	- Return_Duration : Round-trip Flight Order By Duration for a given date , origine and destination;
-	- Return_Stops : Round-trip Flight Order By Number Of Stops for a given date , origine and destination.;
+- One_Way_Price : GET One Way Flights Ordered By Price for a given date , origine and destination .
+- One_Way_Stops : GET One Way One Way Flights Order By Number Of Stops for a given date , origine and destination.
+- One_Way_Duration : One Way Flight Order By Duration for a given date , origine and destination.
+- One_Way_Rating : One Way Flight Order By Rating for a given date , origine and destination.
+- Return_Price : Round-trip Order By Price for a given date , origine and destination.
+- Return_Rating : Round-trip Flight Order By Rating for a given date , origine and destination.
+- Return_Duration : Round-trip Flight Order By Duration for a given date , origine and destination.
+- Return_Stops : Round-trip Flight Order By Number Of Stops for a given date , origine and destination.
 
 ### One_Way_Price usage example
 
