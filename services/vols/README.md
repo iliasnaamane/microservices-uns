@@ -5,7 +5,7 @@
  - produce and consumes 'application/json' data only 
  - answers `200` if everything went well, `400` elsewhere.
 
-## Operations 
+## Operations: 
 
 The services follows a document approach, and handle the following events:
 
