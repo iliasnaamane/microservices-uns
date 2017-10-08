@@ -7,9 +7,9 @@
 * DEJEUX Maxime
 
 ## Getting started
-  Build the project from the services directory with running `./build.sh`
+  Build the root folder with running `./build.sh`
   Start the ecosystem from the root folder with running `./start.sh`
-  Test the ecosystem by running `./tests.sh` from the tests folder
+  Test the ecosystem by running `./tests.sh` from the root folder
   
 ## Services & Features
 * [x] Car Rents
