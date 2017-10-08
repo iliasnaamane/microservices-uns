@@ -13,11 +13,9 @@ services:
     image: result/car-rpc
     ports:
       - "9020:8080"
-
-
-  vols-doc:
-    container_name: vols-doc
-    image: result/vols-doc
+  vols-document:
+    container_name: vols-document
+    image: result/document-vol
     ports:
       - "9030:8080"
   tcs-businesstravel-service:

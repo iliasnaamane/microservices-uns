@@ -2,3 +2,4 @@
 services/resourceBusinessTravel/node_modules
 deployment/mongo_data
 services/rpc/businesstravel
+/services/vol/target/

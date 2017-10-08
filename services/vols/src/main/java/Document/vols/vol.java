@@ -1,56 +1,67 @@
 package Document.vols;
 
-import java.util.Date;
-
 import org.json.JSONObject;
 
 public class vol {
 	
 	private  int id;
-	private String destination;
 	private String origine;
-	private Date Arivee;
-	private Date depart;
+	private String destination;
+	private String date;
 	private double rating;
-	private double distance;
+	private double prix;
 	private String cmpny;
+	private int nb_escales;
+	private double duree;
 	
 	JSONObject toJson() {
         return new JSONObject()
                 .put("id", id)
                 .put("origine", origine)
                 .put("destination", destination)
-                .put("Arivee", Arivee)
-                .put("depart", depart)          
-                .put("distance", distance)
+                       
+                .put("date", date)  
+                .put("rating", rating) 
+                .put("prix", prix) 
                 .put("cmpny", cmpny)
-                .put("rating", rating);
+                .put("nb_escales", nb_escales)
+                .put("duree", duree);
     }
+	
+	public vol(int id, String origine, String destination, String depart, double rating, double prix,
+			String cmpny, int nb_escales, double duree) {
+		super();
+		this.id = id;
+		this.destination = destination;
+		this.origine = origine;
+		this.date = depart;
+		this.rating = rating;
+		this.prix = prix;
+		this.cmpny = cmpny;
+		this.nb_escales = nb_escales;
+		this.duree = duree;
+	}
 	
 	public vol()
 	{}
 	
-	public double get_distance() {return this.distance;}
+	
 	public String get_cmpny() {return this.cmpny;}
 	public double get_rating() {return this.rating;}
 	
-	public boolean set_distance(double distance) { this.distance=distance;return true;}
-	public boolean set_cmpny(String cmpny) { this.cmpny=cmpny;return true;}
-	public boolean set_rating(double rating) { this.rating=rating; return true;}
+	public void set_cmpny(String cmpny) { this.cmpny=cmpny;}
+	public void set_rating(double rating) { this.rating=rating;}
 	
-	public boolean set_destination(String destination) {
+	public void set_destination(String destination) {
 		
 		this.destination=destination;
-		return true;
 	}
-	public boolean set_where (String origine){
+	public void set_where (String origine){
 		this.origine=origine;
-		return true;
 	}
-	public boolean set_Dates(Date arrivee , Date depart) {
+	public boolean set_Date(String depart) {
 		
-		this.Arivee=arrivee;
-		this.depart=depart;
+		this.date=depart;
 		return true;
 		}
 	
@@ -63,14 +74,11 @@ public class vol {
 		
 		return this.origine;
 	}
-	public Date get_arivee() {
-		
-		return this.Arivee;
-		}
+
 	
-	public Date get_depart() {
+	public String get_date() {
 		
-		return this.depart;
+		return this.date;
 		}
 	
 	public vol get_vol() {		
@@ -78,5 +86,12 @@ public class vol {
 		return this;
 	}
 	
+	public int get_id() {
+		return this.id;
+		}
+	public double get_prix() {return this.prix;}
+	public int get_nb_escales() {return this.nb_escales;}
+	public double get_duree() {return duree;}
+	public String get_origine() {return this.origine;}
 	
 }

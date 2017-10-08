@@ -49,6 +49,11 @@
             	<artifactId>mongo-java-driver</artifactId>
             	<version>3.5.0</version>
             </dependency>
+            <dependency>
+            	<groupId>commons-collections</groupId>
+            	<artifactId>commons-collections</artifactId>
+            	<version>3.2.2</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -80,6 +85,10 @@
         <dependency>
         	<groupId>org.mongodb</groupId>
         	<artifactId>mongo-java-driver</artifactId>
+        </dependency>
+        <dependency>
+        	<groupId>commons-collections</groupId>
+        	<artifactId>commons-collections</artifactId>
         </dependency>
     </dependencies>
     <properties>
