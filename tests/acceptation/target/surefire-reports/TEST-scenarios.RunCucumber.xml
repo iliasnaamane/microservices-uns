@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="scenarios.RunCucumber" time="0.73" tests="14" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="scenarios.RunCucumber" time="2.821" tests="20" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib"/>
@@ -65,7 +65,13 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="Given The CarRental service deployed on localhost:9020" classname="Scenario: Search car" time="0.001"/>
+  <testcase name="When users submit a business travel" classname="Scenario: Data post request to a web service" time="0.001"/>
+  <testcase name="Then the node server should handle it and return a success status" classname="Scenario: Data post request to a web service" time="0"/>
+  <testcase name="Scenario: Data post request to a web service" classname="Scenario: Data post request to a web service" time="0"/>
+  <testcase name="When users get all business travels" classname="Scenario: Data get request to a web service" time="0"/>
+  <testcase name="Then the node server should return data" classname="Scenario: Data get request to a web service" time="0"/>
+  <testcase name="Scenario: Data get request to a web service" classname="Scenario: Data get request to a web service" time="0"/>
+  <testcase name="Given The CarRental service deployed on localhost:9020" classname="Scenario: Search car" time="0"/>
   <testcase name="Given a place equal Paris" classname="Scenario: Search car" time="0"/>
   <testcase name="And a date start equal 2017-09-23" classname="Scenario: Search car" time="0"/>
   <testcase name="And a date end equal 2017-09-25" classname="Scenario: Search car" time="0"/>
@@ -73,7 +79,7 @@
   <testcase name="Then the list of cars is" classname="Scenario: Search car" time="0"/>
   <testcase name="Scenario: Search car" classname="Scenario: Search car" time="0"/>
   <testcase name="Given The HotelFinders service deployed on localhost:9010" classname="Scenario: Search hotel" time="0"/>
-  <testcase name="Given a place is Paris" classname="Scenario: Search hotel" time="0.001"/>
+  <testcase name="Given a place is Paris" classname="Scenario: Search hotel" time="0"/>
   <testcase name="And a duration is 10" classname="Scenario: Search hotel" time="0"/>
   <testcase name="And Ascending is true" classname="Scenario: Search hotel" time="0"/>
   <testcase name="When the service called" classname="Scenario: Search hotel" time="0"/>

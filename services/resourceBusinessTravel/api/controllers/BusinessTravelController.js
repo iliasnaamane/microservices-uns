@@ -28,3 +28,12 @@ exports.approveTravel = function(req,res){
       });
   });
 }
+
+
+exports.getAllTravels = function(req,res){
+  BusinessTravel.find({}, function(err, businessTravels) {
+    if(err)
+      res.send(err);
+    res.send({'businessTravels':businessTravels});  
+  });
+}

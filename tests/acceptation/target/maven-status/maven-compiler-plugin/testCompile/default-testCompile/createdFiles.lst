@@ -1,3 +1,4 @@
 scenarios/HotelFindersStepDefinition.class
 scenarios/RunCucumber.class
 scenarios/CarRentalStepDefinition.class
+scenarios/businessTravelStepDefinition.class
