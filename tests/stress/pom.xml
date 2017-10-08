@@ -9,7 +9,7 @@
     <version>1.0</version>
 
     <parent>
-        <groupId>fr.unice.polytech.esb</groupId>
+        <groupId>projet-integration</groupId>
         <artifactId>tests</artifactId>
         <version>1.0</version>
     </parent>
