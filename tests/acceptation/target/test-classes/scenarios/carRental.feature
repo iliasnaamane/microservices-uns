@@ -5,7 +5,12 @@ Feature: Car Search
 
   Scenario: Search car
 
-    Given a place equal Londre
-    	And a duration equal 10
+    Given a place equal Paris
+    And a date start equal 2017-09-23
+    And a date end equal 2017-09-25
     When the service is called
-    Then the cout total is 30.5
+    Then the list of cars is 
+        | idCar |    | marque |     | modele |     | numSerie |     | place |     | prix | 
+    | 2 |     | Renaut |     | Megane |     | 0 |     | Paris |     | 61.0 | 
+
+    

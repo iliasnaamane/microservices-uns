@@ -11,6 +11,6 @@ import java.util.ArrayList;
 public interface HotelFinderService {
 
 	@WebResult(name="recherche_hotel")
-	public ArrayList<Hotel> recherche(@WebParam(name="lieu") String lieu,@WebParam(name="dure") int dure, boolean ascOrdesc);
+	public ArrayList<Hotel> recherche(@WebParam(name="lieu") String lieu,@WebParam(name="dure") int dure, boolean sortedAsc);
 
 }

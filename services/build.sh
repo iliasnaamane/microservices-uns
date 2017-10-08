@@ -16,5 +16,6 @@ mvn -q clean package
 build hotelRPC result/hotel-rpc
 build carRPC result/car-rpc
 build vols result/vols-doc
+build resourceBusinessTravel result/businesstravel-resource
 # build resource  petitroll/tcs-rest
 # build document  petitroll/tcs-doc

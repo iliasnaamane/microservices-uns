@@ -40,6 +40,17 @@ public class Car {
 	public String getModele() { return modele; }
 	public void setModele(String modele) { this.modele = modele; }
         
+        public Car clone(){
+            Car c = new Car();
+            c.setIdCar(idCar);
+            c.setMarque(marque);
+            c.setModele(modele);
+            c.setNumSerie(numSerie);
+            c.setPlace(place);
+            c.setPrix(prix);
+            
+            return c;
+        }
        
       
 }

@@ -11,12 +11,12 @@ public class Hotel implements Comparable<Hotel>  {
 
 	private String lieu;
 	private int prix;
-	//private int dure;
 	private String nom;
-	private String identifier;
+	private int identifier;
 
-	public Hotel(String lieu,int prix, String nom){
-		this.lieu=lieu;
+	public Hotel(int id,String lieu,int prix, String nom){
+		this.identifier = id;
+                this.lieu=lieu;
 		this.prix=prix;
 		//this.dure=dure;
 		this.nom=nom;
@@ -32,8 +32,8 @@ public class Hotel implements Comparable<Hotel>  {
 	public int getPrix() { return prix; }
 	public void setPrix(int prix) { this.prix = prix; }
 	@XmlElement
-	public String getIdentifier() { return identifier; }
-	public void setIdentifier(String identifier) { this.identifier = identifier; }
+	public int getIdentifier() { return identifier; }
+	public void setIdentifier(int identifier) { this.identifier = identifier; }
 	@XmlElement
 	public String getNom() { return nom;}
 	public void setNom(String nom) {this.nom = nom; }
@@ -46,7 +46,12 @@ public class Hotel implements Comparable<Hotel>  {
                 return -1;
             return 0;
         }
-
+        
+        @Override
+        public Hotel clone(){
+            Hotel hClone = new Hotel(this.identifier,this.lieu,this.prix,this.nom);  
+            return hClone;  
+        }
 
 
 }

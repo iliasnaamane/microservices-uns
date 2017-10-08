@@ -1,15 +1,11 @@
 package carRental.service;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import carRental.data.*;
 import java.text.SimpleDateFormat;
 
 import javax.jws.WebService;
 import java.util.Date;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 @WebService(targetNamespace = "http://informatique.polytech.unice.fr/soa1/cookbook/",
         portName = "ExternalCRentalPort",
@@ -22,8 +18,10 @@ public class CarRentalImpl implements CarRentalService {
     public ArrayList<Car> getCarsByPreferences(String place, String dateStart, String dateEnd) throws Exception {
         ArrayList<Car> CarsByPreferences = new ArrayList<>();
         ArrayList<Car> CarsByPlace = this.getCarsByPlace(place);
-        Date startDate = new SimpleDateFormat("YYYY-MM-DD").parse(dateStart);
-        Date endDate = new SimpleDateFormat("YYYY-MM-DD").parse(dateEnd);
+        Date startDate = new SimpleDateFormat("yyyy-MM-dd").parse(dateStart);
+        Date endDate = new SimpleDateFormat("yyyy-MM-dd").parse(dateEnd);
+         //long days = Duration.between(startDate.toInstant(), endDate.toInstant()).toDays();
+       
         CarsByPlace.forEach((c) -> {
             ArrayList<Rent> Rents = this.getRentByDatesAndCarId(c.getIdCar(), startDate, endDate);
             if (Rents.isEmpty()) {
@@ -32,7 +30,17 @@ public class CarRentalImpl implements CarRentalService {
         });
         if (CarsByPreferences.isEmpty())
             throw new Exception("no car dispo");
-        return CarsByPreferences;
+        ArrayList<Car> CarsByPreferencesClone = new ArrayList<>(CarsByPreferences.size());
+        CarsByPreferences.forEach((c) -> {
+            CarsByPreferencesClone.add(c.clone());
+        });
+        long difference =  (startDate.getTime()-endDate.getTime())/86400000;
+        long diff = Math.abs(difference);
+        CarsByPreferencesClone.forEach((c) -> {
+            c.setPrix(diff*c.getPrix());
+        });
+        
+        return CarsByPreferencesClone;
         
     }
     
@@ -47,17 +55,17 @@ public class CarRentalImpl implements CarRentalService {
     }
     
     public boolean checkIntersectionDates(Date StartDate, Date EndDate, Date StartDateOccup, Date EndDateOccup) {
-        if ( (EndDate.after(StartDateOccup) && EndDate.before(EndDateOccup))
+        return ( (EndDate.after(StartDateOccup) && EndDate.before(EndDateOccup))
                 || (StartDate.after(StartDateOccup) && StartDate.before(EndDateOccup))
-                || (StartDate.before(StartDateOccup) && EndDate.after(EndDateOccup))) {
-            return true;
-        }
-        return false;
+                || (StartDate.before(StartDateOccup) && EndDate.after(EndDateOccup)) ) ;
+            
     }
 
     private ArrayList<Rent> getRentByDatesAndCarId(int carId, Date dateStart, Date dateEnd){
         ArrayList<Rent> RentsByDatesAndCarId = new ArrayList<>();
-        Storage.getRents().stream().filter((r) -> (r.getIdCar() == carId && checkIntersectionDates(dateStart, dateEnd, r.getDateStartOccup(), r.getDateEndOccup()) )).forEachOrdered((r) -> {
+        Storage.getRents().stream().filter((r) -> (r.getIdCar() == carId && 
+                checkIntersectionDates(dateStart, dateEnd, r.getDateStartOccup(), r.getDateEndOccup()) )).
+                forEachOrdered((r) -> {
                     RentsByDatesAndCarId.add(r);
         });
         

@@ -70,7 +70,7 @@
                                     <wsdl>${basedir}/src/main/resources/HOTEL.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://informatique.polytech.unice.fr/soa1/cookbook/=hotel_rpc</extraarg>
+                                        <extraarg>http://informatique.polytech.unice.fr/soa1/cookbook/=stubs.hotel_rpc</extraarg>
                                     </extraargs>  
                                     
                                 </wsdlOption>

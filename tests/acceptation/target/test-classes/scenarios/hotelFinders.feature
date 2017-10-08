@@ -6,6 +6,11 @@ Feature: Hotel Search
   Scenario: Search hotel
 
     Given a place is Paris
-    	And a duration is 10
+    And a duration is 10
+    And Ascending is true   
     When the service called
-    Then the name of hotel is Le Carton Confortable
+    Then the list of hotels is
+    | identifier |    | lieu |     | nom |     | prix |
+    | 3 |     | Paris |     | Le Carton Confortable |     | 250 |  
+    | 1 |     | Paris |     | MetroDODO |     | 300 |  
+    | 2 |     | Paris |     | Dododoré |     | 10000 |
