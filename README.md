@@ -25,7 +25,7 @@
   * Why RPC? ( Same arguments as Car Rents Service )
 
 
-* [x] [Flight Rents]( https://github.com/polytechnice-si/5A-Microservices-Integration/blob/master/services/rpc/README.md)                  
+* [x] [Flight Rents]( https://github.com/iliasnaamane/microservices-uns/blob/master/services/vols/README.md)                  
   * User can find alternative flights at a given place and a given dates and many other preferences
   * The service use Document paradigm using JSON data format.
   * Why Document? This service has many procedures which handle differeence user preferences such as ( one way flight ) ..The use of RPC in that case would be an overkill since we will have a tight coupling of many procedures. So the simplest why is REST? No We will get some ugly URIS /flights?destination="paris"&typeflight="oneway"&date="2016-02-23"&..........................) and this kind of URIS can be considered as an anti-pattern. Otherwise the use of Document paradigm is like RPC, except the coupling constraint which helps us to have more flexibility between the client/server.
