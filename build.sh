@@ -18,5 +18,14 @@ build vols result/document-vol
 build hotelRPC result/hotel-rpc
 build carRPC result/car-rpc
 build resourceBusinessTravel result/businesstravel-resource
-# build resource  petitroll/tcs-rest
-# build document  petitroll/tcs-doc
+
+cd ..
+cd integration
+cd esb
+docker build -t  docker build -t petitroll/esb .
+cd ..
+docker build -t petitroll/tcs-bus .
+cd ..
+cd ..
+
+
