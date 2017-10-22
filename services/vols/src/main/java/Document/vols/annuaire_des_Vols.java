@@ -25,28 +25,16 @@ public class annuaire_des_Vols {
 		
 	   JSONObject obj = new JSONObject(input);
 	   try {
-		   
-		  
-       switch (EVENT.valueOf(obj.getString("event"))) {
+		   switch (EVENT.valueOf(obj.getString("event"))) {
+		   case Search :return Response.ok().entity(Return_response(obj).toString(INDENT_FACTOR)).build();
+		   }
        
-       case One_Way_Price:return Response.ok().entity(One_Way_Price(obj,(obj.getString("Outbound_date"))).toString(INDENT_FACTOR)).build();
-       case One_Way_Stops:return Response.ok().entity(One_Way_Stops(obj,(obj.getString("Outbound_date"))).toString(INDENT_FACTOR)).build();
-       case One_Way_Duration:return Response.ok().entity(One_Way_Duration(obj,(obj.getString("Outbound_date"))).toString(INDENT_FACTOR)).build();
-       case One_Way_Rating:return Response.ok().entity(One_Way_Rating(obj,(obj.getString("Outbound_date"))).toString(INDENT_FACTOR)).build();
-       case Return_Price:return Response.ok().entity(Return_Price(obj,(obj.getString("Outbound_date")),(obj.getString("return_date"))).toString(INDENT_FACTOR)).build();
-       case Return_Stops:return Response.ok().entity(Return_Stops(obj,(obj.getString("Outbound_date")),(obj.getString("return_date"))).toString(INDENT_FACTOR)).build();
-       case Return_Duration:return Response.ok().entity(Return_Duration(obj,(obj.getString("Outbound_date")),(obj.getString("return_date"))).toString(INDENT_FACTOR)).build();
-       case Return_Rating:return Response.ok().entity(Return_Rating(obj,(obj.getString("Outbound_date")),(obj.getString("return_date"))).toString(INDENT_FACTOR)).build();
-	default:
-		break;
-       }
-    }catch(Exception e) {
-    JSONObject error = new JSONObject().put("error", e.toString());
-    return Response.status(400).entity(error.toString(INDENT_FACTOR)).build();
-}
+	   	}catch(Exception e) {
+	   		JSONObject error = new JSONObject().put("error", e.toString());
+    		return Response.status(400).entity(error.toString(INDENT_FACTOR)).build();
+	   	}
 	   
-	   return null;
-      
+	  return null;
 	}
 	
 	
