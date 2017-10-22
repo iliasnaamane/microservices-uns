@@ -10,9 +10,10 @@ import static esb.flows.implem.utils.Endpoints.HOTEL_RPC_ENDPOINT;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.Map;
 import javax.xml.ws.BindingProvider;
+import org.apache.camel.Exchange;
+import org.apache.camel.Processor;
 import stubs.hotel_rpc.ExternalHotelFinderService;
 import stubs.hotel_rpc.Hotel;
 import stubs.hotel_rpc.HotelFinderService;
@@ -23,32 +24,68 @@ import stubs.hotel_rpc.HotelFinderService;
  */
 public class HotelSearchHelper {
    
+  
+    
+    public static final Processor cv2hotelSpec = (Exchange exchange) -> {
+        //System.out.println("cv2hotelSpec");
+        Map<String, String> data = (Map<String, String>) exchange.getIn().getBody();
+        HotelSpec hs = new HotelSpec();
+        data.entrySet().forEach((Map.Entry<String, String> entry) -> {
+            System.out.println(entry.getKey() + ", " + entry.getValue());
+            if(entry.getKey().equals("duration")){
+                hs.setDuration(Integer.parseInt(entry.getValue()));
+                System.out.println("duration: "+Integer.parseInt(entry.getValue()));
+            }
+                
+            else{
+                hs.setDest(entry.getValue());
+                System.out.println("destination: " + entry.getValue());
+            }
+             
+        });
+        
+        hs.setSortedAscorDesc(true);
+        System.out.println(hs.toString());
+        System.out.println("hello its working");
+        exchange.getIn().setBody(hs);
+        
+    };
    
-   /*public String getCheapHotel(HotelSpec hs){
-       System.out.println("ça passe par ici");
-       HotelFinderService hf = getWS();
-       System.out.println("hf");
-       System.out.println(hf);
-       ArrayList<Hotel> response = new ArrayList<Hotel>();
-       System.out.println(hs.getDest());
-       response = (ArrayList<Hotel>)hf.recherche(hs.getDest(),hs.getDuration(),true);
-       System.out.println("display response");
-       System.out.println(response);
-       int min_value = Integer.MAX_VALUE;
-       int index = -1;
-       for(int i = 0;i<response.size();i++){
-           int price = response.get(i).getPrix();
-           if(price < min_value){
-              min_value = price;
-              index = i;
-           }
-       }
-       Hotel CheapHotel = response.get(index);
-       System.out.println(CheapHotel.getNom());
-       return CheapHotel.getIdentifier()+","+CheapHotel.getNom()+","+CheapHotel.getPrix()*hs.getDuration();           
-       
-   }*/
-   
+    public static Processor RequestRPC = (Exchange exchange) -> {
+        HotelSpec hs = (HotelSpec) exchange.getIn().getBody();
+        System.out.println(hs.toString());
+        System.out.println("Request RPC");
+        HotelFinderService hf = HotelSearchHelper.getWS();
+        System.out.println("hf");
+        System.out.println(hf);
+        ArrayList<Hotel> response = new ArrayList<Hotel>();
+        System.out.println(hs.getDest());
+        response = (ArrayList<Hotel>) hf.recherche(hs.getDest(), hs.getDuration(), true);
+        System.out.println("display response");
+        System.out.println(response);
+        int min_value = Integer.MAX_VALUE;
+        int index = -1;
+        for (int i = 0; i < response.size(); i++) {
+            int price = response.get(i).getPrix();
+            if (price < min_value) {
+                min_value = price;
+                index = i;
+            }
+        }
+        Hotel CheapHotel = response.get(index);
+        int total_price = hs.getDuration()*min_value;
+        System.out.println(CheapHotel.getNom());
+        //return CheapHotel.getIdentifier() + "," + CheapHotel.getNom() + "," + CheapHotel.getPrix() * hs.getDuration();
+        String CheapHotelJson = "{\n" +
+"       \"id_hotel\":\""+CheapHotel.getIdentifier() +"-service-1,\n" +
+"       \"nights\":"+ hs.getDuration()+",\n" +
+"       \"price\":"+ total_price + "\n" +
+"       }";
+        System.out.println(CheapHotelJson);
+        exchange.getIn().setBody(CheapHotelJson);
+
+    };
+    
     public static  HotelFinderService getWS() {
         System.out.println("get web service RPcC");
         URL wsdl=null;

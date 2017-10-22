@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1508694002464
+Bnd-LastModified: 1508697543682
 Build-Jdk: 1.8.0_121
 Built-By: iliasnaamane
 Bundle-Blueprint: OSGI-INF/blueprint/camel-context.xml
@@ -14,7 +14,7 @@ Embedded-Artifacts: gson-2.8.2.jar;g="com.google.code.gson";a="gson";v="
  2.8.2"
 Export-Package: esb.flows.implem;version="1.0";uses:="org.apache.camel.b
  uilder",esb.flows.implem.data;version="1.0",esb.flows.implem.utils;vers
- ion="1.0";uses:="org.apache.camel.dataformat.csv"
+ ion="1.0";uses:="org.apache.camel,org.apache.camel.dataformat.csv"
 Import-Package: com.fasterxml.jackson.annotation;version="[2.6,3)",javax
  .jws,javax.xml.bind,javax.xml.bind.annotation,javax.xml.namespace,javax
  .xml.ws,org.apache.activemq.camel.component,org.apache.activemq.spring,

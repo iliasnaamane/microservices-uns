@@ -1,1 +1,5 @@
-HotelSpec{dest=Paris, duration=3, sortedAscorDesc=true}
+{
+       "id_hotel":"3-service-1,
+       "nights":3,
+       "price":225
+       }
