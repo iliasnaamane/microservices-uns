@@ -1,0 +1,1 @@
+HotelSpec{dest=Paris, duration=3, sortedAscorDesc=true}

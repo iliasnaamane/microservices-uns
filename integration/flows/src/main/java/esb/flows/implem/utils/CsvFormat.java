@@ -13,6 +13,7 @@ import org.apache.camel.dataformat.csv.CsvDataFormat;
  */
 public class CsvFormat {
     public static CsvDataFormat buildCsvFormat() {
+        //System.out.print("csv data format");
         CsvDataFormat format = new CsvDataFormat();
         format.setDelimiter(",".charAt(0));
         format.setSkipHeaderRecord(true);

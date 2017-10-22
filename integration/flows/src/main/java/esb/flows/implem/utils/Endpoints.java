@@ -17,14 +17,14 @@ public class Endpoints {
     
     //services endpoints
     public static final String HOTEL_RPC_ENDPOINT = "http://localhost:9010/hotel-rpc/ExternalHotelFinderService";
-    public static final String HOTEL_RPC_WSDL_URL = "http://localhost:9010/hotel-rpc/ExternalHotelFinderService?wsdl&";
-    public static final String HOTEL_SERVICE_NAME = "ExternalHotelFinderService";
-    public static final String PORT_NAME = "ExternalHotelFinderPort";
-    
+    //public static final String HOTEL_RPC_WSDL_URL = "http://localhost:9010/hotel-rpc/ExternalHotelFinderService?wsdl&";
+    //public static final String HOTEL_SERVICE_NAME = "ExternalHotelFinderService";
+    //public static final String PORT_NAME = "ExternalHotelFinderPort";
+   /* 
     public static final  String HOTEL_RPC_URL = HOTEL_RPC_ENDPOINT
                 + "wsdlURL="+HOTEL_RPC_WSDL_URL
                 + "serviceName="+HOTEL_SERVICE_NAME
-                + "portName="+PORT_NAME;
+                + "portName="+PORT_NAME;*/
     
     
     

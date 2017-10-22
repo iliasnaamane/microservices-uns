@@ -89,7 +89,7 @@
                             <sourceRoot>${basedir}/src/main/java/</sourceRoot>
                             <wsdlOptions>
                                 <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/hotel.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/hotel.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://informatique.polytech.unice.fr/soa1/cookbook/=stubs.hotel_rpc</extraarg>

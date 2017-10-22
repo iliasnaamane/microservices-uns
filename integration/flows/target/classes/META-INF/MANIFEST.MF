@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1508652948581
+Bnd-LastModified: 1508694002464
 Build-Jdk: 1.8.0_121
 Built-By: iliasnaamane
 Bundle-Blueprint: OSGI-INF/blueprint/camel-context.xml
@@ -14,13 +14,13 @@ Embedded-Artifacts: gson-2.8.2.jar;g="com.google.code.gson";a="gson";v="
  2.8.2"
 Export-Package: esb.flows.implem;version="1.0";uses:="org.apache.camel.b
  uilder",esb.flows.implem.data;version="1.0",esb.flows.implem.utils;vers
- ion="1.0";uses:="esb.flows.implem.data,org.apache.camel.dataformat.csv"
-Import-Package: javax.jws,javax.xml.bind,javax.xml.bind.annotation,javax
- .xml.namespace,javax.xml.ws,org.apache.activemq.camel.component,org.apa
- che.activemq.spring,org.apache.camel,org.apache.camel.builder;version="
- [2.16,3)",org.apache.camel.component.jms,org.apache.camel.dataformat.cs
- v;version="[2.16,3)",org.apache.camel.model;version="[2.16,3)",org.apac
- he.camel.spi;version="[2.16,3)",org.osgi.service.blueprint;version="[1.
- 0.0,2.0.0)"
+ ion="1.0";uses:="org.apache.camel.dataformat.csv"
+Import-Package: com.fasterxml.jackson.annotation;version="[2.6,3)",javax
+ .jws,javax.xml.bind,javax.xml.bind.annotation,javax.xml.namespace,javax
+ .xml.ws,org.apache.activemq.camel.component,org.apache.activemq.spring,
+ org.apache.camel,org.apache.camel.builder;version="[2.16,3)",org.apache
+ .camel.component.jms,org.apache.camel.dataformat.csv;version="[2.16,3)"
+ ,org.apache.camel.model;version="[2.16,3)",org.apache.camel.spi;version
+ ="[2.16,3)",org.osgi.service.blueprint;version="[1.0.0,2.0.0)"
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
 Tool: Bnd-2.4.1.201501161923

@@ -5,14 +5,18 @@
  */
 package esb.flows.implem.data;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import java.io.Serializable;
+
 /**
  *
  * @author iliasnaamane
  */
-public class HotelSpec  {
-    public String dest;
-    public int duration;
-    public boolean sortedAscorDesc;
+public class HotelSpec implements Serializable  {
+    
+    @JsonProperty private String dest;
+    @JsonProperty private int duration;
+    @JsonProperty private boolean sortedAscorDesc;
 
     public String getDest() {
         return dest;
@@ -36,6 +40,11 @@ public class HotelSpec  {
 
     public void setSortedAscorDesc(boolean sortedAscorDesc) {
         this.sortedAscorDesc = sortedAscorDesc;
+    }
+
+    @Override
+    public String toString() {
+        return "HotelSpec{" + "dest=" + dest + ", duration=" + duration + ", sortedAscorDesc=" + sortedAscorDesc + '}';
     }
     
     

@@ -15,6 +15,10 @@ import org.apache.camel.builder.RouteBuilder;
 import esb.flows.implem.utils.CsvFormat;
 import static esb.flows.implem.utils.Endpoints.*;
 import esb.flows.implem.utils.HotelSearchHelper;
+import static esb.flows.implem.utils.HotelSearchHelper.getWS;
+import java.util.ArrayList;
+import stubs.hotel_rpc.Hotel;
+import stubs.hotel_rpc.HotelFinderService;
 
 /**
  *
@@ -34,6 +38,7 @@ public class ioRoutes extends RouteBuilder {
                 .split(body())
                     .parallelProcessing().executorService(WORKERS)
                         .process(cv2hotelSpec)
+                .log("I am here")
                 .to(BUILD_HOTEL_SPEC)
                
         ;
@@ -47,26 +52,71 @@ public class ioRoutes extends RouteBuilder {
         from(SEARCH_HOTEL_1)
             .routeId("request-to-hotelrpc-1")
                 .routeDescription("send request data from queue to service")
-                .bean(HotelSearchHelper.class,"getCheapHotel(${body})")
-                .unmarshal().string()
+                .log(body().toString())
+                .process(RequestRPC)
                 .to(LETTER_OUTPUT_DIR+"?fileName=cheapHotel.txt")
         ;
                 
        
     }
     
-    private static   Processor cv2hotelSpec = (Exchange exchange)-> {
-        System.out.println("cv2hotelSpecaaaa");
-        Map<String, Object> data = (Map<String, Object>) exchange.getIn().getBody();
-        System.out.println("3333aaaaaaaaaa");
+    private static final   Processor cv2hotelSpec = (Exchange exchange) -> {
+        //System.out.println("cv2hotelSpec");
+        Map<String, String> data = (Map<String, String>) exchange.getIn().getBody();
         HotelSpec hs = new HotelSpec();
-        hs.setDest((String)data.get("dest"));
-        hs.setDuration((int)data.get("duration"));
+        data.entrySet().forEach((Map.Entry<String, String> entry) -> {
+            System.out.println(entry.getKey() + ", " + entry.getValue());
+            if(entry.getKey().equals("duration")){
+                hs.setDuration(Integer.parseInt(entry.getValue()));
+                System.out.println("duration: "+Integer.parseInt(entry.getValue()));
+            }
+                
+            else{
+                hs.setDest(entry.getValue());
+                System.out.println("destination: " + entry.getValue());
+            }
+             
+        });
+        
         hs.setSortedAscorDesc(true);
         System.out.println(hs.toString());
+        System.out.println("hello its working");
         exchange.getIn().setBody(hs);
-        System.out.println("aaaaaaaaaa");
+        
     };
+    
+     private static final   Processor RequestRPC = (Exchange exchange) -> {
+         HotelSpec hs = (HotelSpec)exchange.getIn().getBody();
+         System.out.println(hs.toString());
+         System.out.println("Request RPC");
+         HotelFinderService hf = HotelSearchHelper.getWS();
+         System.out.println("hf");
+         System.out.println(hf);
+         ArrayList<Hotel> response = new ArrayList<Hotel>();
+         System.out.println(hs.getDest());
+         response = (ArrayList<Hotel>) hf.recherche(hs.getDest(), hs.getDuration(), true);
+         System.out.println("display response");
+         System.out.println(response);
+         int min_value = Integer.MAX_VALUE;
+         int index = -1;
+         for (int i = 0; i < response.size(); i++) {
+             int price = response.get(i).getPrix();
+             if (price < min_value) {
+                 min_value = price;
+                 index = i;
+             }
+         }
+         Hotel CheapHotel = response.get(index);
+         System.out.println(CheapHotel.getNom());
+         //return CheapHotel.getIdentifier() + "," + CheapHotel.getNom() + "," + CheapHotel.getPrix() * hs.getDuration();
+         exchange.getIn().setBody(hs.toString());
+        
+    };
+    
+    
+    
+    
+    
     
    /* private static   Processor listToCheapHotel = (Exchange exchange)-> {
         System.out.println("listHotelsToCheapHotel");
