@@ -5,10 +5,21 @@ import Document.vols.comparators.Comparateur_ID;
 import Document.vols.comparators.Comparateur_NB_ESCALES;
 import Document.vols.comparators.Comparateur_Prix;
 import Document.vols.comparators.Comparateur_RATING;
+
+import static Document.vols.vol_collection.One_Way_Duration;
+import static Document.vols.vol_collection.One_Way_Price;
+import static Document.vols.vol_collection.One_Way_Rating;
+import static Document.vols.vol_collection.One_Way_Stops;
+import static Document.vols.vol_collection.Return_Duration;
+import static Document.vols.vol_collection.Return_Price;
+import static Document.vols.vol_collection.Return_Rating;
+import static Document.vols.vol_collection.Return_Stops;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
+import javax.ws.rs.core.Response;
 
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.Predicate;
@@ -18,7 +29,22 @@ import org.json.JSONObject;
 
 public class vol_collection {
 	
-	
+	public static JSONObject Return_response(JSONObject input)
+	{
+		
+		 switch (input.getString("sortby")) {
+	       
+	       case "Price": return One_Way_Price(input,(input.getString("Outbound_date")));
+	       case "Stops":return One_Way_Stops(input,(input.getString("Outbound_date")));
+	       case "Duration":return One_Way_Duration(input,(input.getString("Outbound_date")));
+	       case "Rating":return One_Way_Rating(input,(input.getString("Outbound_date")));
+	       case "Price_r":return Return_Price(input,(input.getString("Outbound_date")),(input.getString("return_date")));
+	       case "Stops_r":return Return_Stops(input,(input.getString("Outbound_date")),(input.getString("return_date")));
+	       case "Duration_r":return Return_Duration(input,(input.getString("Outbound_date")),(input.getString("return_date")));
+	       case "Rating_r":return Return_Rating(input,(input.getString("Outbound_date")),(input.getString("return_date")));
+	}
+		 return null;
+	}
 	
 	
 	 static JSONObject One_Way_Price (JSONObject input,String aller) {

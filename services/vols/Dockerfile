@@ -1,5 +1,4 @@
 FROM tomee:8-jre-7.0.3-plus
-# MAINTAINER Sébastien Mosser (mosser@i3s.unice.fr)
 
 # Build with : docker build -t petitroll/tcs-rpc .
 # Publish with: docker push petitroll/tcs-rpc

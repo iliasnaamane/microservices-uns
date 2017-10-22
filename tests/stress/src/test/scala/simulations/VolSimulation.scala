@@ -17,11 +17,11 @@ class VolsSimulation extends Simulation {
 
 
   def JSON_REQUEST="""{
-    "event": "Return_Duration",
-    "Outbound_date": "12-10-2017",
-    "return_date":"13-10-2017",
-    "from" :"Nice",
-    "to" : "Paris"
+	"event": "Search",
+	"sortby":"Rating",
+	"Outbound_date": "12-10-2017",
+	"from" :"Nice",
+	"to" : "Paris"
 }"""
 
 
