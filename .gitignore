@@ -3,3 +3,4 @@
 deployment/mongo_data
 services/rpc/businesstravel
 /services/vol/target/
+/services/externals/hotels/target/

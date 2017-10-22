@@ -1,7 +1,12 @@
 version: '2'
 
 services:
+  
 
+  hotels:
+    image: soa-team-1/hotels
+    ports:
+      - "8003:8080"
   hotel-rpc:                
     container_name: hotel-rpc
     image: result/hotel-rpc
@@ -37,6 +42,7 @@ services:
       - MONGODB_DATABASE=BusinessTravelDB
     ports:
       - "27017:27017"
+  
 
   #integration-bus:  # To attach to this container at runtime: docker exec -it tcs-bus sh
     #container_name: tcs-bus

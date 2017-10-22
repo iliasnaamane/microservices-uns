@@ -53,16 +53,9 @@ public class HotelSearchHelper {
    
     public static Processor RequestRPC = (Exchange exchange) -> {
         HotelSpec hs = (HotelSpec) exchange.getIn().getBody();
-        System.out.println(hs.toString());
-        System.out.println("Request RPC");
         HotelFinderService hf = HotelSearchHelper.getWS();
-        System.out.println("hf");
-        System.out.println(hf);
         ArrayList<Hotel> response = new ArrayList<Hotel>();
-        System.out.println(hs.getDest());
         response = (ArrayList<Hotel>) hf.recherche(hs.getDest(), hs.getDuration(), true);
-        System.out.println("display response");
-        System.out.println(response);
         int min_value = Integer.MAX_VALUE;
         int index = -1;
         for (int i = 0; i < response.size(); i++) {
@@ -74,8 +67,6 @@ public class HotelSearchHelper {
         }
         Hotel CheapHotel = response.get(index);
         int total_price = hs.getDuration()*min_value;
-        System.out.println(CheapHotel.getNom());
-        //return CheapHotel.getIdentifier() + "," + CheapHotel.getNom() + "," + CheapHotel.getPrix() * hs.getDuration();
         String CheapHotelJson = "{\n" +
 "       \"id_hotel\":\""+CheapHotel.getIdentifier() +"-service-1,\n" +
 "       \"nights\":"+ hs.getDuration()+",\n" +
@@ -84,6 +75,13 @@ public class HotelSearchHelper {
         System.out.println(CheapHotelJson);
         exchange.getIn().setBody(CheapHotelJson);
 
+    };
+    
+     public static final Processor RequestREST = (Exchange exchange) -> {
+        HotelSpec hs = (HotelSpec) exchange.getIn().getBody();
+        exchange.getIn().setHeader(Exchange.HTTP_QUERY,"destination="+hs.getDest());
+        exchange.getIn().setBody(null);
+        
     };
     
     public static  HotelFinderService getWS() {
@@ -103,4 +101,7 @@ public class HotelSearchHelper {
         System.out.println("WSDL DONE");
         return ws;
     }
+    
+    
+   
 }

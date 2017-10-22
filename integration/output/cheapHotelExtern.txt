@@ -1,0 +1,5 @@
+[{
+  "city": "Paris",
+  "name": "Hotel-Pas-Cher",
+  "roomCost": 50
+}]

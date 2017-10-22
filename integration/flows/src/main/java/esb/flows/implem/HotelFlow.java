@@ -5,25 +5,19 @@
  */
 package esb.flows.implem;
 
-import esb.flows.implem.data.HotelSpec;
-import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import org.apache.camel.Exchange;
-import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
 import esb.flows.implem.utils.CsvFormat;
 import static esb.flows.implem.utils.Endpoints.*;
 import esb.flows.implem.utils.HotelSearchHelper;
-import java.util.ArrayList;
-import stubs.hotel_rpc.Hotel;
-import stubs.hotel_rpc.HotelFinderService;
+import org.apache.camel.Exchange;
 
 /**
  *
  * @author iliasnaamane
  */
-public class ioRoutes extends RouteBuilder {
+public class HotelFlow extends RouteBuilder {
     private static final ExecutorService WORKERS = Executors.newFixedThreadPool(3);
     @Override
     public void configure() throws Exception {
@@ -45,7 +39,8 @@ public class ioRoutes extends RouteBuilder {
         from(BUILD_HOTEL_SPEC)
            .routeId("spec hotel queue")
                 .routeDescription("queue")
-                .to(SEARCH_HOTEL_1)    
+                .multicast()
+                .to(SEARCH_HOTEL_1,SEARCH_HOTEL_2)    
         ;
         
         from(SEARCH_HOTEL_1)
@@ -55,7 +50,23 @@ public class ioRoutes extends RouteBuilder {
                 .process(HotelSearchHelper.RequestRPC)
                 .to(LETTER_OUTPUT_DIR+"?fileName=cheapHotel.txt")
         ;
+        
+
                 
+        from(SEARCH_HOTEL_2)
+            .routeId("request-to-hotelrest")
+                .routeDescription("send request data from queue to service")
+                .log(body().toString())
+                .log("request to external hotel rest service")
+                .setHeader(Exchange.HTTP_METHOD, constant("GET"))
+                .setHeader("Accept", constant("application/json"))
+                .process(HotelSearchHelper.RequestREST)
+                .inOut(HOTEL_EXTERNAL_REST_ENDPOINT)
+                .unmarshal().string()
+                .to(LETTER_OUTPUT_DIR+"?fileName=cheapHotelExtern.txt")
+                
+                
+        ;
        
     }
     
