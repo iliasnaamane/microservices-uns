@@ -1,0 +1,12 @@
+esb/flows/implem/data/HotelSpec.class
+stubs/hotel_rpc/package-info.class
+stubs/hotel_rpc/RechercheResponse.class
+esb/flows/implem/utils/Endpoints.class
+esb/flows/implem/ioRoutes.class
+stubs/hotel_rpc/Recherche.class
+stubs/hotel_rpc/Hotel.class
+stubs/hotel_rpc/HotelFinderService.class
+esb/flows/implem/utils/CsvFormat.class
+stubs/hotel_rpc/ObjectFactory.class
+stubs/hotel_rpc/ExternalHotelFinderService.class
+esb/flows/implem/utils/HotelSearchHelper.class

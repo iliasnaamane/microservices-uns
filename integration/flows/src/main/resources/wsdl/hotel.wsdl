@@ -1,0 +1,57 @@
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://informatique.polytech.unice.fr/soa1/cookbook/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="ExternalHotelFinderService" targetNamespace="http://informatique.polytech.unice.fr/soa1/cookbook/">
+<wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://informatique.polytech.unice.fr/soa1/cookbook/" elementFormDefault="unqualified" targetNamespace="http://informatique.polytech.unice.fr/soa1/cookbook/" version="1.0">
+<xs:element name="recherche" type="tns:recherche"/>
+<xs:element name="rechercheResponse" type="tns:rechercheResponse"/>
+<xs:complexType name="recherche">
+<xs:sequence>
+<xs:element minOccurs="0" name="lieu" type="xs:string"/>
+<xs:element name="dure" type="xs:int"/>
+<xs:element name="arg2" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="rechercheResponse">
+<xs:sequence>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="recherche_hotel" type="tns:hotel"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="hotel">
+<xs:sequence>
+<xs:element minOccurs="0" name="identifier" type="xs:string"/>
+<xs:element minOccurs="0" name="lieu" type="xs:string"/>
+<xs:element minOccurs="0" name="nom" type="xs:string"/>
+<xs:element name="prix" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
+</wsdl:types>
+<wsdl:message name="rechercheResponse">
+<wsdl:part element="tns:rechercheResponse" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="recherche">
+<wsdl:part element="tns:recherche" name="parameters"></wsdl:part>
+</wsdl:message>
+<wsdl:portType name="HotelFinderService">
+<wsdl:operation name="recherche">
+<wsdl:input message="tns:recherche" name="recherche"></wsdl:input>
+<wsdl:output message="tns:rechercheResponse" name="rechercheResponse"></wsdl:output>
+</wsdl:operation>
+</wsdl:portType>
+<wsdl:binding name="ExternalHotelFinderServiceSoapBinding" type="tns:HotelFinderService">
+<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+<wsdl:operation name="recherche">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="recherche">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="rechercheResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:service name="ExternalHotelFinderService">
+<wsdl:port binding="tns:ExternalHotelFinderServiceSoapBinding" name="ExternalHotelFinderPort">
+<soap:address location="http://localhost:9010/hotel-rpc/ExternalHotelFinderService"/>
+</wsdl:port>
+</wsdl:service>
+</wsdl:definitions>

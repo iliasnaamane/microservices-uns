@@ -22,12 +22,14 @@
         <activemq.version>5.7.0</activemq.version>
         <jsonassert.version>1.5.0</jsonassert.version>
         <bundle.symbolicName>${project.artifactId}</bundle.symbolicName>
-        <bundle.namespace>fr.unice.polytech.esb.flows</bundle.namespace>
+        <bundle.namespace>esb.flows</bundle.namespace>
     </properties>
 
     <modules>
         <module>flows</module>
+        <!-- <module>business</module> -->
     </modules>
+
 
     <dependencies>
         <dependency>
