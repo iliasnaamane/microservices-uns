@@ -53,26 +53,8 @@ public class HotelFlow extends RouteBuilder {
                 .to(LETTER_OUTPUT_DIR+"?fileName=cheapHotel.txt")
         ;
 
-/*
-         from(CSV_INPUT_FILE_CAR)
-            .routeId("csv-input-car")
-            .routeDescription("Loads a CSV containg request")
-            .log("Processing ${file:name}")
-            .unmarshal(CsvFormat.buildCsvFormat())
-            .log("Loading the file as a CSV document")
-            .split(body())
-                .parallelProcessing().executorService(WORKERS)
-                .process(csv2Request)
-            .to(SEARCH_CAR);
-        
-        from(SEARCH_CAR)
-            .routeId("search-car")
-            .routeDescription("Call the car rental service")
-            .log("Processing ${file:name}")
-            .bean(CarRentalHelper.class, "buildGetCarsRequest(${body})")
-            .inOut(CAR_RPC_ENDPOINT)
-            .log("THIS IS SPARTA")
-                ;*/
+
+
                 
         from(SEARCH_HOTEL_2)
             .routeId("request-to-hotelrest")
@@ -84,24 +66,12 @@ public class HotelFlow extends RouteBuilder {
                 .process(HotelSearchHelper.RequestREST)
                 .inOut(HOTEL_EXTERNAL_REST_ENDPOINT)
                 .unmarshal().string()
-                .to(LETTER_OUTPUT_DIR+"?fileName=cheapHotelExtern.txt")
-                
-                
+                .to(LETTER_OUTPUT_DIR+"?fileName=cheapHotelExtern.txt")   
         ;
+
+        
        
     }
-
-   /* private static   Processor csv2Request = (Exchange exchange)-> {
-    System.out.println("csv2Request");
-    Map<String, Object> data = (Map<String, Object>) exchange.getIn().getBody();
-    Request req = new Request();
-    req.setPlace((String)data.get("place"));
-    req.setDateStart((String)data.get("dateStart"));
-    req.setDateEnd((String)data.get("dateEnd"));
-    System.out.println(req.toString());
-    exchange.getIn().setBody(req);
-    System.out.println("Fin csv2Request");
-    };*/
     
    /* private static   Processor listToCheapHotel = (Exchange exchange)-> {
         System.out.println("listHotelsToCheapHotel");
