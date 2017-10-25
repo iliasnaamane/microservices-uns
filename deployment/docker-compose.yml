@@ -3,10 +3,11 @@ version: '2'
 services:
   
 
-  #hotels:
-  #  image: soa-team-1/hotels
-  #  ports:
-  #    - "8003:8080"
+  hotels:
+    container_name: tcs-hotel-rpc
+    image: soa-team-1/hotels
+    ports:
+      - "8003:8080"
   hotel-rpc:                
     container_name: hotel-rpc
     image: result/hotel-rpc
