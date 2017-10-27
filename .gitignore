@@ -1,6 +1,5 @@
-# Dependency directory
-#services/resourceBusinessTravel/node_modules
-deployment/mongo_data
-services/rpc/businesstravel
-/services/vol/target/
+#deployment/mongo_data
+/services/vols/target/
 /services/externals/hotels/target/
+/services/carRPC/target/
+/services/hotelRPC/target/
