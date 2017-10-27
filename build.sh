@@ -20,6 +20,14 @@ build hotelRPC result/hotel-rpc
 build carRPC result/car-rpc
 build resourceBusinessTravel result/businesstravel-resource
 
+cd services
+cd externals
+build hotels soa-team-1/hotels
+cd ..
+cd ..
+
+
+
 #cd ..
 #cd integration
 #cd esb

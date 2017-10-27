@@ -10,8 +10,8 @@
     <name>ESB :: Services :: Hotels</name>
 
     <parent>
-      <groupId>fr.unice.polytech.esb</groupId>
-      <artifactId>services</artifactId>
+      <groupId>projet-integration</groupId>
+      <artifactId>rootExt</artifactId>
       <version>1.0</version>
     </parent>
 
