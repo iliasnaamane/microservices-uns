@@ -43,7 +43,13 @@ services:
       - MONGODB_DATABASE=BusinessTravelDB
     ports:
       - "27017:27017"
-  
+  flightreservation-registry:               # Flight reservation registry, on port 9080
+     container_name: flightreservation
+     image: matthieugenovese/flightreservation-document
+     depends_on:
+       - database
+     ports:
+       - "9080:8080"
 
   #integration-bus:  # To attach to this container at runtime: docker exec -it tcs-bus sh
     #container_name: tcs-bus

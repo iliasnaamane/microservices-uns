@@ -24,7 +24,7 @@ public class Endpoints {
     public static final String HOTEL_EXTERNAL_REST_ENDPOINT = "http://localhost:8003/tcs-hotel-service/hotels";
 //public static final String HOTEL_RPC_WSDL_URL = "http://localhost:9010/hotel-rpc/ExternalHotelFinderService?wsdl&";
 
-    public static final String CAR_RPC_ENDPOINT = "http:car-rpc:8080/car-rpc/ExternalCarRentalService";
+    public static final String CAR_RPC_ENDPOINT = "http://localhost:9020/car-rpc/ExternalCarRentalService";
 
     //public static final String HOTEL_RPC_WSDL_URL = "http://localhost:9010/hotel-rpc/ExternalHotelFinderService?wsdl&";
 

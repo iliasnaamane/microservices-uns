@@ -28,7 +28,7 @@ public class CarFlow extends RouteBuilder {
     @Override
     public void configure() throws Exception {
 
-         from(CSV_INPUT_FILE_CAR)
+        from(CSV_INPUT_FILE_CAR)
         .routeId("csv-input-car")
         .routeDescription("Loads a CSV containg request")
         .log("Processing ${file:name}")
