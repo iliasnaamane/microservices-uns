@@ -1,0 +1,7 @@
+src
+*.log
+.gitignore
+package-lock.json
+yarn.lock
+.babelrc
+Dockerfile

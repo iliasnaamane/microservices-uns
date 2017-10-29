@@ -1,0 +1,24 @@
+{
+  "name": "cars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "serve": "node lib/index.js",
+    "start": "nodemon src/index.js --exec babel-node",
+    "test": "mocha test/**/*.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "morgan": "^1.8.2",
+    "restify": "^6.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-native": "^4.0.0",
+    "nodemon": "^1.12.1"
+  }
+}
