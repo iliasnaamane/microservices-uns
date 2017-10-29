@@ -23,8 +23,11 @@ build resourceBusinessTravel result/businesstravel-resource
 cd services
 cd externals
 build hotels soa-team-1/hotels
+build cars soa-team-2/cars
 cd ..
 cd ..
+
+
 
 
 
