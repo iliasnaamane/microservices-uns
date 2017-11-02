@@ -7,11 +7,11 @@ package esb.flows.implem;
 
 
 import esb.flows.implem.data.Request;
-import esb.flows.implem.utils.CarRentalHelper;
+import esb.flows.implem.utils.Helpers.CarRentalHelper;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import org.apache.camel.builder.RouteBuilder;
-import esb.flows.implem.utils.CsvFormat;
+import esb.flows.implem.utils.Helpers.CsvFormat;
 import static esb.flows.implem.utils.Endpoints.*;
 import java.util.Map;
 

@@ -9,9 +9,10 @@ package esb.flows.implem;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import org.apache.camel.builder.RouteBuilder;
-import esb.flows.implem.utils.CsvFormat;
+import esb.flows.implem.utils.Helpers.CsvFormat;
 import static esb.flows.implem.utils.Endpoints.*;
-import esb.flows.implem.utils.HotelSearchHelper;
+import esb.flows.implem.utils.Helpers.HotelSearchHelper;
+import esb.flows.implem.utils.Strategies.HotelStrategy;
 import org.apache.camel.Exchange;
 
 
@@ -50,7 +51,7 @@ public class HotelFlow extends RouteBuilder {
                 .routeDescription("send request data from queue to service")
                 .log(body().toString())
                 .process(HotelSearchHelper.RequestRPC)
-                .to(LETTER_OUTPUT_DIR+"?fileName=cheapHotel.txt")
+                .to(AGGREGATION_HOTEL)
         ;
 
 
@@ -66,11 +67,33 @@ public class HotelFlow extends RouteBuilder {
                 .process(HotelSearchHelper.RequestREST)
                 .inOut(HOTEL_EXTERNAL_REST_ENDPOINT)
                 .unmarshal().string()
-                .to(LETTER_OUTPUT_DIR+"?fileName=cheapHotelExtern.txt")   
+                .process(HotelSearchHelper.json2CheapHotel)
+                .to(AGGREGATION_HOTEL)   
         ;
-
         
-       
+        from(AGGREGATION_HOTEL)
+            .routeId("aggregation-hotel")
+                .routeDescription("send request ")
+                .log(body().toString())
+                .aggregate(constant(true),new HotelStrategy())
+                .completionSize(2)
+                .process(HotelSearchHelper.hotel2Json)
+                .unmarshal().string()
+                .to(BUSINESS_TRAVEL_REST)
+                
+        ;
+        
+        from(BUSINESS_TRAVEL_REST)
+           .routeId("business-rest-call")
+              .routeDescription("send request to rest service")
+              .log(body().toString())
+                .setHeader(Exchange.HTTP_METHOD, constant("POST")) 
+                .setHeader("Content-Type", constant("application/json"))
+                .setHeader("Accept", constant("application/json"))
+                .inOut(BUSINESS_TRAVEL_ENDPOINT)
+                .unmarshal().string()
+                .to(LETTER_OUTPUT_DIR+"?fileName=output.txt")
+        ;
     }
     
    /* private static   Processor listToCheapHotel = (Exchange exchange)-> {

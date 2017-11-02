@@ -16,7 +16,9 @@ public class Endpoints {
     // direct endpoints
     public static final String SEARCH_HOTEL_1 = "direct:search-hotel-1";
     public static final String SEARCH_HOTEL_2 = "direct:search-hotel-2";
+    public static final String AGGREGATION_HOTEL = "direct:aggregation-hotel";
     public static final String SEARCH_CAR = "direct:search-car";
+    public static final String BUSINESS_TRAVEL_REST = "direct:businesstravel-rest";
 
     //services endpoints
     public static final String HOTEL_RPC_ENDPOINT = "http://localhost:9010/hotel-rpc/ExternalHotelFinderService";
@@ -25,6 +27,8 @@ public class Endpoints {
 //public static final String HOTEL_RPC_WSDL_URL = "http://localhost:9010/hotel-rpc/ExternalHotelFinderService?wsdl&";
 
     public static final String CAR_RPC_ENDPOINT = "http://localhost:9020/car-rpc/ExternalCarRentalService";
+    
+    public static final String BUSINESS_TRAVEL_ENDPOINT = "http://localhost:9040/travels";
 
     //public static final String HOTEL_RPC_WSDL_URL = "http://localhost:9010/hotel-rpc/ExternalHotelFinderService?wsdl&";
 

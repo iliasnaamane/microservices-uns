@@ -1,7 +1,15 @@
 version: '2'
 
 services:
-
+  database:
+    image: mongo
+    container_name: tcs-database
+    volumes:
+      - "./mongo_data:/data/db"
+    environment:
+      - MONGODB_DATABASE=BusinessTravelDB
+    ports:
+      - "27017:27017"
   cars:
     container_name: tcs-cars
     image: soa-team-2/cars
@@ -38,34 +46,35 @@ services:
       - database
     environment:
       - MONGODB_ADDRESS=database
-  database:
-    image: mongo
-    container_name: database-container
-    volumes:
-      - "./mongo_data:/data/db"
-    environment:
-      - MONGODB_DATABASE=BusinessTravelDB
-    ports:
-      - "27017:27017"
+  
   flightreservation-registry:               # Flight reservation registry, on port 9080
-     container_name: flightreservation
-     image: matthieugenovese/flightreservation-document
-     depends_on:
-       - database
-     ports:
-       - "9080:8080"
+    container_name: flightreservation
+    image: matthieugenovese/flightreservation-document
+    depends_on:
+      - database
+    ports:
+     - "9080:8080"
 
   #integration-bus:  # To attach to this container at runtime: docker exec -it tcs-bus sh
-    #container_name: tcs-bus
-    #image: petitroll/tcs-bus
+    #container_name: wow-bus
+    #image: iliasnaamane/wow-bus
     #volumes:
      # - "./camel_input:/servicemix/camel/input"
-     # - "./camel_output:/servicemix/camel/output"
-    #ports:
-      #- "8181:8181"
-      #- "8101:8101"
-     # - "1099:1099"
-     # - "61616:61616"
-     # - "44444:44444"
+          #-  - "./camel_output:/servicemix/camel/output"
+    #depends_on:
+      #- flightreservation-registry
+        #-    - database
+           #- - tcs-businesstravel-service
+           #- - vols-document
+           #- - car-rpc
+           #- - hotel-rpc
+          #-  - hotels
+          #-  - cars
+          #-ports:
+            #-- "8181:8181"
+           #-      #- - "8101:8101"
+            #-- "1099:1099"
+            #-- "61616:61616"
+           #- - "44444:44444"
 
  

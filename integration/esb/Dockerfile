@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk-alpine
 
-# Build:                docker build -t petitroll/esb . # Consider --no-cache if necessary
+# Build:                docker build --no-cache -t iliasnaamane/esb . # Consider --no-cache if necessary
 # Interactive run:      docker run -it --entrypoint "sh" petitroll/esb
 
 # Installing service mix from the Apache French Mirror
@@ -18,6 +18,3 @@ RUN ./install-deps.sh
 
 # Port exposition
 EXPOSE 8181 8101 1099 61616 44444
-
-# Starting ServiceMix
-ENTRYPOINT ["./bin/servicemix"]
