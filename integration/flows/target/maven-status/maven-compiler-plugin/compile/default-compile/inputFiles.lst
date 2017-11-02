@@ -1,9 +1,10 @@
 /Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/esb/flows/implem/utils/Endpoints.java
-/Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/esb/flows/implem/utils/Helpers/HotelSearchHelper.java
 /Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/esb/flows/implem/data/CheapHotel.java
 /Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/stubs/hotel_rpc/HotelFinderService.java
+/Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/esb/flows/implem/VolsFlow.java
 /Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/esb/flows/implem/data/HotelSpec.java
 /Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/stubs/hotel_rpc/Recherche.java
+/Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/esb/flows/implem/data/VolsRequest.java
 /Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/esb/flows/implem/HotelFlow.java
 /Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/esb/flows/implem/utils/Helpers/CsvFormat.java
 /Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/esb/flows/implem/utils/Strategies/HotelStrategy.java
@@ -12,8 +13,12 @@
 /Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/esb/flows/implem/CarFlow.java
 /Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/esb/flows/implem/data/CheapHotelExternal.java
 /Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/stubs/hotel_rpc/ObjectFactory.java
+/Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/esb/flows/implem/data/VolResponse.java
+/Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/esb/flows/implem/utils/Helpers/HotelHelper.java
 /Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/stubs/hotel_rpc/RechercheResponse.java
 /Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/esb/flows/implem/data/Request.java
+/Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/esb/flows/implem/data/vol.java
 /Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/stubs/hotel_rpc/ExternalHotelFinderService.java
 /Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/stubs/hotel_rpc/Hotel.java
+/Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/esb/flows/implem/utils/Processors/HotelProcessors.java
 /Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/stubs/hotel_rpc/package-info.java

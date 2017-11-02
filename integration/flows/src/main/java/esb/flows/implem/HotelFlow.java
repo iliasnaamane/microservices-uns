@@ -11,7 +11,7 @@ import java.util.concurrent.Executors;
 import org.apache.camel.builder.RouteBuilder;
 import esb.flows.implem.utils.Helpers.CsvFormat;
 import static esb.flows.implem.utils.Endpoints.*;
-import esb.flows.implem.utils.Helpers.HotelSearchHelper;
+import esb.flows.implem.utils.Processors.HotelProcessors;
 import esb.flows.implem.utils.Strategies.HotelStrategy;
 import org.apache.camel.Exchange;
 
@@ -33,7 +33,7 @@ public class HotelFlow extends RouteBuilder {
                 .log("Loading the file as a CSV document")
                 .split(body())
                     .parallelProcessing().executorService(WORKERS)
-                        .process(HotelSearchHelper.cv2hotelSpec)
+                        .process(HotelProcessors.cv2hotelSpec)
                 .log("I am here")
                 .to(BUILD_HOTEL_SPEC)
                
@@ -50,7 +50,7 @@ public class HotelFlow extends RouteBuilder {
             .routeId("request-to-hotelrpc-1")
                 .routeDescription("send request data from queue to service")
                 .log(body().toString())
-                .process(HotelSearchHelper.RequestRPC)
+                .process(HotelProcessors.RequestRPC)
                 .to(AGGREGATION_HOTEL)
         ;
 
@@ -64,10 +64,10 @@ public class HotelFlow extends RouteBuilder {
                 .log("request to external hotel rest service")
                 .setHeader(Exchange.HTTP_METHOD, constant("GET"))
                 .setHeader("Accept", constant("application/json"))
-                .process(HotelSearchHelper.RequestREST)
+                .process(HotelProcessors.RequestREST)
                 .inOut(HOTEL_EXTERNAL_REST_ENDPOINT)
                 .unmarshal().string()
-                .process(HotelSearchHelper.json2CheapHotel)
+                .process(HotelProcessors.json2CheapHotel)
                 .to(AGGREGATION_HOTEL)   
         ;
         
@@ -77,7 +77,7 @@ public class HotelFlow extends RouteBuilder {
                 .log(body().toString())
                 .aggregate(constant(true),new HotelStrategy())
                 .completionSize(2)
-                .process(HotelSearchHelper.hotel2Json)
+                .process(HotelProcessors.hotel2Json)
                 .unmarshal().string()
                 .to(BUSINESS_TRAVEL_REST)
                 

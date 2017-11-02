@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package esb.flows.implem.utils.Helpers;
+package esb.flows.implem.utils.Processors;
 
 
 
@@ -12,15 +12,11 @@ import com.google.gson.Gson;
 import esb.flows.implem.data.CheapHotel;
 import esb.flows.implem.data.CheapHotelExternal;
 import esb.flows.implem.data.HotelSpec;
-import static esb.flows.implem.utils.Endpoints.HOTEL_RPC_ENDPOINT;
-import java.net.MalformedURLException;
-import java.net.URL;
+import esb.flows.implem.utils.Helpers.HotelHelper;
 import java.util.ArrayList;
 import java.util.Map;
-import javax.xml.ws.BindingProvider;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
-import stubs.hotel_rpc.ExternalHotelFinderService;
 import stubs.hotel_rpc.Hotel;
 import stubs.hotel_rpc.HotelFinderService;
 
@@ -29,7 +25,7 @@ import stubs.hotel_rpc.HotelFinderService;
  *
  * @author iliasnaamane
  */
-public class HotelSearchHelper {
+public class HotelProcessors {
     
     /**
      *  transform cheapest hotel from both services to Json 
@@ -122,7 +118,7 @@ public class HotelSearchHelper {
      */
     public static Processor RequestRPC = (Exchange exchange) -> {
         HotelSpec hs = (HotelSpec) exchange.getIn().getBody();
-        HotelFinderService hf = HotelSearchHelper.getWS();
+        HotelFinderService hf = HotelHelper.getWS();
         ArrayList<Hotel> response = new ArrayList<Hotel>();
         response = (ArrayList<Hotel>) hf.recherche(hs.getDest(), hs.getDuration(), true);
         int min_value = Integer.MAX_VALUE;
@@ -157,18 +153,7 @@ public class HotelSearchHelper {
         
     };
     
-    public static  HotelFinderService getWS() {
-        URL wsdl=null;
-        try {
-            wsdl = new URL("http://localhost:9010/hotel-rpc/ExternalHotelFinderService?wsdl");
-        } catch (MalformedURLException ex) {
-            ex.printStackTrace();
-        }
-        ExternalHotelFinderService factory = new ExternalHotelFinderService(wsdl);
-        HotelFinderService ws = factory.getExternalHotelFinderPort();
-        String address = HOTEL_RPC_ENDPOINT;
-        return ws;
-    }
+    
     
     
    

@@ -1,5 +1,0 @@
-{
-       "id_hotel":"3-service-1,
-       "nights":3,
-       "price":225
-       }

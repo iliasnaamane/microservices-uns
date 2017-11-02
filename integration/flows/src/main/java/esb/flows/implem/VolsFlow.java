@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import org.apache.camel.builder.RouteBuilder;
-import esb.flows.implem.utils.CsvFormat;
+import esb.flows.implem.utils.Helpers.CsvFormat;
 import static esb.flows.implem.utils.Endpoints.*;
 import java.io.IOException;
 import org.apache.camel.Exchange;
