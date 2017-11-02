@@ -49,25 +49,26 @@ public class vol_collection {
 	
 	 static JSONObject One_Way_Price (JSONObject input,String aller) {
 		 JSONObject vols=new JSONObject();		
-		 vols.put("Outbound", list(input,aller,"PRICE"));		 
-		 return new JSONObject().put("Flights", vols);
+		 vols.put("Outbound", list(input,aller,"PRICE"));
+                
+		 return vols;
 	    }
 	 static JSONObject One_Way_Rating (JSONObject input,String aller) {
 		 	JSONObject vols=new JSONObject();	 
 		 	vols.put("Outbound", list(input,aller,"RATING"));
-			return new JSONObject().put("Flights", vols);
+			 return vols;
 	    }
 	 static JSONObject One_Way_Duration (JSONObject input,String aller) {
 		 JSONObject vols=new JSONObject();
 		 vols.put("Outbound", list(input,aller,"DURATION"));
-		 return new JSONObject().put("Flights", vols);
+		 return vols;
 	    }
 	 static JSONObject One_Way_Stops (JSONObject input,String aller) {
 		 JSONObject vols=new JSONObject();
 		
 		 vols.put("Outbound", list(input,aller,"STOPS"));
 		 
-	        return new JSONObject().put("Flights", vols);
+	        return vols;
 	    }
 	 static JSONObject Return_Price (JSONObject input,String aller,String retour) {
 		 JSONObject vols=new JSONObject();
@@ -75,7 +76,7 @@ public class vol_collection {
 		 vols.put("Outbound", list(input,aller,"PRICE"));
 		 vols.put("Return", list(input,retour,"PRICE"));
 		 
-		 return new JSONObject().put("Flights", vols);
+		 return vols;
 	    }
 	 static JSONObject Return_Rating (JSONObject input,String aller,String retour) {
 		 JSONObject vols=new JSONObject();
@@ -83,7 +84,7 @@ public class vol_collection {
 		 vols.put("Outbound", list(input,aller,"RATING"));
 		 vols.put("Return", list(input,retour,"RATING"));
 		 
-		 return new JSONObject().put("Flights", vols);
+		 return vols;
 	    } 
 	 static JSONObject Return_Duration (JSONObject input,String aller,String retour) {
 		 JSONObject vols=new JSONObject();
@@ -92,7 +93,7 @@ public class vol_collection {
 		 vols.put("Outbound", list(input,aller,"DURATION"));
 		 vols.put("Return", list(input,retour,"DURATION"));
 		 
-		 return new JSONObject().put("Flights", vols);
+		 return vols;
 	    } 
 	 static JSONObject Return_Stops (JSONObject input,String aller,String retour) {
 		 JSONObject vols=new JSONObject();
@@ -100,10 +101,10 @@ public class vol_collection {
 		 vols.put("Outbound", list(input,aller,"STOPS"));
 		 vols.put("Return", list(input,retour,"STOPS"));
 		 
-		 return new JSONObject().put("Flights", vols);
+		 return vols;
 	    }
 	 
-	 static JSONObject list(JSONObject input,String aller,String sortBy) {
+	 static JSONArray list(JSONObject input,String aller,String sortBy) {
 		 String from=input.getString("from");
 		 String to=input.getString("to");
 		 String date=aller;
@@ -122,13 +123,13 @@ public class vol_collection {
 	       case"STOPS":Collections.sort(vols_coll, new Comparateur_NB_ESCALES());break;
 	       default :Collections.sort(vols_coll, new Comparateur_ID());break;
 	       }
-	       JSONArray contents = new JSONArray();
+	       JSONArray contents = new JSONArray();            
 	        for(int i=0 ; i<vols_coll.size();i++) 
 	        {
-	        	contents.put(vols_coll.get(i).toJson());        	
+	        	contents.put(vols_coll.get(i).toJson());      
 	        }    
 
-	        return new JSONObject().put("sorted_flights", contents).put("Number_of_Results", vols_coll.size()).put("DATE",aller);
+	        return contents;
 	    }
 	
 	private static ArrayList<vol> getVols(String from,String to,String date) {
