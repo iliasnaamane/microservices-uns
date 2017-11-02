@@ -1,4 +1,4 @@
-package esb.flows.implem.data;
+package esb.flows.implem.data.Car;
 
 import java.io.Serializable;
 

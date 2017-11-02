@@ -1,8 +1,8 @@
-package esb.flows.implem.data;
+package esb.flows.implem.data.Car;
 
 import java.io.Serializable;
 
-public class Request implements Serializable {
+public class CarRequest implements Serializable {
 
     private String place;
     private String dateStart;
@@ -22,7 +22,7 @@ public class Request implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Request request = (Request) o;
+        CarRequest request = (CarRequest) o;
 
         if (dateStart != null ? !dateStart.equals(request.dateStart) : request.dateStart != null) return false;
         if (dateEnd != null ? !dateEnd.equals(request.dateEnd) : request.dateEnd != null) return false;

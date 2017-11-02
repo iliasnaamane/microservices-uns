@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package esb.flows.implem.data;
+package esb.flows.implem.data.Hotel;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;

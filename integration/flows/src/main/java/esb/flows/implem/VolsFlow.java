@@ -6,9 +6,9 @@
 package esb.flows.implem;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import esb.flows.implem.data.VolResponse;
-import esb.flows.implem.data.VolsRequest;
-import esb.flows.implem.data.vol;
+import esb.flows.implem.data.Flight.VolResponse;
+import esb.flows.implem.data.Flight.VolsRequest;
+import esb.flows.implem.data.Flight.vol;
 import org.apache.camel.Processor;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;

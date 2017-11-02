@@ -1,4 +1,4 @@
-package esb.flows.implem.data;
+package esb.flows.implem.data.Hotel;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;

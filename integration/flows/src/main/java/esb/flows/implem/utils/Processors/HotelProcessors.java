@@ -9,9 +9,9 @@ package esb.flows.implem.utils.Processors;
 
 
 import com.google.gson.Gson;
-import esb.flows.implem.data.CheapHotel;
-import esb.flows.implem.data.CheapHotelExternal;
-import esb.flows.implem.data.HotelSpec;
+import esb.flows.implem.data.Hotel.CheapHotel;
+import esb.flows.implem.data.Hotel.CheapHotelExternal;
+import esb.flows.implem.data.Hotel.HotelSpec;
 import esb.flows.implem.utils.Helpers.HotelHelper;
 import java.util.ArrayList;
 import java.util.Map;

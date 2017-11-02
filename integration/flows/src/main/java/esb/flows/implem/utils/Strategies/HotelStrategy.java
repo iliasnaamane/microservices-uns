@@ -5,7 +5,7 @@
  */
 package esb.flows.implem.utils.Strategies;
 
-import esb.flows.implem.data.CheapHotel;
+import esb.flows.implem.data.Hotel.CheapHotel;
 import org.apache.camel.Exchange;
 import org.apache.camel.processor.aggregate.AggregationStrategy;
 

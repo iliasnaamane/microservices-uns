@@ -10,7 +10,7 @@
 package esb.flows.implem;
 
 
-import esb.flows.implem.data.Request;
+import esb.flows.implem.data.Car.CarRequest;
 import esb.flows.implem.utils.Helpers.CarRentalHelper;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -57,7 +57,7 @@ public class CarFlow extends RouteBuilder {
    private static   Processor csv2Request = (Exchange exchange)-> {
     System.out.println("csv2Request");
     Map<String, Object> data = (Map<String, Object>) exchange.getIn().getBody();
-    Request req = new Request();
+    CarRequest req = new CarRequest();
     req.setPlace((String)data.get("place"));
     req.setDateStart((String)data.get("dateStart"));
     req.setDateEnd((String)data.get("dateEnd"));
