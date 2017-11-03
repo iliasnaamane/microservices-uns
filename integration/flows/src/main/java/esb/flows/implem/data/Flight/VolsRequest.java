@@ -5,6 +5,7 @@
  */
 package esb.flows.implem.data.Flight;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
@@ -15,10 +16,17 @@ import java.util.Map;
  */
 public class VolsRequest implements Serializable {
     
-      private String Outbound_date;
-  private String from;
-  private String to;
-
+ private String Outbound_date;
+ private String from;
+ private String to;
+   //@JsonProperty private String isDirect;
+  
+    public VolsRequest( Map<String, Object> data )
+    {
+           from=((String) data.get("from"));
+           to=((String) data.get("to"));
+           Outbound_date=((String) data.get("Outbound_date")); 
+    }
 
     public String getOutbound_date() {
         return Outbound_date;
@@ -50,14 +58,24 @@ public class VolsRequest implements Serializable {
          map.put("to",to);
          map.put("from",from);
          map.put("Outbound_date",Outbound_date);
+       //  map.put("isDirect", isDirect);
  
     return map;
     }
 
+//    public String getIsDirect() {
+//        return isDirect;
+//    }
+//
+//    public void setIsDirect(String isDirect) {
+//        this.isDirect = isDirect;
+//    }
+
     @Override
     public String toString() {
-        return "vol{" +" Outbound_date=" + Outbound_date + ", from=" + from + ", to=" + to + '}';
+        return "VolsRequest{" + "Outbound_date=" + Outbound_date + ", from=" + from + ", to=" + to + /*", isDirect=" + isDirect */+ '}';
     }
+
     
  
 }

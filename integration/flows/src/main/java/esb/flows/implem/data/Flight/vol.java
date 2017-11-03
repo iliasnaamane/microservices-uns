@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package esb.flows.implem.data.Flight;
+import com.google.gson.JsonObject;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
@@ -13,34 +14,36 @@ import java.util.Map;
  * @author obisama
  */
 
-public class vol implements Serializable {
-     String date;
-     double   prix;
-     String     cmpny;
-     int       nb_escales;
-     String    destination;
-     double     rating;
-     double      duree;
-     int       id;
-     String    origine;
+public class vol implements Serializable,ItemPriceComparator {
+     String date=null;
+     String prix=null;
+     String cmpny=null;
+     String nb_escales=null;
+     String destination=null;
+     String rating=null;
+     String duree=null;
+     String id=null;
+     String origine=null;
 
     @Override
     public String toString() {
-        return "Cheapestflight {" + "'date'='" + date + "', \n"+
+        return "Cheapestflight {" + "\n"+
+                "'date'='" + date + "', \n"+
                 "'prix'='" + prix + "', \n"+
+                "'origine'='" + origine +"' , \n"+
+                "'destination'='" + destination + "', \n"+
+                "'id'='" + id + "', \n"+
                 "'cmpny'='" +cmpny + "', \n"+
                 "'nb_escales'='" + nb_escales + "', \n"+
-                "'destination'='" + destination + "', \n"+
                 "'rating'='" + rating + "', \n"+
-                "'duree'='" + duree +"', \n"+
-                "'id'='" + id + "', \n"+
-                "'origine'='" + origine +"' \n"+ '}';
+                "'duree'='" + duree +"' \n"+
+                '}';
     }
 
     public vol() {
     }
 
-    public vol(String date, double prix, String cmpny, int nb_escales, String destination, double rating, double duree, int id, String origine) {
+    public vol(String date, String prix, String cmpny, String nb_escales, String destination, String rating, String duree, String id, String origine) {
         this.date = date;
         this.prix = prix;
         this.cmpny = cmpny;
@@ -51,21 +54,34 @@ public class vol implements Serializable {
         this.id = id;
         this.origine = origine;
     }
-
+       public vol(JsonObject jsn){
+             this.prix=(jsn.get("prix").getAsString());
+             this.destination=(jsn.get("destination").getAsString());
+             this.date=(jsn.get("date").getAsString());
+             this.origine=(jsn.get("origine").getAsString());
+             this.cmpny=(jsn.get("cmpny").getAsString());
+             this.duree=(jsn.get("duree").getAsString());
+             this.id=(jsn.get("id").getAsString());
+             this.nb_escales=(jsn.get("nb_escales").getAsString());
+             this.rating=(jsn.get("rating").getAsString());
+       }
+   
      
     public String getDate() {
         return date;
     }
+    
+ 
 
     public void setDate(String date) {
         this.date = date;
     }
 
-    public double getPrix() {
+    public String getPrix() {
         return prix;
     }
 
-    public void setPrix(double prix) {
+    public void setPrix(String prix) {
         this.prix = prix;
     }
 
@@ -77,11 +93,11 @@ public class vol implements Serializable {
         this.cmpny = cmpny;
     }
 
-    public int getNb_escales() {
+    public String getNb_escales() {
         return nb_escales;
     }
 
-    public void setNb_escales(int nb_escales) {
+    public void setNb_escales(String nb_escales) {
         this.nb_escales = nb_escales;
     }
 
@@ -93,27 +109,27 @@ public class vol implements Serializable {
         this.destination = destination;
     }
 
-    public double getRating() {
+    public String getRating() {
         return rating;
     }
 
-    public void setRating(double rating) {
+    public void setRating(String rating) {
         this.rating = rating;
     }
 
-    public double getDuree() {
+    public String getDuree() {
         return duree;
     }
 
-    public void setDuree(double duree) {
+    public void setDuree(String duree) {
         this.duree = duree;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -124,5 +140,11 @@ public class vol implements Serializable {
     public void setOrigine(String origine) {
         this.origine = origine;
     }
+
+    @Override
+    public String getPrice() {
+    return prix+"";
+    }
 }
+
 
