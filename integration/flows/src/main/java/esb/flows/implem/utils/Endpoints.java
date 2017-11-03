@@ -2,14 +2,14 @@ package esb.flows.implem.utils;
 
 public class Endpoints {
     // file inputs
-    public static final String CSV_INPUT_FILE_HOTEL = "file:/home/obisama/Desktop/finalfinal/microservices-uns/finalfinal/microservices-uns/integration/input"
+    public static final String CSV_INPUT_FILE_HOTEL = "file:/Users/iliasnaamane/microservices-uns/integration/input"
             + "?fileName=hotels.csv" ;
-     public static final String CSV_INPUT_FILE_CAR = "file:/home/obisama/Desktop/finalfinal/microservices-uns/finalfinal/microservices-uns/integration/input"
+     public static final String CSV_INPUT_FILE_CAR = "file:/Users/iliasnaamane/microservices-uns/integration/input"
             + "?fileName=car.csv" ;
-    public static final String CSV_INPUT_FILE_VOLS ="file:/home/obisama/Desktop/finalfinal/microservices-uns/finalfinal/microservices-uns/integration//input" 
+    public static final String CSV_INPUT_FILE_VOLS ="file:/Users/iliasnaamane/microservices-uns/integration/input" 
             + "?fileName=vol.csv" ;;
     // file outputs
-    public static final String LETTER_OUTPUT_DIR = "file:/home/obisama/Desktop/finalfinal/microservices-uns/finalfinal/microservices-uns/integration/output";
+    public static final String LETTER_OUTPUT_DIR = "file:/Users/iliasnaamane/microservices-uns/integration/output";
     
     // activemq endpoints
     public static final String BUILD_HOTEL_SPEC = "activemq:handle-hotel-spec";

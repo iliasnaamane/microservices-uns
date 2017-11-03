@@ -80,9 +80,10 @@ public class VolsFlow extends RouteBuilder {
                 .setHeader("Accept", constant("application/json"))
                 .log("Before Process reqRestservB ::::: "+body().toString())
                 .process(reqRestservB)
+                 
                 .inOut(VOLS_EXTERNAL_JAXRS_ENDPOINT) 
                 .unmarshal().string()
-                .process(Answer2ToFlight)
+               // .process(Answer2ToFlight)
                 //.marshal().json(JsonLibrary.Jackson)
                 .to(LETTER_OUTPUT_DIR+"?fileName=vols2.txt")
         ;
@@ -139,6 +140,7 @@ public class VolsFlow extends RouteBuilder {
     
      private static Processor reqRestservB = (Exchange exchange) -> { 
         VolsRequest req = (VolsRequest) exchange.getIn().getBody();
+        System.out.println("helloooo");
         String[] date2format = req.getOutbound_date().split("-");
         String dateformat2 = (date2format[2] + "-" + date2format[1] + "-" + date2format[0]);
 //      if( req.getIsDirect()==null)
@@ -149,6 +151,7 @@ public class VolsFlow extends RouteBuilder {
                                       "\"date\":\"" + dateformat2+"\","+
                                       "\"isDirect\": " + "false"+
                         "}}";
+        System.out.println(request);
      
 //     }
 //      else{
@@ -159,7 +162,7 @@ public class VolsFlow extends RouteBuilder {
 //                                      "\"isDirect\": " + req.getIsDirect() +
 //                        "}}";
 //      }
-         exchange.getIn().setBody(req);
+         exchange.getIn().setBody(request);
     };
     
 
