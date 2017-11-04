@@ -5,45 +5,36 @@ var Schema = mongoose.Schema;
 var BusinessTravelSchema = new Schema({
   email: String,
   destination: String,
+  start:Date,
+  end:Date,
   approved: {
     type:Boolean,
     default: false
   },
-  flights:[
+  flight:
     {
-      id_flight:String,
-      departDate:Date,
-      returnDate:Date,
-      type_flight:String,
-      from: String,
-      to: String,
+      id_flight: String,
       price: Number
     },
-  ],
+  
 
-  carRentals:[
+  carRental:
     {
-      id_rentcar:String,
-      startDate:Date,
-      endDate:Date,
+      id_rentcar: String,
+      modele: String,
+      marque: String,
+      price: Number
 
-    }],
+    },
 
-   hotels:[
-     {
-       id_hotel:String,
-       nights: Number,
-       price: Number
-     }
+   hotel:
+   {
+      id_hotel:String,
+      hotel_name: String,
+      price: Number
+    }
 
-   ],
-   otherTickets:[
-     {
-       id_ticket: String,
-       description: String,
-       price: Number
-     }
-   ]
+   
 
 
 

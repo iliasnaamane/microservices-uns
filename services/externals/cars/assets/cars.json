@@ -2193,5 +2193,19 @@
       }
     ],
     "priceperday": 40.1
+  },
+  {
+    "id": 100,
+    "make": "Mercedes-Benz",
+    "model": "S-Class",
+    "year": 1987,
+    "agency": {
+      "name": "Voomm",
+      "address": "79121 Merrick Street",
+      "city": "Paris",
+      "country": "France"
+    },
+    "bookings": [],
+    "priceperday": 77.3
   }
 ]

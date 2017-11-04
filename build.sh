@@ -20,10 +20,18 @@ build hotelRPC result/hotel-rpc
 build carRPC result/car-rpc
 build resourceBusinessTravel result/businesstravel-resource
 
-cd services
+#cd services
 cd externals
-build hotels soa-team-1/hotels
+cd cars 
+npm i 
+npm run build
+cd ..
+
 build cars soa-team-2/cars
+
+build hotels soa-team-1/hotels
+
+
 cd ..
 cd ..
 

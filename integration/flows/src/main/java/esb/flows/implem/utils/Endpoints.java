@@ -5,7 +5,7 @@ public class Endpoints {
     public static final String CSV_INPUT_FILE_HOTEL = "file:/Users/iliasnaamane/microservices-uns/integration/input"
             + "?fileName=hotels.csv" ;
      public static final String CSV_INPUT_FILE_CAR = "file:/Users/iliasnaamane/microservices-uns/integration/input"
-            + "?fileName=car.csv" ;
+            + "?fileName=cars.csv" ;
     public static final String CSV_INPUT_FILE_VOLS ="file:/Users/iliasnaamane/microservices-uns/integration/input" 
             + "?fileName=vol.csv" ;;
     // file outputs
@@ -14,15 +14,18 @@ public class Endpoints {
     // activemq endpoints
     public static final String BUILD_HOTEL_SPEC = "activemq:handle-hotel-spec";
     public static final String BUILD_VOL_QUEUE = "activemq:handle-vol-requests";
+    public static final String BUILD_CAR_QUEUE = "activemq:handle-car-requests";
     
     // direct endpoints
     public static final String SEARCH_HOTEL_1 = "direct:search-hotel-1";
     public static final String SEARCH_HOTEL_2 = "direct:search-hotel-2";
     public static final String AGGREGATION_HOTEL = "direct:aggregation-hotel";
-    public static final String SEARCH_CAR = "direct:search-car";
+    public static final String SEARCH_CAR_1 = "direct:search-car-1";
+    public static final String SEARCH_CAR_2 = "direct:search-car-2";
     public static final String SEARCH_VOLA = "direct:search-vol-serviceA";
     public static final String SEARCH_VOLB = "direct:search-vol-serviceB";
     public static final String VOLS_AGGREGATE = "direct:aggregate-vols";
+    public static final String CARS_AGGREGATE = "direct:aggregate-cars";
     public static final String BUSINESS_TRAVEL_REST = "direct:businesstravel-rest";
 
     
@@ -39,5 +42,6 @@ public class Endpoints {
     
     public static final String VOLS_EXTERNAL_JAXRS_ENDPOINT ="http://localhost:9080/flightreservation-service-document/registry";
     
+    public static final String CAR_EXTERNAL_REST_ENDPOINT = "http://localhost:9090/cars";
     
 }

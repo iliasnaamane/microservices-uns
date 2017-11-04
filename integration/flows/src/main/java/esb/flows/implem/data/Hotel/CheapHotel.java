@@ -16,7 +16,7 @@ import java.io.Serializable;
 public class CheapHotel  implements Serializable {
     @JsonProperty private String identifier;
     @JsonProperty private int duration;
-    @JsonProperty private int totalPrice;
+    @JsonProperty private int price;
     
     
 
@@ -29,8 +29,8 @@ public class CheapHotel  implements Serializable {
     }
 
 
-    public int getTotalPrice() {
-        return totalPrice;
+    public int getPrice() {
+        return price;
     }
     
    
@@ -43,13 +43,13 @@ public class CheapHotel  implements Serializable {
         this.duration = duration;
     }
 
-    public void setTotalPrice(int totalPrice) {
-        this.totalPrice = totalPrice;
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     @Override
     public String toString() {
-        return "CheapHotel{" + "identifier=" + identifier + ", duration=" + duration + ", totalPrice=" + totalPrice + '}';
+        return "CheapHotel{" + "identifier=" + identifier + ", duration=" + duration + ", price=" + price + '}';
     }
     
     

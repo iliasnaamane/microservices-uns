@@ -83,17 +83,7 @@ public class HotelFlow extends RouteBuilder {
                 
         ;
         
-        from(BUSINESS_TRAVEL_REST)
-           .routeId("business-rest-call")
-              .routeDescription("send request to rest service")
-              .log(body().toString())
-                .setHeader(Exchange.HTTP_METHOD, constant("POST")) 
-                .setHeader("Content-Type", constant("application/json"))
-                .setHeader("Accept", constant("application/json"))
-                .inOut(BUSINESS_TRAVEL_ENDPOINT)
-                .unmarshal().string()
-                .to(LETTER_OUTPUT_DIR+"?fileName=output.txt")
-        ;
+        
     }
     
    /* private static   Processor listToCheapHotel = (Exchange exchange)-> {

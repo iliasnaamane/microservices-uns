@@ -10,17 +10,15 @@
 package esb.flows.implem;
 
 
-import esb.flows.implem.data.Car.CarRequest;
-import esb.flows.implem.utils.Helpers.CarRentalHelper;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import org.apache.camel.builder.RouteBuilder;
 import esb.flows.implem.utils.Helpers.CsvFormat;
 import static esb.flows.implem.utils.Endpoints.*;
-import java.util.Map;
+import esb.flows.implem.utils.Processors.CarProcessors;
+import esb.flows.implem.utils.Strategies.CarStrategy;
 
 import org.apache.camel.Exchange;
-import org.apache.camel.Processor;
 
 
 /**
@@ -40,30 +38,60 @@ public class CarFlow extends RouteBuilder {
         .log("Loading the file as a CSV document")
         .split(body())
             .parallelProcessing().executorService(WORKERS)
-            .process(csv2Request)
-        .to(SEARCH_CAR);
+            .process(CarProcessors.csv2Request)
+        .to(BUILD_CAR_QUEUE);
+        
+        
+        from(BUILD_CAR_QUEUE)
+          .routeId("car queue")
+                .routeDescription("car request queue")
+                .log("we are in the car request queue")
+                .multicast()
+                .to(SEARCH_CAR_1,SEARCH_CAR_2)
+        ;
     
-        from(SEARCH_CAR)
-            .routeId("search-car")
-            .routeDescription("Call the car rental service")
+        from(SEARCH_CAR_1)
+            .routeId("search-car-1")
+            .routeDescription("Call our car rental RPC service")
             .log("Processing ${file:name}")
-            .bean(CarRentalHelper.class, "buildGetCarsRequest(${body})")
+            .setHeader(Exchange.HTTP_METHOD, constant("POST"))
+            .setHeader("Content-Type", constant("text/xml"))
+            .process(CarProcessors.RequestRPC)
             .inOut(CAR_RPC_ENDPOINT)
-            .log("THIS IS SPARTA")
-                ;
+            .unmarshal().string()
+            .process(CarProcessors.consolidateResponse)
+            .to(CARS_AGGREGATE); 
+        
+        from(SEARCH_CAR_2)
+            .routeId("search-car-2")
+                .routeDescription("Call external rental REST service ")
+                .setHeader(Exchange.HTTP_METHOD, constant("GET"))
+                .setHeader("Accept", constant("application/json"))
+                .process(CarProcessors.RequestREST)
+                .inOut(CAR_EXTERNAL_REST_ENDPOINT)
+                .unmarshal().string()
+                .process(CarProcessors.json2CarExternalForm)
+                .to(CARS_AGGREGATE) 
+        ;
+        
+        from(CARS_AGGREGATE)
+            .routeId("car-aggregation")
+               .routeDescription("car aggregation route")
+                .log(body().toString())
+                .aggregate(constant(true),new CarStrategy())
+                .completionSize(2)
+                .process(CarProcessors.CarForm2json)
+                .unmarshal().string()
+                .to(BUSINESS_TRAVEL_REST)
+        ;
+        
+       
+        
+        
+        
        
     }
 
-   private static   Processor csv2Request = (Exchange exchange)-> {
-    System.out.println("csv2Request");
-    Map<String, Object> data = (Map<String, Object>) exchange.getIn().getBody();
-    CarRequest req = new CarRequest();
-    req.setPlace((String)data.get("place"));
-    req.setDateStart((String)data.get("dateStart"));
-    req.setDateEnd((String)data.get("dateEnd"));
-    System.out.println(req.toString());
-    exchange.getIn().setBody(req);
-    System.out.println("Fin csv2Request");
-    };
+   
     
 }

@@ -25,6 +25,12 @@ import stubs.hotel_rpc.HotelFinderService;
  *
  * @author iliasnaamane
  */
+
+
+/**
+ * This class contain all hotel processors
+ * 
+ */
 public class HotelProcessors {
     
     /**
@@ -35,7 +41,7 @@ public class HotelProcessors {
          String CheapHotelJson = "{\n" +
 "       \"id_hotel\":\""+cheapHotel.getIdentifier() +"-service-1,\n" +
 "       \"nights\":"+ cheapHotel.getDuration()+",\n" +
-"       \"price\":"+ cheapHotel.getTotalPrice() + "\n" +
+"       \"price\":"+ cheapHotel.getPrice() + "\n" +
 "       }";
         exchange.getIn().setBody(CheapHotelJson);
         
@@ -56,7 +62,7 @@ public class HotelProcessors {
 "     {\n" +
 "       \"id_hotel\":\""+cheapHotel.getIdentifier()+"\",\n" +
 "       \"nights\": "+cheapHotel.getDuration()+",\n" +
-"       \"price\": "+cheapHotel.getTotalPrice()+"\n" +
+"       \"price\": "+cheapHotel.getPrice()+"\n" +
 "     }\n" +
 "\n" +
 "   ]\n" +
@@ -77,8 +83,7 @@ public class HotelProcessors {
         CheapHotelExternal chExternal = gson.fromJson(jsonObject, CheapHotelExternal.class);
         CheapHotel ch = new CheapHotel();
         ch.setIdentifier("service-2");
-        ch.setDuration(3);
-        ch.setTotalPrice(chExternal.getRoomCost()*3);
+        ch.setPrice(chExternal.getRoomCost());
        
         exchange.getIn().setBody(ch);
         
@@ -113,9 +118,7 @@ public class HotelProcessors {
     };
    
     
-    /**
-     * Processor to return lower price 
-     */
+    
     public static Processor RequestRPC = (Exchange exchange) -> {
         HotelSpec hs = (HotelSpec) exchange.getIn().getBody();
         HotelFinderService hf = HotelHelper.getWS();
@@ -131,11 +134,10 @@ public class HotelProcessors {
             }
         }
         Hotel H = response.get(index);
-        int total_price = hs.getDuration()*min_value;
         CheapHotel CheapHotel = new CheapHotel();
         CheapHotel.setIdentifier(H.getIdentifier());
         CheapHotel.setDuration(hs.getDuration());
-        CheapHotel.setTotalPrice(total_price);
+        CheapHotel.setPrice(min_value);
        /* String CheapHotelJson = "{\n" +
 "       \"id_hotel\":\""+CheapHotel.getIdentifier() +"-service-1,\n" +
 "       \"nights\":"+ hs.getDuration()+",\n" +

@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1509677202089
+Bnd-LastModified: 1509820594233
 Build-Jdk: 1.8.0_121
 Built-By: iliasnaamane
 Bundle-Blueprint: OSGI-INF/blueprint/camel-context.xml
@@ -27,6 +27,7 @@ Import-Package: com.fasterxml.jackson.annotation;version="[2.6,3)",javax
  6,3)",org.apache.camel.component.jms,org.apache.camel.dataformat.csv;ve
  rsion="[2.16,3)",org.apache.camel.model;version="[2.16,3)",org.apache.c
  amel.processor.aggregate;version="[2.16,3)",org.apache.camel.spi;versio
- n="[2.16,3)",org.osgi.service.blueprint;version="[1.0.0,2.0.0)"
+ n="[2.16,3)",org.osgi.service.blueprint;version="[1.0.0,2.0.0)",org.xml
+ .sax
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
 Tool: Bnd-2.4.1.201501161923

@@ -14,7 +14,7 @@ services:
     container_name: tcs-cars
     image: soa-team-2/cars
     ports:
-      - "8004:9060"  
+      - "9090:9060"  
   hotels:
     container_name: tcs-hotel-rpc
     image: soa-team-1/hotels

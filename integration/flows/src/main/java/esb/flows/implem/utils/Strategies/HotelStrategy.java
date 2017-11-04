@@ -16,28 +16,28 @@ import org.apache.camel.processor.aggregate.AggregationStrategy;
 public class HotelStrategy implements AggregationStrategy{
 
     @Override
-    public Exchange aggregate(Exchange internal, Exchange external) {
+    public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
        System.out.println("hello");
-        if(internal == null){
-            internal = external;
+        if(oldExchange == null){
+            oldExchange = newExchange;
             System.out.println("null");
-            return external;
+            return newExchange;
         }
             
-        else if(external != null)  {
-            CheapHotel ch = (CheapHotel)internal.getIn().getBody();
-            CheapHotel che = (CheapHotel)external.getIn().getBody();
-            System.out.println("ch: "+ch.getTotalPrice());
-            System.out.println("che:"+che.getTotalPrice());
-            if(ch.getTotalPrice() > che.getTotalPrice()){
-                internal.getIn().setBody(che);
-                System.out.println("return value : "+internal.getIn().getBody());
-                return internal;
+        else if(newExchange != null)  {
+            CheapHotel ch = (CheapHotel)oldExchange.getIn().getBody();
+            CheapHotel che = (CheapHotel)newExchange.getIn().getBody();
+            System.out.println("ch: "+ch.getPrice());
+            System.out.println("che:"+che.getPrice());
+            if(ch.getPrice() > che.getPrice()){
+                oldExchange.getIn().setBody(che);
+                System.out.println("return value : "+oldExchange.getIn().getBody());
+                return oldExchange;
                
             }     
         }
         
-        return internal;
+        return oldExchange;
             
          
       

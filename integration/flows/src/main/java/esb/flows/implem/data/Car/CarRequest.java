@@ -1,12 +1,13 @@
 package esb.flows.implem.data.Car;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;
 
 public class CarRequest implements Serializable {
 
-    private String place;
-    private String dateStart;
-    private String dateEnd;
+    @JsonProperty private String place;
+    @JsonProperty private String dateStart;
+    @JsonProperty private String dateEnd;
 
     public String getPlace() { return place; }
     public void setPlace(String place) { this.place = place; }
