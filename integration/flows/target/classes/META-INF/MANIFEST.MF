@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1509677202089
-Build-Jdk: 1.8.0_121
-Built-By: iliasnaamane
+Bnd-LastModified: 1509827339809
+Build-Jdk: 1.8.0_131
+Built-By: user
 Bundle-Blueprint: OSGI-INF/blueprint/camel-context.xml
 Bundle-ClassPath: .,gson-2.8.2.jar
 Bundle-ManifestVersion: 2

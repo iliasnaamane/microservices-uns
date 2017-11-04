@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for hotel complex type.
+ * <p>Classe Java pour hotel complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType name="hotel"&gt;
@@ -43,7 +43,7 @@ public class Hotel {
     protected int prix;
 
     /**
-     * Gets the value of the identifier property.
+     * Obtient la valeur de la propriété identifier.
      * 
      * @return
      *     possible object is
@@ -55,7 +55,7 @@ public class Hotel {
     }
 
     /**
-     * Sets the value of the identifier property.
+     * Définit la valeur de la propriété identifier.
      * 
      * @param value
      *     allowed object is
@@ -67,7 +67,7 @@ public class Hotel {
     }
 
     /**
-     * Gets the value of the lieu property.
+     * Obtient la valeur de la propriété lieu.
      * 
      * @return
      *     possible object is
@@ -79,7 +79,7 @@ public class Hotel {
     }
 
     /**
-     * Sets the value of the lieu property.
+     * Définit la valeur de la propriété lieu.
      * 
      * @param value
      *     allowed object is
@@ -91,7 +91,7 @@ public class Hotel {
     }
 
     /**
-     * Gets the value of the nom property.
+     * Obtient la valeur de la propriété nom.
      * 
      * @return
      *     possible object is
@@ -103,7 +103,7 @@ public class Hotel {
     }
 
     /**
-     * Sets the value of the nom property.
+     * Définit la valeur de la propriété nom.
      * 
      * @param value
      *     allowed object is
@@ -115,7 +115,7 @@ public class Hotel {
     }
 
     /**
-     * Gets the value of the prix property.
+     * Obtient la valeur de la propriété prix.
      * 
      */
     public int getPrix() {
@@ -123,7 +123,7 @@ public class Hotel {
     }
 
     /**
-     * Sets the value of the prix property.
+     * Définit la valeur de la propriété prix.
      * 
      */
     public void setPrix(int value) {

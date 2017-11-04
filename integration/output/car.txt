@@ -1,0 +1,10 @@
+<ns2:getCarsByPreferencesResponse xmlns:ns2="http://informatique.polytech.unice.fr/soa1/cookbook/">
+<carSearch_result>
+<idCar>2</idCar>
+<marque>Renaut</marque>
+<modele>Megane</modele>
+<numSerie>0</numSerie>
+<place>Paris</place>
+<prix>61.0</prix>
+</carSearch_result>
+</ns2:getCarsByPreferencesResponse>

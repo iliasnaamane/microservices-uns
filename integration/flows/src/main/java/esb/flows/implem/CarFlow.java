@@ -10,7 +10,7 @@
 package esb.flows.implem;
 
 
-import esb.flows.implem.data.Car.CarRequest;
+
 import esb.flows.implem.utils.Helpers.CarRentalHelper;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -18,7 +18,7 @@ import org.apache.camel.builder.RouteBuilder;
 import esb.flows.implem.utils.Helpers.CsvFormat;
 import static esb.flows.implem.utils.Endpoints.*;
 import java.util.Map;
-
+import esb.flows.implem.utils.Processors.CarProcessors;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 
@@ -40,7 +40,7 @@ public class CarFlow extends RouteBuilder {
         .log("Loading the file as a CSV document")
         .split(body())
             .parallelProcessing().executorService(WORKERS)
-            .process(csv2Request)
+            .process(CarProcessors.csv2Request)
         .to(SEARCH_CAR);
     
         from(SEARCH_CAR)
@@ -48,22 +48,15 @@ public class CarFlow extends RouteBuilder {
             .routeDescription("Call the car rental service")
             .log("Processing ${file:name}")
             .bean(CarRentalHelper.class, "buildGetCarsRequest(${body})")
+            .log("input requete dans car-RPC")
             .inOut(CAR_RPC_ENDPOINT)
-            .log("THIS IS SPARTA")
-                ;
-       
+            .to(AGGREGATION_CAR);
+
+        from(AGGREGATION_CAR)
+            //.process(CarProcessors.car2Json)
+            .unmarshal().string()
+            .to(LETTER_OUTPUT_DIR+"?fileName=car.txt");
+     
     }
 
-   private static   Processor csv2Request = (Exchange exchange)-> {
-    System.out.println("csv2Request");
-    Map<String, Object> data = (Map<String, Object>) exchange.getIn().getBody();
-    CarRequest req = new CarRequest();
-    req.setPlace((String)data.get("place"));
-    req.setDateStart((String)data.get("dateStart"));
-    req.setDateEnd((String)data.get("dateEnd"));
-    System.out.println(req.toString());
-    exchange.getIn().setBody(req);
-    System.out.println("Fin csv2Request");
-    };
-    
 }
