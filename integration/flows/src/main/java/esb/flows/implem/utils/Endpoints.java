@@ -6,9 +6,10 @@ public class Endpoints {
     public static final String CSV_INPUT_FILE_HOTEL = "file:/Users/iliasnaamane/microservices-uns/integration/input"
             + "?fileName=hotels.csv" ;
     public static final String CSV_INPUT_FILE_CAR = "file:/Users/iliasnaamane/microservices-uns/integration/input"
-            + "?fileName=cars.csv" ;
+
     public static final String CSV_INPUT_FILE_VOLS ="file:/Users/iliasnaamane/microservices-uns/integration/input"
             + "?fileName=vol.csv" ;
+
 
     
    
@@ -35,8 +36,10 @@ public class Endpoints {
 
 
     public static final String BUSINESS_TRAVEL_REST = "direct:businesstravel-rest";
+
     
     public static final String BUSINESS_TRAVEL_REST2 = "direct:businesstravel-rest2";
+
     
     //services endpoints
     public static final String HOTEL_RPC_ENDPOINT = "http://localhost:9010/hotel-rpc/ExternalHotelFinderService";
