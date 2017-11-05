@@ -73,7 +73,7 @@ public class VolsRequest implements Serializable {
 
     @Override
     public String toString() {
-        return "VolsRequest{" + "Outbound_date=" + Outbound_date + ", from=" + from + ", to=" + to + /*", isDirect=" + isDirect */+ '}';
+        return "VolsRequest{" + "Outbound_date=" + Outbound_date + ", from=" + from + ", to=" + to + '}';
     }
 
     
