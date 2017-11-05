@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/esb/flows/implem/utils/Endpoints.java
 /Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/esb/flows/implem/utils/Strategies/VolsStrategy.java
 /Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/esb/flows/implem/data/Car/CarForm.java
@@ -27,3 +28,41 @@
 /Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/stubs/hotel_rpc/Hotel.java
 /Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/esb/flows/implem/utils/Processors/HotelProcessors.java
 /Users/iliasnaamane/microservices-uns/integration/flows/src/main/java/esb/flows/implem/data/Car/CarRequest.java
+=======
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/esb/flows/implem/utils/Processors/CarProcessors.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/stubs/car_rpc/GetCarsByPreferencesResponse.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/esb/flows/implem/data/Hotel/CheapHotel.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/stubs/car_rpc/ExternalCarRentalService.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/esb/flows/implem/data/Car/CarRequest.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/stubs/car_rpc/ObjectFactory.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/stubs/car_rpc/Exception.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/stubs/car_rpc/Car.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/esb/flows/implem/data/Hotel/HotelSpec.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/esb/flows/implem/data/Flight/vol.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/esb/flows/implem/utils/Strategies/VolsStrategy.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/esb/flows/implem/utils/Endpoints.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/stubs/hotel_rpc/ExternalHotelFinderService.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/esb/flows/implem/data/Flight/ItemPriceComparator.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/esb/flows/implem/data/Flight/VolsRequest.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/esb/flows/implem/utils/Helpers/HotelHelper.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/esb/flows/implem/utils/Helpers/CsvFormat.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/stubs/hotel_rpc/Recherche.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/stubs/hotel_rpc/ObjectFactory.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/stubs/car_rpc/GetCarsByPreferences.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/esb/flows/implem/data/Car/CarForm.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/stubs/car_rpc/Exception_Exception.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/stubs/car_rpc/package-info.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/stubs/hotel_rpc/Hotel.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/esb/flows/implem/VolsFlow.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/esb/flows/implem/utils/Processors/HotelProcessors.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/esb/flows/implem/CarFlow.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/stubs/hotel_rpc/package-info.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/stubs/car_rpc/CarRental.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/esb/flows/implem/utils/Helpers/CarRentalHelper.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/esb/flows/implem/data/Flight/VolResponse.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/esb/flows/implem/HotelFlow.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/esb/flows/implem/data/Hotel/CheapHotelExternal.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/esb/flows/implem/utils/Strategies/HotelStrategy.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/stubs/hotel_rpc/HotelFinderService.java
+/home/user/Bureau/Projet 2 ESB/microservices-uns/integration/flows/src/main/java/stubs/hotel_rpc/RechercheResponse.java
+>>>>>>> fac171f12408ee638e4ce0192033ab1d01bcc76e
