@@ -5,6 +5,7 @@
 /services/hotelRPC/target/
 /deployment/mongo_data/
 /flows/target/
+
 /tests/acceptation/target/
 cp-files.sh
 deploy-servicemix.sh
