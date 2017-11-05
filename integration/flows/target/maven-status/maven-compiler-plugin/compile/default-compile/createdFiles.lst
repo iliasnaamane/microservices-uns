@@ -1,12 +1,9 @@
 esb/flows/implem/utils/Strategies/HotelStrategy.class
 esb/flows/implem/data/Hotel/CheapHotel.class
-stubs/hotel_rpc/RechercheResponse.class
-<<<<<<< HEAD
-=======
 stubs/hotel_rpc/package-info.class
-esb/flows/implem/VolsFlow.class
->>>>>>> fac171f12408ee638e4ce0192033ab1d01bcc76e
+stubs/hotel_rpc/RechercheResponse.class
 esb/flows/implem/utils/Strategies/VolsStrategy.class
+esb/flows/implem/VolsFlow.class
 esb/flows/implem/utils/Helpers/HotelHelper.class
 esb/flows/implem/data/Car/CarExternalForm.class
 stubs/hotel_rpc/Recherche.class
@@ -15,14 +12,10 @@ esb/flows/implem/utils/Processors/CarProcessors$1.class
 stubs/hotel_rpc/HotelFinderService.class
 esb/flows/implem/data/Flight/ItemPriceComparator.class
 esb/flows/implem/utils/Helpers/CsvFormat.class
-<<<<<<< HEAD
 esb/flows/implem/data/Car/CarRequest.class
-=======
 esb/flows/implem/HotelFlow.class
-esb/flows/implem/data/Car/CarRequest.class
 stubs/car_rpc/Exception_Exception.class
 stubs/car_rpc/package-info.class
->>>>>>> fac171f12408ee638e4ce0192033ab1d01bcc76e
 esb/flows/implem/CarFlow.class
 stubs/hotel_rpc/ExternalHotelFinderService.class
 esb/flows/implem/data/Hotel/HotelSpec.class
@@ -35,18 +28,12 @@ stubs/car_rpc/Exception.class
 esb/flows/implem/utils/Endpoints.class
 esb/flows/implem/data/Flight/VolResponse.class
 esb/flows/implem/utils/Processors/CarProcessors.class
-<<<<<<< HEAD
-=======
 stubs/car_rpc/GetCarsByPreferences.class
 stubs/car_rpc/Car.class
->>>>>>> fac171f12408ee638e4ce0192033ab1d01bcc76e
 esb/flows/implem/utils/Helpers/CarRentalHelper.class
 esb/flows/implem/data/Flight/VolsRequest.class
 stubs/hotel_rpc/ObjectFactory.class
 esb/flows/implem/data/Flight/vol.class
-<<<<<<< HEAD
-esb/flows/implem/utils/Strategies/CarStrategy.class
-=======
 stubs/car_rpc/ExternalCarRentalService.class
 stubs/car_rpc/CarRental.class
->>>>>>> fac171f12408ee638e4ce0192033ab1d01bcc76e
+esb/flows/implem/utils/Strategies/CarStrategy.class

@@ -6,4 +6,4 @@ mvn clean package
 cp flows/target/implem-1.0.jar ../apache-servicemix-7.0.1/deploy/.
 
 cd ../apache-servicemix-7.0.1/bin/
-./servicemix
+#./servicemix

@@ -118,3 +118,13 @@
 2017-11-04 21:29:20,031 | INFO  | .0.1:40344@61616 | LogAuditLoginModule              | 116 - org.apache.karaf.jaas.modules - 4.0.9 | Authentication succeeded - karaf
 2017-11-04 21:29:20,088 | INFO  | .0.1:40346@61616 | LogAuditLoginModule              | 116 - org.apache.karaf.jaas.modules - 4.0.9 | Authentication attempt - karaf
 2017-11-04 21:29:20,090 | INFO  | .0.1:40346@61616 | LogAuditLoginModule              | 116 - org.apache.karaf.jaas.modules - 4.0.9 | Authentication succeeded - karaf
+2017-11-05 01:27:18,056 | INFO  | .0.1:58049@61616 | LogAuditLoginModule              | 116 - org.apache.karaf.jaas.modules - 4.0.9 | Authentication attempt - karaf
+2017-11-05 01:27:18,058 | INFO  | .0.1:58049@61616 | LogAuditLoginModule              | 116 - org.apache.karaf.jaas.modules - 4.0.9 | Authentication succeeded - karaf
+2017-11-05 01:27:18,083 | INFO  | .0.1:58050@61616 | LogAuditLoginModule              | 116 - org.apache.karaf.jaas.modules - 4.0.9 | Authentication attempt - karaf
+2017-11-05 01:27:18,084 | INFO  | .0.1:58050@61616 | LogAuditLoginModule              | 116 - org.apache.karaf.jaas.modules - 4.0.9 | Authentication succeeded - karaf
+2017-11-05 01:27:18,106 | INFO  | .0.1:58051@61616 | LogAuditLoginModule              | 116 - org.apache.karaf.jaas.modules - 4.0.9 | Authentication attempt - karaf
+2017-11-05 01:27:18,107 | INFO  | .0.1:58051@61616 | LogAuditLoginModule              | 116 - org.apache.karaf.jaas.modules - 4.0.9 | Authentication succeeded - karaf
+2017-11-05 01:28:41,599 | INFO  | .0.1:59036@61616 | LogAuditLoginModule              | 116 - org.apache.karaf.jaas.modules - 4.0.9 | Authentication attempt - karaf
+2017-11-05 01:28:41,600 | INFO  | .0.1:59036@61616 | LogAuditLoginModule              | 116 - org.apache.karaf.jaas.modules - 4.0.9 | Authentication succeeded - karaf
+2017-11-05 01:31:16,921 | INFO  | .0.1:60851@61616 | LogAuditLoginModule              | 116 - org.apache.karaf.jaas.modules - 4.0.9 | Authentication attempt - karaf
+2017-11-05 01:31:16,921 | INFO  | .0.1:60851@61616 | LogAuditLoginModule              | 116 - org.apache.karaf.jaas.modules - 4.0.9 | Authentication succeeded - karaf
