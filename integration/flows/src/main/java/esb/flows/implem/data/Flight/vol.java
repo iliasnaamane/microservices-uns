@@ -27,7 +27,7 @@ public class vol implements Serializable,ItemPriceComparator {
 
     @Override
     public String toString() {
-        return "Cheapestflight {" + "\n"+
+        return "vol{" + "\n"+
                 "'date'='" + date + "', \n"+
                 "'prix'='" + prix + "', \n"+
                 "'origine'='" + origine +"' , \n"+

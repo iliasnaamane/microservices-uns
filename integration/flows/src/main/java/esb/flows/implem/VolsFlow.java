@@ -49,29 +49,29 @@ public class VolsFlow extends RouteBuilder {
                  from(BUILD_VOL_QUEUE)
                 .routeId("vols-req-queue")
                 .routeDescription("queue des requetes de vols")
-//                .multicast() 
-//                .to(SEARCH_VOLA, SEARCH_VOLB)
-                  .to(SEARCH_VOLB)        
+                .multicast() 
+                .to(SEARCH_VOLA, SEARCH_VOLB)
+//                  .to(SEARCH_VOLA)        
         ;
 
                 
                  
-//        from(SEARCH_VOLA)
-//            .routeId("request-to-vol rest A")
-//                .routeDescription("send request data from queue to service A")
-//                .log("request to external hotel rest service")
-//                .setHeader(Exchange.HTTP_METHOD, constant("POST"))
-//                .setHeader("Content-Type", constant("application/json"))
-//                .setHeader("Accept", constant("application/json"))
-//                .log("Before Process reqRestservA ::::: "+body().toString())
-//                .process(reqRestservA)
-//                .log("After Process ::::: "+body().toString())
-//                .inOut(VOL_JAXRS_ENDPOINT)
-//                .unmarshal().string()
-//                .process(Answer1ToFlight)
-////                .to(VOLS_AGGREGATE)
-//                .to(LETTER_OUTPUT_DIR+"?fileName=vols.txt")
-//                ; 
+        from(SEARCH_VOLA)
+            .routeId("request-to-vol rest A")
+                .routeDescription("send request data from queue to service A")
+                .log("request to external hotel rest service")
+                .setHeader(Exchange.HTTP_METHOD, constant("POST"))
+                .setHeader("Content-Type", constant("application/json"))
+                .setHeader("Accept", constant("application/json"))
+                .log("Before Process reqRestservA ::::: "+body().toString())
+                .process(reqRestservA)
+                .log("After Process ::::: "+body().toString())
+                .inOut(VOL_JAXRS_ENDPOINT)
+                .unmarshal().string()
+                .process(Answer1ToFlight)
+//                .to(VOLS_AGGREGATE)
+                .to(VOLS_AGGREGATE)
+                ; 
          from(SEARCH_VOLB) // transforme des FlightRequest
                 .routeId("request-to-vol extern B")
                 .routeDescription(" request data from external service")
@@ -80,25 +80,37 @@ public class VolsFlow extends RouteBuilder {
                 .setHeader("Accept", constant("application/json"))
                 .log("Before Process reqRestservB ::::: "+body().toString())
                 .process(reqRestservB)
-                 
                 .inOut(VOLS_EXTERNAL_JAXRS_ENDPOINT) 
                 .unmarshal().string()
-               // .process(Answer2ToFlight)
+                .process(Answer2ToFlight)
                 //.marshal().json(JsonLibrary.Jackson)
-                .to(LETTER_OUTPUT_DIR+"?fileName=vols2.txt")
+                .to(VOLS_AGGREGATE)
         ;
-//         
-//          from(VOLS_AGGREGATE)
-//                .routeId("aggreg-flight")
-//                .routeDescription("l'aggregator des avions")
-//                .log("before aggreg" + body())
-//                .aggregate(constant(true), new VolsStrategy())
-//                .completionSize(2)
-//                .log("after aggreg" + body())
-//                .setHeader("type", constant("flight"))
-//                //.marshal().json(JsonLibrary.Jackson)
-//                .to(LETTER_OUTPUT_DIR+"?fileName=vols.txt")
-//        ;
+         
+          from(VOLS_AGGREGATE)
+                .routeId("aggreg-flight")
+                .routeDescription("l'aggregator des avions")
+                .log("before aggreg" + body())
+                .aggregate(constant(true), new VolsStrategy())
+                  .log("After Aggregator")
+                .completionSize(2)
+                .log("after aggreg" + body())
+//                .unmarshal().string()
+                .log("nothing left but to wright on the file")
+                //.marshal().json(JsonLibrary.Jackson)
+                .to(BUSINESS_TRAVEL_REST2)
+        ;
+          
+           from(BUSINESS_TRAVEL_REST2)
+           .routeId("business-rest-call2")
+              .routeDescription("send request to rest service2")
+              .log(body().toString())
+                .setHeader(Exchange.HTTP_METHOD, constant("POST")) 
+                .setHeader("Content-Type", constant("application/json"))
+                .setHeader("Accept", constant("application/json"))
+              //  .unmarshal().string()
+                .to(LETTER_OUTPUT_DIR+"?fileName=volss.txt")
+        ;
 
     }
     
@@ -119,7 +131,7 @@ public class VolsFlow extends RouteBuilder {
     };
      
     private static Processor reqRestservA = (Exchange exchange) -> {
-            VolsRequest p = (VolsRequest) exchange.getIn().getBody();
+            VolsRequest p =  exchange.getIn().getBody(VolsRequest.class);
             Map<String,String> map = p.vol2Map();
             map.put("event", "Search");
             map.put("sortby", "Price");
@@ -139,29 +151,19 @@ public class VolsFlow extends RouteBuilder {
     };
     
      private static Processor reqRestservB = (Exchange exchange) -> { 
-        VolsRequest req = (VolsRequest) exchange.getIn().getBody();
-        System.out.println("helloooo");
-        String[] date2format = req.getOutbound_date().split("-");
+         VolsRequest p = (VolsRequest) exchange.getIn().getBody();
+        String[] date2format = p.getOutbound_date().split("-");
         String dateformat2 = (date2format[2] + "-" + date2format[1] + "-" + date2format[0]);
-//      if( req.getIsDirect()==null)
-//      {
+
         String request = "{ \"event\": \"LIST\","+
                         " \"filter\": "+
-                                     "{\"destination\" : \"" +req.getTo() +"\","+
+                                     "{\"destination\" : \"" +p.getTo() +"\","+
                                       "\"date\":\"" + dateformat2+"\","+
-                                      "\"isDirect\": " + "false"+
+                                      "\"isDirect\":false"+
                         "}}";
-        System.out.println(request);
      
-//     }
-//      else{
-//       String request = "{ \"event\": \"LIST\","+
-//                        " \"filter\": "+
-//                                     "{\"destination\" : \"" +req.getTo() +"\","+
-//                                      "\"date\":\"" + dateformat2+"\","+
-//                                      "\"isDirect\": " + req.getIsDirect() +
-//                        "}}";
-//      }
+
+            System.out.println("erqRestservB resultat::::: "+request);
          exchange.getIn().setBody(request);
     };
     
@@ -188,7 +190,7 @@ private static final Processor Answer1ToFlight = (Exchange exchange) -> {
             exchange.getIn().setBody(resultat);
         }
 
-        exchange.getIn().setBody(resultat.toString());
+        exchange.getIn().setBody(resultat);
 };
 
 private static final Processor Answer2ToFlight = (Exchange exchange) -> {
@@ -203,25 +205,35 @@ private static final Processor Answer2ToFlight = (Exchange exchange) -> {
                     .get("vols")
                     .getAsJsonArray();
             
-            System.out.println("j'ai transformé le json") ;
+            System.out.println("j'ai transformé le json" + list) ;
             for(JsonElement j : list){
+                System.out.println("0::dans la boucle for") ;
                 JsonObject jsontmp = j.getAsJsonObject();
+                System.out.println("1::dans la boucle for") ;
+               
                 if(Integer.valueOf(jsontmp.get("price").getAsString()) < Integer.valueOf(resultat.getPrice())){
+                     System.out.println("2::dans la boucle for, dans if") ;
                     resultat.setDestination(jsontmp.get("destination").getAsString());
+                      System.out.println("3::dans la boucle for, dans if") ;
                     resultat.setDate(jsontmp.get("date").getAsString());
+                      System.out.println("4::dans la boucle for, dans if") ;
                     resultat.setPrix(jsontmp.get("price").getAsString());
+                      System.out.println("5::dans la boucle for, dans if") ;
                     JsonArray stops = j.getAsJsonObject()
                                        .get("stops")
                                        .getAsJsonArray();
+                      System.out.println("6::dans la boucle for, dans if") ;
                     
                     if(!stops.isJsonNull())
                     {
+                          System.out.println("7::dans la boucle for, dans if") ;
                         StringBuilder ss =new StringBuilder();
                         for(JsonElement k :stops )
                         { 
                             // JsonObject jsontmp2 = k.getAsJsonObject();
                              ss.append(k.toString()+"/");
                         }
+                          System.out.println("8::dans la boucle for, dans if") ;
                         ss.deleteCharAt(ss.length()-1);
                       resultat.setOrigine(ss.toString());
                     }
@@ -229,10 +241,13 @@ private static final Processor Answer2ToFlight = (Exchange exchange) -> {
             }
         }
         catch(JsonSyntaxException | NumberFormatException e){
+            e.printStackTrace();
+            System.out.println("9::dans catch") ;
             System.out.println(exchange.getIn().getBody().toString() + " \n" + exchange.getIn().getHeaders());
             exchange.getIn().setBody(resultat);
         }
         System.out.println(resultat.toString());
+        System.out.println("10::sortie") ;
         exchange.getIn().setBody(resultat);
 };
 }

@@ -1,6 +1,7 @@
 package esb.flows.implem.utils;
 
 public class Endpoints {
+ 
     // file inputs
     public static final String CSV_INPUT_FILE_HOTEL = "file:/Users/iliasnaamane/microservices-uns/integration/input"
             + "?fileName=hotels.csv" ;
@@ -15,7 +16,7 @@ public class Endpoints {
     
     // activemq endpoints
     public static final String BUILD_HOTEL_SPEC = "activemq:handle-hotel-spec";
-    public static final String BUILD_VOL_QUEUE = "activemq:handle-vol-requests";
+     public static final String BUILD_VOL_QUEUE = "activemq:handle-vol-requests";
     public static final String BUILD_CAR_QUEUE = "activemq:handle-car-requests";
     
     // direct endpoints
@@ -29,7 +30,7 @@ public class Endpoints {
     public static final String SEARCH_VOLB = "direct:search-vol-serviceB";
     public static final String VOLS_AGGREGATE = "direct:aggregate-vols";
     public static final String CARS_AGGREGATE = "direct:aggregate-cars";
-
+    
 
 
     public static final String BUSINESS_TRAVEL_REST = "direct:businesstravel-rest";
@@ -46,8 +47,15 @@ public class Endpoints {
 
     public static final String VOL_JAXRS_ENDPOINT ="http://localhost:9030/vols/webapi/vols";
     
-    public static final String VOLS_EXTERNAL_JAXRS_ENDPOINT ="http://localhost:9080/flightreservation-service-document/registry";
+public static final String VOLS_EXTERNAL_JAXRS_ENDPOINT ="http://localhost:9080/flightreservation-service-document/registry";
     
     public static final String CAR_EXTERNAL_REST_ENDPOINT = "http://localhost:9090/cars";
     
+    
+  
+ public static final String DEATH_POOL = "activemq:global:dead";
+    
+  
+    
+ 
 }
