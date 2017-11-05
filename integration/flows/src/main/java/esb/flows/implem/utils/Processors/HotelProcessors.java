@@ -43,6 +43,7 @@ public class HotelProcessors {
 "       \"nights\":"+ cheapHotel.getDuration()+",\n" +
 "       \"price\":"+ cheapHotel.getPrice() + "\n" +
 "       }";
+         System.out.println(cheapHotel);
         exchange.getIn().setBody(CheapHotelJson);
         
     };
