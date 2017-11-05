@@ -2106,3 +2106,1073 @@ INFOS: Lock acquired. Setting startlevel to 100
 2017-11-04 21:56:40,125 | WARN  | FelixStartLevel  | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Task rejected for JMX Notification dispatch of event [org.osgi.framework.ServiceEvent[source=[javax.management.MBeanServer]]] - Dispatcher may have been shutdown
 2017-11-04 21:56:40,163 | INFO  | FelixStartLevel  | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Stopping JMX OSGi agent
 2017-11-04 21:56:40,164 | INFO  | FelixStartLevel  | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Unregistering MBean with ObjectName [osgi.compendium:service=cm,version=1.3,framework=org.apache.felix.framework,uuid=986b9542-7dc1-442c-84cb-a4468fe7f23e] for service with service.id [15]
+Nov 05, 2017 2:26:11 AM org.apache.karaf.main.lock.SimpleFileLock lock
+INFO: Trying to lock /Users/iliasnaamane/microservices-uns/apache-servicemix-7.0.1/lock
+Nov 05, 2017 2:26:11 AM org.apache.karaf.main.lock.SimpleFileLock lock
+INFO: Lock acquired
+Nov 05, 2017 2:26:11 AM org.apache.karaf.main.Main$KarafLockCallback lockAquired
+INFO: Lock acquired. Setting startlevel to 100
+2017-11-05 02:26:14,626 | INFO  | pool-16-thread-2 | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Unregistering commands for bundle org.apache.karaf.log.core/4.0.9
+2017-11-05 02:26:14,628 | INFO  | pool-17-thread-2 | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Unregistering org.osgi.jmx.service.cm.ConfigurationAdminMBean to MBeanServer com.sun.jmx.mbeanserver.JmxMBeanServer@5e481248 with name osgi.compendium:service=cm,version=1.3,framework=org.apache.felix.framework,uuid=21b5c317-39f5-4cdc-91da-61b1073f3f21
+2017-11-05 02:26:14,628 | INFO  | pool-17-thread-2 | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Unregistering org.osgi.jmx.framework.PackageStateMBean to MBeanServer com.sun.jmx.mbeanserver.JmxMBeanServer@5e481248 with name osgi.core:type=packageState,version=1.5,framework=org.apache.felix.framework,uuid=21b5c317-39f5-4cdc-91da-61b1073f3f21
+2017-11-05 02:26:14,628 | INFO  | pool-17-thread-2 | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Unregistering org.osgi.jmx.framework.wiring.BundleWiringStateMBean to MBeanServer com.sun.jmx.mbeanserver.JmxMBeanServer@5e481248 with name osgi.core:type=wiringState,version=1.1,framework=org.apache.felix.framework,uuid=21b5c317-39f5-4cdc-91da-61b1073f3f21
+2017-11-05 02:26:14,628 | INFO  | pool-17-thread-2 | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Unregistering org.osgi.jmx.framework.BundleStateMBean to MBeanServer com.sun.jmx.mbeanserver.JmxMBeanServer@5e481248 with name osgi.core:type=bundleState,version=1.7,framework=org.apache.felix.framework,uuid=21b5c317-39f5-4cdc-91da-61b1073f3f21
+2017-11-05 02:26:14,629 | INFO  | pool-15-thread-2 | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Unregistering commands for bundle org.apache.karaf.kar.core/4.0.9
+2017-11-05 02:26:14,630 | INFO  | pool-16-thread-2 | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Registering commands for bundle org.apache.karaf.log.core/4.0.9
+2017-11-05 02:26:14,631 | INFO  | pool-15-thread-2 | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Registering commands for bundle org.apache.karaf.kar.core/4.0.9
+2017-11-05 02:26:14,631 | INFO  | pool-17-thread-2 | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Unregistering org.osgi.jmx.framework.ServiceStateMBean to MBeanServer com.sun.jmx.mbeanserver.JmxMBeanServer@5e481248 with name osgi.core:type=serviceState,version=1.7,framework=org.apache.felix.framework,uuid=21b5c317-39f5-4cdc-91da-61b1073f3f21
+2017-11-05 02:26:14,631 | INFO  | pool-17-thread-2 | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Unregistering org.osgi.jmx.framework.FrameworkMBean to MBeanServer com.sun.jmx.mbeanserver.JmxMBeanServer@5e481248 with name osgi.core:type=framework,version=1.7,framework=org.apache.felix.framework,uuid=21b5c317-39f5-4cdc-91da-61b1073f3f21
+2017-11-05 02:26:14,632 | WARN  | pool-17-thread-2 | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Task rejected for JMX Notification dispatch of event [org.osgi.framework.ServiceEvent[source=[javax.management.MBeanServer]]] - Dispatcher may have been shutdown
+2017-11-05 02:26:14,638 | INFO  | pool-17-thread-2 | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Registering org.osgi.jmx.service.cm.ConfigurationAdminMBean to MBeanServer com.sun.jmx.mbeanserver.JmxMBeanServer@5e481248 with name osgi.compendium:service=cm,version=1.3,framework=org.apache.felix.framework,uuid=21b5c317-39f5-4cdc-91da-61b1073f3f21
+2017-11-05 02:26:14,638 | INFO  | pool-17-thread-2 | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Registering org.osgi.jmx.framework.PackageStateMBean to MBeanServer com.sun.jmx.mbeanserver.JmxMBeanServer@5e481248 with name osgi.core:type=packageState,version=1.5,framework=org.apache.felix.framework,uuid=21b5c317-39f5-4cdc-91da-61b1073f3f21
+2017-11-05 02:26:14,638 | INFO  | pool-17-thread-2 | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Registering org.osgi.jmx.framework.wiring.BundleWiringStateMBean to MBeanServer com.sun.jmx.mbeanserver.JmxMBeanServer@5e481248 with name osgi.core:type=wiringState,version=1.1,framework=org.apache.felix.framework,uuid=21b5c317-39f5-4cdc-91da-61b1073f3f21
+2017-11-05 02:26:14,639 | INFO  | pool-17-thread-2 | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Registering org.osgi.jmx.framework.BundleStateMBean to MBeanServer com.sun.jmx.mbeanserver.JmxMBeanServer@5e481248 with name osgi.core:type=bundleState,version=1.7,framework=org.apache.felix.framework,uuid=21b5c317-39f5-4cdc-91da-61b1073f3f21
+2017-11-05 02:26:14,639 | INFO  | pool-17-thread-2 | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Registering org.osgi.jmx.framework.ServiceStateMBean to MBeanServer com.sun.jmx.mbeanserver.JmxMBeanServer@5e481248 with name osgi.core:type=serviceState,version=1.7,framework=org.apache.felix.framework,uuid=21b5c317-39f5-4cdc-91da-61b1073f3f21
+2017-11-05 02:26:14,639 | INFO  | pool-17-thread-2 | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Registering org.osgi.jmx.framework.FrameworkMBean to MBeanServer com.sun.jmx.mbeanserver.JmxMBeanServer@5e481248 with name osgi.core:type=framework,version=1.7,framework=org.apache.felix.framework,uuid=21b5c317-39f5-4cdc-91da-61b1073f3f21
+2017-11-05 02:26:14,730 | INFO  | FelixStartLevel  | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Command registration delayed for bundle org.apache.karaf.shell.ssh/4.0.9. Missing dependencies: [org.apache.sshd.SshServer]
+2017-11-05 02:26:14,733 | INFO  | pool-26-thread-1 | SecurityUtils                    | 163 - org.apache.sshd.core - 0.14.0 | BouncyCastle not registered, using the default JCE provider
+2017-11-05 02:26:14,756 | INFO  | FelixStartLevel  | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Registering commands for bundle org.apache.karaf.system.core/4.0.9
+2017-11-05 02:26:14,770 | INFO  | FelixStartLevel  | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Command registration delayed for bundle org.apache.karaf.web.core/4.0.9. Missing dependencies: [org.apache.karaf.web.WebContainerService]
+2017-11-05 02:26:14,835 | INFO  | pool-26-thread-1 | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Registering commands for bundle org.apache.karaf.shell.ssh/4.0.9
+2017-11-05 02:26:14,861 | WARN  | pool-26-thread-1 | Activator                        | 125 - org.apache.karaf.shell.ssh - 4.0.9 | Exception caught while starting SSH server
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)[:1.8.0_121]
+	at sun.nio.ch.Net.bind(Net.java:433)[:1.8.0_121]
+	at sun.nio.ch.Net.bind(Net.java:425)[:1.8.0_121]
+	at sun.nio.ch.AsynchronousServerSocketChannelImpl.bind(AsynchronousServerSocketChannelImpl.java:162)[:1.8.0_121]
+	at org.apache.sshd.common.io.nio2.Nio2Acceptor.bind(Nio2Acceptor.java:66)[163:org.apache.sshd.core:0.14.0]
+	at org.apache.sshd.common.io.nio2.Nio2Acceptor.bind(Nio2Acceptor.java:74)[163:org.apache.sshd.core:0.14.0]
+	at org.apache.sshd.SshServer.start(SshServer.java:287)[163:org.apache.sshd.core:0.14.0]
+	at org.apache.karaf.shell.ssh.Activator.doStart(Activator.java:117)[125:org.apache.karaf.shell.ssh:4.0.9]
+	at org.apache.karaf.util.tracker.BaseActivator.run(BaseActivator.java:246)[125:org.apache.karaf.shell.ssh:4.0.9]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)[:1.8.0_121]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)[:1.8.0_121]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)[:1.8.0_121]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)[:1.8.0_121]
+	at java.lang.Thread.run(Thread.java:745)[:1.8.0_121]
+2017-11-05 02:26:14,970 | INFO  | FelixStartLevel  | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Registering commands for bundle org.apache.karaf.shell.commands/4.0.9
+2017-11-05 02:26:15,014 | INFO  | pool-28-thread-2 | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Registering commands for bundle org.apache.karaf.web.core/4.0.9
+2017-11-05 02:26:15,041 | INFO  | FelixStartLevel  | Activator                        | 213 - org.ops4j.pax.web.pax-web-runtime - 4.3.0 | EventAdmin support enabled, servlet events will be postet to topics.
+2017-11-05 02:26:15,042 | INFO  | FelixStartLevel  | Activator                        | 213 - org.ops4j.pax.web.pax-web-runtime - 4.3.0 | LogService support enabled, log events will be created.
+2017-11-05 02:26:15,043 | INFO  | FelixStartLevel  | Activator                        | 213 - org.ops4j.pax.web.pax-web-runtime - 4.3.0 | Pax Web started
+2017-11-05 02:26:15,057 | INFO  | FelixStartLevel  | ContextLoaderListener            | 217 - org.springframework.osgi.extender - 1.2.1 | Starting [org.springframework.osgi.extender] bundle v.[1.2.1]
+2017-11-05 02:26:15,075 | INFO  | onfig-2-thread-1 | log                              | 190 - org.eclipse.jetty.util - 9.2.19.v20160908 | Logging initialized @3858ms
+2017-11-05 02:26:15,105 | INFO  | FelixStartLevel  | ExtenderConfiguration            | 217 - org.springframework.osgi.extender - 1.2.1 | No custom extender configuration detected; using defaults...
+2017-11-05 02:26:15,110 | INFO  | FelixStartLevel  | TimerTaskExecutor                | 150 - org.apache.servicemix.bundles.spring-context - 3.2.18.RELEASE_1 | Initializing Timer
+2017-11-05 02:26:15,245 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Adding the extensions from bundle org.apache.cxf.cxf-rt-wsdl (92) [org.apache.cxf.wsdl.WSDLManager]
+2017-11-05 02:26:15,246 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-corba (59) [org.apache.cxf.binding.corba.CorbaBindingFactory, org.apache.cxf.binding.corba.wsdl.WSDLExtensionRegister]
+2017-11-05 02:26:15,252 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-local (85) [org.apache.cxf.transport.local.LocalTransportFactory]
+2017-11-05 02:26:15,253 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-object (60) [org.apache.cxf.binding.object.ObjectBindingFactory]
+2017-11-05 02:26:15,259 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-soap (61) [org.apache.cxf.binding.soap.SoapBindingFactory, org.apache.cxf.binding.soap.SoapTransportFactory]
+2017-11-05 02:26:15,266 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-xml (62) [org.apache.cxf.binding.xml.XMLBindingFactory, org.apache.cxf.binding.xml.wsdl11.XMLWSDLExtensionLoader]
+2017-11-05 02:26:15,311 | INFO  | atures.logging]) | Activator                        | 67 - org.apache.cxf.cxf-rt-features-logging - 3.1.9 | CXF message logging feature disabled
+2017-11-05 02:26:15,316 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Adding the extensions from bundle org.apache.cxf.cxf-rt-features-metrics (68) [org.apache.cxf.metrics.MetricsProvider]
+2017-11-05 02:26:15,328 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-http (82) [org.apache.cxf.transport.http.HTTPTransportFactory, org.apache.cxf.transport.http.HTTPWSDLExtensionLoader, org.apache.cxf.transport.http.policy.HTTPClientAssertionBuilder, org.apache.cxf.transport.http.policy.HTTPServerAssertionBuilder, org.apache.cxf.transport.http.policy.NoOpPolicyInterceptorProvider]
+2017-11-05 02:26:15,329 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-policy (89) [org.apache.cxf.ws.policy.PolicyEngine, org.apache.cxf.policy.PolicyDataEngine, org.apache.cxf.ws.policy.AssertionBuilderRegistry, org.apache.cxf.ws.policy.PolicyInterceptorProviderRegistry, org.apache.cxf.ws.policy.PolicyBuilder, org.apache.cxf.ws.policy.PolicyAnnotationListener, org.apache.cxf.ws.policy.attachment.ServiceModelPolicyProvider, org.apache.cxf.ws.policy.attachment.external.DomainExpressionBuilderRegistry, org.apache.cxf.ws.policy.attachment.external.EndpointReferenceDomainExpressionBuilder, org.apache.cxf.ws.policy.attachment.external.URIDomainExpressionBuilder, org.apache.cxf.ws.policy.attachment.wsdl11.Wsdl11AttachmentPolicyProvider, org.apache.cxf.ws.policy.mtom.MTOMAssertionBuilder, org.apache.cxf.ws.policy.mtom.MTOMPolicyInterceptorProvider]
+2017-11-05 02:26:15,341 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Adding the extensions from bundle org.apache.cxf.cxf-rt-frontend-jaxws (71) [org.apache.cxf.jaxws.context.WebServiceContextResourceResolver]
+2017-11-05 02:26:15,357 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Adding the extensions from bundle org.apache.cxf.cxf-rt-javascript (74) [org.apache.cxf.javascript.JavascriptServerListener]
+2017-11-05 02:26:15,362 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Adding the extensions from bundle org.apache.cxf.cxf-rt-management (75) [org.apache.cxf.management.InstrumentationManager]
+2017-11-05 02:26:15,414 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-http-jetty (83) [org.apache.cxf.transport.http_jetty.JettyDestinationFactory, org.apache.cxf.transport.http_jetty.JettyHTTPServerEngineFactory, org.apache.cxf.transport.http.ContinuationProviderFactory]
+2017-11-05 02:26:15,436 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-jms (84) [org.apache.cxf.transport.jms.JMSTransportFactory, org.apache.cxf.transport.jms.wsdl11.JMSWSDLExtensionLoader]
+2017-11-05 02:26:15,442 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-udp (86) [org.apache.cxf.transport.udp.UDPTransportFactory]
+2017-11-05 02:26:15,447 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-addr (87) [org.apache.cxf.ws.addressing.policy.AddressingAssertionBuilder, org.apache.cxf.ws.addressing.policy.UsingAddressingAssertionBuilder, org.apache.cxf.ws.addressing.policy.AddressingPolicyInterceptorProvider, org.apache.cxf.ws.addressing.impl.AddressingWSDLExtensionLoader, org.apache.cxf.ws.addressing.WSAddressingFeature$WSAddressingFeatureApplier, org.apache.cxf.ws.addressing.MAPAggregator$MAPAggregatorLoader]
+2017-11-05 02:26:15,454 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-mex (88) [org.apache.cxf.ws.mex.MEXServerListener]
+2017-11-05 02:26:15,469 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-security (91) [org.apache.cxf.ws.security.policy.WSSecurityPolicyLoader, org.apache.cxf.ws.security.cache.CacheCleanupListener]
+2017-11-05 02:26:15,470 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-rm (90) [org.apache.cxf.ws.rm.RMManager, org.apache.cxf.ws.rm.policy.RMPolicyInterceptorProvider, org.apache.cxf.ws.rm.policy.RM10AssertionBuilder, org.apache.cxf.ws.rm.policy.RM12AssertionBuilder, org.apache.cxf.ws.rm.policy.WSRMP12PolicyLoader, org.apache.cxf.ws.rm.policy.MC11PolicyLoader, org.apache.cxf.ws.rm.policy.RSPPolicyLoader]
+2017-11-05 02:26:15,868 | INFO  | ctivemq.server]) | ActiveMQServiceFactory           | 25 - org.apache.activemq.activemq-osgi - 5.14.5 | Starting broker amq-broker
+2017-11-05 02:26:15,888 | ERROR | ctivemq.server]) | configadmin                      | 3 - org.apache.felix.configadmin - 1.8.14 | [org.osgi.service.cm.ManagedServiceFactory, id=199, bundle=25/mvn:org.apache.activemq/activemq-osgi/5.14.5]: Updating configuration org.apache.activemq.server.588834cb-7798-4dac-a2a8-606f96c12eb4 caused a problem: Cannot start the broker
+org.osgi.service.cm.ConfigurationException: null : Cannot start the broker
+	at org.apache.activemq.osgi.ActiveMQServiceFactory.updated(ActiveMQServiceFactory.java:144)[25:org.apache.activemq.activemq-osgi:5.14.5]
+	at org.apache.felix.cm.impl.helper.ManagedServiceFactoryTracker.updated(ManagedServiceFactoryTracker.java:159)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.helper.ManagedServiceFactoryTracker.provideConfiguration(ManagedServiceFactoryTracker.java:93)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.ConfigurationManager$ManagedServiceFactoryUpdate.provide(ConfigurationManager.java:1624)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.ConfigurationManager$ManagedServiceFactoryUpdate.run(ConfigurationManager.java:1566)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.UpdateThread.run0(UpdateThread.java:141)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.UpdateThread.run(UpdateThread.java:109)[3:org.apache.felix.configadmin:1.8.14]
+	at java.lang.Thread.run(Thread.java:745)[:1.8.0_121]
+Caused by: java.io.FileNotFoundException: class path resource [home/user/Bureau/Projet 2 ESB/microservices-uns/apache-servicemix-7.0.1/etc/activemq.xml] cannot be resolved to URL because it does not exist
+	at org.springframework.core.io.ClassPathResource.getURL(ClassPathResource.java:186)[152:org.apache.servicemix.bundles.spring-core:3.2.18.RELEASE_1]
+	at org.apache.activemq.osgi.ActiveMQServiceFactory.updated(ActiveMQServiceFactory.java:82)[25:org.apache.activemq.activemq-osgi:5.14.5]
+	... 7 more
+2017-11-05 02:26:15,890 | INFO  | ctivemq.server]) | ActiveMQServiceFactory           | 25 - org.apache.activemq.activemq-osgi - 5.14.5 | Starting broker amq-broker
+2017-11-05 02:26:15,922 | INFO  | FelixStartLevel  | Activator                        | 43 - org.apache.camel.camel-core - 2.16.5 | Camel activator starting
+2017-11-05 02:26:15,930 | INFO  | ctivemq.server]) | ClassPathXmlApplicationContext   | 150 - org.apache.servicemix.bundles.spring-context - 3.2.18.RELEASE_1 | Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@34ab383: startup date [Sun Nov 05 02:26:15 CET 2017]; root of context hierarchy
+2017-11-05 02:26:15,948 | INFO  | FelixStartLevel  | Activator                        | 43 - org.apache.camel.camel-core - 2.16.5 | Camel activator started
+2017-11-05 02:26:15,961 | INFO  | ctivemq.server]) | XmlBeanDefinitionReader          | 149 - org.apache.servicemix.bundles.spring-beans - 3.2.18.RELEASE_1 | Loading XML bean definitions from URL [file:/Users/iliasnaamane/microservices-uns/apache-servicemix-7.0.1/etc/activemq.xml]
+2017-11-05 02:26:15,964 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Adding the extensions from bundle org.apache.camel.camel-cxf-transport (45) [org.apache.camel.component.cxf.transport.CamelTransportFactory]
+2017-11-05 02:26:16,014 | INFO  | FelixStartLevel  | BlueprintContainerImpl           | 28 - org.apache.aries.blueprint.core - 1.7.1 | Bundle org.apache.servicemix.activemq.camel/7.0.1 is waiting for dependencies [(&(&(transacted=false)(name=default-cf))(objectClass=javax.jms.ConnectionFactory))]
+2017-11-05 02:26:16,065 | WARN  | onfig-2-thread-1 | JettyServerImpl                  | 211 - org.ops4j.pax.web.pax-web-jetty - 4.3.0 | server configuration file location is invalid
+2017-11-05 02:26:16,097 | INFO  | onfig-2-thread-1 | JettyFactoryImpl                 | 211 - org.ops4j.pax.web.pax-web-jetty - 4.3.0 | SPDY not available, creating standard ServerConnector for Http
+2017-11-05 02:26:16,108 | INFO  | onfig-2-thread-1 | JettyServerImpl                  | 211 - org.ops4j.pax.web.pax-web-jetty - 4.3.0 | Pax Web available at [0.0.0.0]:[8181]
+2017-11-05 02:26:16,117 | INFO  | onfig-2-thread-1 | HttpServiceFactoryImpl           | 213 - org.ops4j.pax.web.pax-web-runtime - 4.3.0 | Binding bundle: [org.apache.cxf.cxf-rt-transports-http [82]] to http service
+2017-11-05 02:26:16,135 | INFO  | FelixStartLevel  | GenericResourceManager           | 25 - org.apache.activemq.activemq-osgi - 5.14.5 | Resource manager is unrecoverable
+2017-11-05 02:26:16,166 | INFO  | ctivemq.server]) | DefaultListableBeanFactory       | 149 - org.apache.servicemix.bundles.spring-beans - 3.2.18.RELEASE_1 | Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@56ef7ac5: defining beans [org.apache.activemq.xbean.XBeanBrokerService#0]; root of factory hierarchy
+2017-11-05 02:26:16,271 | INFO  | ctivemq.server]) | BrokerService                    | 25 - org.apache.activemq.activemq-osgi - 5.14.5 | Using Persistence Adapter: KahaDBPersistenceAdapter[/Users/iliasnaamane/microservices-uns/apache-servicemix-7.0.1/data/amq-broker/kahadb]
+2017-11-05 02:26:16,301 | WARN  | FelixStartLevel  | NamespaceHandlerRegistryImpl     | 28 - org.apache.aries.blueprint.core - 1.7.1 | NamespaceHandler org.apache.camel.blueprint.handler.CamelNamespaceHandler is behaving badly and should be fixed
+2017-11-05 02:26:16,306 | INFO  | ctivemq.server]) | MessageDatabase                  | 25 - org.apache.activemq.activemq-osgi - 5.14.5 | KahaDB is version 6
+2017-11-05 02:26:16,324 | INFO  | ctivemq.server]) | MessageDatabase                  | 25 - org.apache.activemq.activemq-osgi - 5.14.5 | Recovering from the journal @1:317645
+2017-11-05 02:26:16,337 | INFO  | ctivemq.server]) | MessageDatabase                  | 25 - org.apache.activemq.activemq-osgi - 5.14.5 | Recovery replayed 328 operations from the journal in 0.025 seconds.
+2017-11-05 02:26:16,345 | INFO  | ctivemq.server]) | PListStoreImpl                   | 25 - org.apache.activemq.activemq-osgi - 5.14.5 | PListStore:[/Users/iliasnaamane/microservices-uns/apache-servicemix-7.0.1/data/amq-broker/amq-broker/tmp_storage] started
+2017-11-05 02:26:16,473 | INFO  | ctivemq.server]) | BrokerService                    | 25 - org.apache.activemq.activemq-osgi - 5.14.5 | Apache ActiveMQ 5.14.5 (amq-broker, ID:iliass-MacBook-Pro.local-50900-1509845176353-0:1) is starting
+2017-11-05 02:26:16,517 | ERROR | ctivemq.server]) | BrokerService                    | 25 - org.apache.activemq.activemq-osgi - 5.14.5 | Failed to start Apache ActiveMQ ([amq-broker, ID:iliass-MacBook-Pro.local-50900-1509845176353-0:1], java.io.IOException: Transport Connector could not be registered in JMX: java.io.IOException: Failed to bind to server socket: tcp://0.0.0.0:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 due to: java.net.BindException: Address already in use (Bind failed))
+2017-11-05 02:26:16,517 | INFO  | ctivemq.server]) | BrokerService                    | 25 - org.apache.activemq.activemq-osgi - 5.14.5 | Apache ActiveMQ 5.14.5 (amq-broker, ID:iliass-MacBook-Pro.local-50900-1509845176353-0:1) is shutting down
+2017-11-05 02:26:16,518 | INFO  | ctivemq.server]) | TransportConnector               | 25 - org.apache.activemq.activemq-osgi - 5.14.5 | Connector openwire stopped
+2017-11-05 02:26:16,523 | INFO  | ctivemq.server]) | PListStoreImpl                   | 25 - org.apache.activemq.activemq-osgi - 5.14.5 | PListStore:[/Users/iliasnaamane/microservices-uns/apache-servicemix-7.0.1/data/amq-broker/amq-broker/tmp_storage] stopped
+2017-11-05 02:26:16,523 | INFO  | ctivemq.server]) | KahaDBStore                      | 25 - org.apache.activemq.activemq-osgi - 5.14.5 | Stopping async queue tasks
+2017-11-05 02:26:16,523 | INFO  | ctivemq.server]) | KahaDBStore                      | 25 - org.apache.activemq.activemq-osgi - 5.14.5 | Stopping async topic tasks
+2017-11-05 02:26:16,524 | INFO  | ctivemq.server]) | KahaDBStore                      | 25 - org.apache.activemq.activemq-osgi - 5.14.5 | Stopped KahaDB
+2017-11-05 02:26:16,536 | INFO  | ctivemq.server]) | BrokerService                    | 25 - org.apache.activemq.activemq-osgi - 5.14.5 | Apache ActiveMQ 5.14.5 (amq-broker, ID:iliass-MacBook-Pro.local-50900-1509845176353-0:1) uptime 0.274 seconds
+2017-11-05 02:26:16,536 | INFO  | ctivemq.server]) | BrokerService                    | 25 - org.apache.activemq.activemq-osgi - 5.14.5 | Apache ActiveMQ 5.14.5 (amq-broker, ID:iliass-MacBook-Pro.local-50900-1509845176353-0:1) is shutdown
+2017-11-05 02:26:16,536 | ERROR | ctivemq.server]) | configadmin                      | 3 - org.apache.felix.configadmin - 1.8.14 | [org.osgi.service.cm.ManagedServiceFactory, id=199, bundle=25/mvn:org.apache.activemq/activemq-osgi/5.14.5]: Updating configuration org.apache.activemq.server.8bc36035-de8d-47a7-9f01-a7404b9a6e91 caused a problem: Cannot start the broker
+org.osgi.service.cm.ConfigurationException: null : Cannot start the broker
+	at org.apache.activemq.osgi.ActiveMQServiceFactory.updated(ActiveMQServiceFactory.java:144)[25:org.apache.activemq.activemq-osgi:5.14.5]
+	at org.apache.felix.cm.impl.helper.ManagedServiceFactoryTracker.updated(ManagedServiceFactoryTracker.java:159)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.helper.ManagedServiceFactoryTracker.provideConfiguration(ManagedServiceFactoryTracker.java:93)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.ConfigurationManager$ManagedServiceFactoryUpdate.provide(ConfigurationManager.java:1624)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.ConfigurationManager$ManagedServiceFactoryUpdate.run(ConfigurationManager.java:1566)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.UpdateThread.run0(UpdateThread.java:141)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.UpdateThread.run(UpdateThread.java:109)[3:org.apache.felix.configadmin:1.8.14]
+	at java.lang.Thread.run(Thread.java:745)[:1.8.0_121]
+Caused by: java.io.IOException: Transport Connector could not be registered in JMX: java.io.IOException: Failed to bind to server socket: tcp://0.0.0.0:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 due to: java.net.BindException: Address already in use (Bind failed)
+	at org.apache.activemq.util.IOExceptionSupport.create(IOExceptionSupport.java:28)[25:org.apache.activemq.activemq-osgi:5.14.5]
+	at org.apache.activemq.broker.BrokerService.registerConnectorMBean(BrokerService.java:2222)[25:org.apache.activemq.activemq-osgi:5.14.5]
+	at org.apache.activemq.broker.BrokerService.startTransportConnector(BrokerService.java:2708)[25:org.apache.activemq.activemq-osgi:5.14.5]
+	at org.apache.activemq.broker.BrokerService.startAllConnectors(BrokerService.java:2598)[25:org.apache.activemq.activemq-osgi:5.14.5]
+	at org.apache.activemq.broker.BrokerService.doStartBroker(BrokerService.java:759)[25:org.apache.activemq.activemq-osgi:5.14.5]
+	at org.apache.activemq.broker.BrokerService.startBroker(BrokerService.java:721)[25:org.apache.activemq.activemq-osgi:5.14.5]
+	at org.apache.activemq.broker.BrokerService.start(BrokerService.java:624)[25:org.apache.activemq.activemq-osgi:5.14.5]
+	at org.apache.activemq.osgi.ActiveMQServiceFactory.updated(ActiveMQServiceFactory.java:140)[25:org.apache.activemq.activemq-osgi:5.14.5]
+	... 7 more
+Caused by: java.io.IOException: Failed to bind to server socket: tcp://0.0.0.0:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600 due to: java.net.BindException: Address already in use (Bind failed)
+	at org.apache.activemq.util.IOExceptionSupport.create(IOExceptionSupport.java:34)[25:org.apache.activemq.activemq-osgi:5.14.5]
+	at org.apache.activemq.transport.tcp.TcpTransportServer.bind(TcpTransportServer.java:143)[25:org.apache.activemq.activemq-osgi:5.14.5]
+	at org.apache.activemq.transport.tcp.TcpTransportFactory.doBind(TcpTransportFactory.java:62)[25:org.apache.activemq.activemq-osgi:5.14.5]
+	at org.apache.activemq.transport.TransportFactorySupport.bind(TransportFactorySupport.java:40)[25:org.apache.activemq.activemq-osgi:5.14.5]
+	at org.apache.activemq.broker.TransportConnector.createTransportServer(TransportConnector.java:318)[25:org.apache.activemq.activemq-osgi:5.14.5]
+	at org.apache.activemq.broker.TransportConnector.getServer(TransportConnector.java:141)[25:org.apache.activemq.activemq-osgi:5.14.5]
+	at org.apache.activemq.broker.TransportConnector.asManagedConnector(TransportConnector.java:107)[25:org.apache.activemq.activemq-osgi:5.14.5]
+	at org.apache.activemq.broker.BrokerService.registerConnectorMBean(BrokerService.java:2217)[25:org.apache.activemq.activemq-osgi:5.14.5]
+	... 13 more
+Caused by: java.net.BindException: Address already in use (Bind failed)
+	at java.net.PlainSocketImpl.socketBind(Native Method)[:1.8.0_121]
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)[:1.8.0_121]
+	at java.net.ServerSocket.bind(ServerSocket.java:375)[:1.8.0_121]
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)[:1.8.0_121]
+	at javax.net.DefaultServerSocketFactory.createServerSocket(ServerSocketFactory.java:231)[:1.8.0_121]
+	at org.apache.activemq.transport.tcp.TcpTransportServer.bind(TcpTransportServer.java:140)[25:org.apache.activemq.activemq-osgi:5.14.5]
+	... 19 more
+2017-11-05 02:26:16,574 | INFO  | pache.cxf.osgi]) | JettyServerWrapper               | 211 - org.ops4j.pax.web.pax-web-jetty - 4.3.0 | will add org.apache.jasper.servlet.JasperInitializer to ServletContainerInitializers
+2017-11-05 02:26:16,575 | INFO  | pache.cxf.osgi]) | JettyServerWrapper               | 211 - org.ops4j.pax.web.pax-web-jetty - 4.3.0 | Skipt org.apache.jasper.servlet.JasperInitializer, because specialized handler will be present
+2017-11-05 02:26:16,575 | INFO  | pache.cxf.osgi]) | JettyServerWrapper               | 211 - org.ops4j.pax.web.pax-web-jetty - 4.3.0 | will add org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainerInitializer to ServletContainerInitializers
+2017-11-05 02:26:16,853 | INFO  | pache.cxf.osgi]) | JettyServerWrapper               | 211 - org.ops4j.pax.web.pax-web-jetty - 4.3.0 | added ServletContainerInitializer: org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainerInitializer
+2017-11-05 02:26:16,854 | INFO  | pache.cxf.osgi]) | JettyServerWrapper               | 211 - org.ops4j.pax.web.pax-web-jetty - 4.3.0 | will add org.springframework.web.SpringServletContainerInitializer to ServletContainerInitializers
+2017-11-05 02:26:16,854 | WARN  | pache.cxf.osgi]) | JettyServerWrapper               | 211 - org.ops4j.pax.web.pax-web-jetty - 4.3.0 | failed to parse and instantiate of javax.servlet.ServletContainerInitializer in classpath
+2017-11-05 02:26:16,879 | INFO  | pache.cxf.osgi]) | HttpServiceContext               | 211 - org.ops4j.pax.web.pax-web-jetty - 4.3.0 | registering context DefaultHttpContext [bundle=org.apache.cxf.cxf-rt-transports-http [82], contextID=default], with context-name: 
+2017-11-05 02:26:16,885 | INFO  | pache.cxf.osgi]) | HttpServiceContext               | 211 - org.ops4j.pax.web.pax-web-jetty - 4.3.0 | registering JasperInitializer
+2017-11-05 02:26:16,905 | INFO  | pache.cxf.osgi]) | TldScanner                       | 212 - org.ops4j.pax.web.pax-web-jsp - 4.3.0 | found TLD bundle://212.0:0/META-INF/c-1_0-rt.tld
+2017-11-05 02:26:16,926 | INFO  | pache.cxf.osgi]) | TldScanner                       | 212 - org.ops4j.pax.web.pax-web-jsp - 4.3.0 | found TLD bundle://212.0:0/META-INF/c-1_0.tld
+2017-11-05 02:26:16,935 | INFO  | pache.cxf.osgi]) | TldScanner                       | 212 - org.ops4j.pax.web.pax-web-jsp - 4.3.0 | found TLD bundle://212.0:0/META-INF/c.tld
+2017-11-05 02:26:16,939 | INFO  | pache.cxf.osgi]) | TldScanner                       | 212 - org.ops4j.pax.web.pax-web-jsp - 4.3.0 | found TLD bundle://212.0:0/META-INF/fmt-1_0-rt.tld
+2017-11-05 02:26:16,945 | INFO  | pache.cxf.osgi]) | TldScanner                       | 212 - org.ops4j.pax.web.pax-web-jsp - 4.3.0 | found TLD bundle://212.0:0/META-INF/fmt-1_0.tld
+2017-11-05 02:26:16,964 | INFO  | pache.cxf.osgi]) | TldScanner                       | 212 - org.ops4j.pax.web.pax-web-jsp - 4.3.0 | found TLD bundle://212.0:0/META-INF/fmt.tld
+2017-11-05 02:26:16,972 | INFO  | pache.cxf.osgi]) | TldScanner                       | 212 - org.ops4j.pax.web.pax-web-jsp - 4.3.0 | found TLD bundle://212.0:0/META-INF/fn.tld
+2017-11-05 02:26:16,975 | INFO  | pache.cxf.osgi]) | TldScanner                       | 212 - org.ops4j.pax.web.pax-web-jsp - 4.3.0 | found TLD bundle://212.0:0/META-INF/permittedTaglibs.tld
+2017-11-05 02:26:16,975 | INFO  | pache.cxf.osgi]) | TldScanner                       | 212 - org.ops4j.pax.web.pax-web-jsp - 4.3.0 | found TLD bundle://212.0:0/META-INF/scriptfree.tld
+2017-11-05 02:26:16,976 | INFO  | pache.cxf.osgi]) | TldScanner                       | 212 - org.ops4j.pax.web.pax-web-jsp - 4.3.0 | found TLD bundle://212.0:0/META-INF/sql-1_0-rt.tld
+2017-11-05 02:26:16,981 | INFO  | pache.cxf.osgi]) | TldScanner                       | 212 - org.ops4j.pax.web.pax-web-jsp - 4.3.0 | found TLD bundle://212.0:0/META-INF/sql-1_0.tld
+2017-11-05 02:26:16,985 | INFO  | pache.cxf.osgi]) | TldScanner                       | 212 - org.ops4j.pax.web.pax-web-jsp - 4.3.0 | found TLD bundle://212.0:0/META-INF/sql.tld
+2017-11-05 02:26:16,986 | INFO  | pache.cxf.osgi]) | TldScanner                       | 212 - org.ops4j.pax.web.pax-web-jsp - 4.3.0 | found TLD bundle://212.0:0/META-INF/x-1_0-rt.tld
+2017-11-05 02:26:16,990 | INFO  | pache.cxf.osgi]) | TldScanner                       | 212 - org.ops4j.pax.web.pax-web-jsp - 4.3.0 | found TLD bundle://212.0:0/META-INF/x-1_0.tld
+2017-11-05 02:26:16,995 | INFO  | pache.cxf.osgi]) | TldScanner                       | 212 - org.ops4j.pax.web.pax-web-jsp - 4.3.0 | found TLD bundle://212.0:0/META-INF/x.tld
+2017-11-05 02:26:17,031 | INFO  | pache.cxf.osgi]) | ContextHandler                   | 190 - org.eclipse.jetty.util - 9.2.19.v20160908 | Started HttpServiceContext{httpContext=DefaultHttpContext [bundle=org.apache.cxf.cxf-rt-transports-http [82], contextID=default]}
+2017-11-05 02:26:17,033 | INFO  | pache.cxf.osgi]) | Server                           | 190 - org.eclipse.jetty.util - 9.2.19.v20160908 | jetty-9.2.19.v20160908
+2017-11-05 02:26:17,060 | WARN  | pache.cxf.osgi]) | AbstractLifeCycle                | 190 - org.eclipse.jetty.util - 9.2.19.v20160908 | FAILED default@3707fa60{HTTP/1.1}{0.0.0.0:8181}: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)[:1.8.0_121]
+	at sun.nio.ch.Net.bind(Net.java:433)[:1.8.0_121]
+	at sun.nio.ch.Net.bind(Net.java:425)[:1.8.0_121]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)[:1.8.0_121]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)[:1.8.0_121]
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:321)[187:org.eclipse.jetty.server:9.2.19.v20160908]
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)[187:org.eclipse.jetty.server:9.2.19.v20160908]
+	at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:236)[187:org.eclipse.jetty.server:9.2.19.v20160908]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)[190:org.eclipse.jetty.util:9.2.19.v20160908]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:366)[187:org.eclipse.jetty.server:9.2.19.v20160908]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)[190:org.eclipse.jetty.util:9.2.19.v20160908]
+	at org.ops4j.pax.web.service.jetty.internal.JettyServerImpl$1.start(JettyServerImpl.java:287)[211:org.ops4j.pax.web.pax-web-jetty:4.3.0]
+	at org.ops4j.pax.web.service.internal.HttpServiceStarted.registerServlet(HttpServiceStarted.java:222)[213:org.ops4j.pax.web.pax-web-runtime:4.3.0]
+	at org.ops4j.pax.web.service.internal.HttpServiceStarted.registerServlet(HttpServiceStarted.java:196)[213:org.ops4j.pax.web.pax-web-runtime:4.3.0]
+	at org.ops4j.pax.web.service.internal.HttpServiceStarted.registerServlet(HttpServiceStarted.java:180)[213:org.ops4j.pax.web.pax-web-runtime:4.3.0]
+	at org.ops4j.pax.web.service.internal.HttpServiceProxy.registerServlet(HttpServiceProxy.java:64)[213:org.ops4j.pax.web.pax-web-runtime:4.3.0]
+	at org.apache.cxf.transport.http.osgi.ServletExporter.updated(ServletExporter.java:108)[82:org.apache.cxf.cxf-rt-transports-http:3.1.9]
+	at org.apache.felix.cm.impl.helper.ManagedServiceTracker.updated(ManagedServiceTracker.java:189)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.helper.ManagedServiceTracker.updateService(ManagedServiceTracker.java:152)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.helper.ManagedServiceTracker.provideConfiguration(ManagedServiceTracker.java:85)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.ConfigurationManager$ManagedServiceUpdate.provide(ConfigurationManager.java:1463)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.ConfigurationManager$ManagedServiceUpdate.run(ConfigurationManager.java:1419)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.UpdateThread.run0(UpdateThread.java:141)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.UpdateThread.run(UpdateThread.java:109)[3:org.apache.felix.configadmin:1.8.14]
+	at java.lang.Thread.run(Thread.java:745)[:1.8.0_121]
+2017-11-05 02:26:17,061 | WARN  | pache.cxf.osgi]) | AbstractLifeCycle                | 190 - org.eclipse.jetty.util - 9.2.19.v20160908 | FAILED org.ops4j.pax.web.service.jetty.internal.JettyServerWrapper@52b6eb1f: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)[:1.8.0_121]
+	at sun.nio.ch.Net.bind(Net.java:433)[:1.8.0_121]
+	at sun.nio.ch.Net.bind(Net.java:425)[:1.8.0_121]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)[:1.8.0_121]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)[:1.8.0_121]
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:321)[187:org.eclipse.jetty.server:9.2.19.v20160908]
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)[187:org.eclipse.jetty.server:9.2.19.v20160908]
+	at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:236)[187:org.eclipse.jetty.server:9.2.19.v20160908]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)[190:org.eclipse.jetty.util:9.2.19.v20160908]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:366)[187:org.eclipse.jetty.server:9.2.19.v20160908]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)[190:org.eclipse.jetty.util:9.2.19.v20160908]
+	at org.ops4j.pax.web.service.jetty.internal.JettyServerImpl$1.start(JettyServerImpl.java:287)[211:org.ops4j.pax.web.pax-web-jetty:4.3.0]
+	at org.ops4j.pax.web.service.internal.HttpServiceStarted.registerServlet(HttpServiceStarted.java:222)[213:org.ops4j.pax.web.pax-web-runtime:4.3.0]
+	at org.ops4j.pax.web.service.internal.HttpServiceStarted.registerServlet(HttpServiceStarted.java:196)[213:org.ops4j.pax.web.pax-web-runtime:4.3.0]
+	at org.ops4j.pax.web.service.internal.HttpServiceStarted.registerServlet(HttpServiceStarted.java:180)[213:org.ops4j.pax.web.pax-web-runtime:4.3.0]
+	at org.ops4j.pax.web.service.internal.HttpServiceProxy.registerServlet(HttpServiceProxy.java:64)[213:org.ops4j.pax.web.pax-web-runtime:4.3.0]
+	at org.apache.cxf.transport.http.osgi.ServletExporter.updated(ServletExporter.java:108)[82:org.apache.cxf.cxf-rt-transports-http:3.1.9]
+	at org.apache.felix.cm.impl.helper.ManagedServiceTracker.updated(ManagedServiceTracker.java:189)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.helper.ManagedServiceTracker.updateService(ManagedServiceTracker.java:152)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.helper.ManagedServiceTracker.provideConfiguration(ManagedServiceTracker.java:85)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.ConfigurationManager$ManagedServiceUpdate.provide(ConfigurationManager.java:1463)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.ConfigurationManager$ManagedServiceUpdate.run(ConfigurationManager.java:1419)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.UpdateThread.run0(UpdateThread.java:141)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.UpdateThread.run(UpdateThread.java:109)[3:org.apache.felix.configadmin:1.8.14]
+	at java.lang.Thread.run(Thread.java:745)[:1.8.0_121]
+2017-11-05 02:26:17,061 | ERROR | pache.cxf.osgi]) | HttpServiceStarted               | 213 - org.ops4j.pax.web.pax-web-runtime - 4.3.0 | Could not start the servlet context for context path []
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)[:1.8.0_121]
+	at sun.nio.ch.Net.bind(Net.java:433)[:1.8.0_121]
+	at sun.nio.ch.Net.bind(Net.java:425)[:1.8.0_121]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)[:1.8.0_121]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)[:1.8.0_121]
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:321)[187:org.eclipse.jetty.server:9.2.19.v20160908]
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)[187:org.eclipse.jetty.server:9.2.19.v20160908]
+	at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:236)[187:org.eclipse.jetty.server:9.2.19.v20160908]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)[190:org.eclipse.jetty.util:9.2.19.v20160908]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:366)[187:org.eclipse.jetty.server:9.2.19.v20160908]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)[190:org.eclipse.jetty.util:9.2.19.v20160908]
+	at org.ops4j.pax.web.service.jetty.internal.JettyServerImpl$1.start(JettyServerImpl.java:287)[211:org.ops4j.pax.web.pax-web-jetty:4.3.0]
+	at org.ops4j.pax.web.service.internal.HttpServiceStarted.registerServlet(HttpServiceStarted.java:222)[213:org.ops4j.pax.web.pax-web-runtime:4.3.0]
+	at org.ops4j.pax.web.service.internal.HttpServiceStarted.registerServlet(HttpServiceStarted.java:196)[213:org.ops4j.pax.web.pax-web-runtime:4.3.0]
+	at org.ops4j.pax.web.service.internal.HttpServiceStarted.registerServlet(HttpServiceStarted.java:180)[213:org.ops4j.pax.web.pax-web-runtime:4.3.0]
+	at org.ops4j.pax.web.service.internal.HttpServiceProxy.registerServlet(HttpServiceProxy.java:64)[213:org.ops4j.pax.web.pax-web-runtime:4.3.0]
+	at org.apache.cxf.transport.http.osgi.ServletExporter.updated(ServletExporter.java:108)[82:org.apache.cxf.cxf-rt-transports-http:3.1.9]
+	at org.apache.felix.cm.impl.helper.ManagedServiceTracker.updated(ManagedServiceTracker.java:189)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.helper.ManagedServiceTracker.updateService(ManagedServiceTracker.java:152)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.helper.ManagedServiceTracker.provideConfiguration(ManagedServiceTracker.java:85)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.ConfigurationManager$ManagedServiceUpdate.provide(ConfigurationManager.java:1463)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.ConfigurationManager$ManagedServiceUpdate.run(ConfigurationManager.java:1419)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.UpdateThread.run0(UpdateThread.java:141)[3:org.apache.felix.configadmin:1.8.14]
+	at org.apache.felix.cm.impl.UpdateThread.run(UpdateThread.java:109)[3:org.apache.felix.configadmin:1.8.14]
+	at java.lang.Thread.run(Thread.java:745)[:1.8.0_121]
+2017-11-05 02:26:17,279 | WARN  | FelixStartLevel  | DefaultTypeConverter             | 43 - org.apache.camel.camel-core - 2.16.5 | Overriding type converter from: StaticMethodTypeConverter: public static org.apache.activemq.command.ActiveMQDestination org.apache.activemq.camel.converter.ActiveMQConverter.toDestination(java.lang.String) to: StaticMethodTypeConverter: public static org.apache.activemq.command.ActiveMQDestination org.apache.activemq.camel.converter.ActiveMQConverter.toDestination(java.lang.String)
+2017-11-05 02:26:17,280 | WARN  | FelixStartLevel  | DefaultTypeConverter             | 43 - org.apache.camel.camel-core - 2.16.5 | Overriding type converter from: InstanceMethodTypeConverter: public org.apache.activemq.command.ActiveMQMessage org.apache.activemq.camel.converter.ActiveMQMessageConverter.toMessage(org.apache.camel.Exchange) throws javax.jms.JMSException to: InstanceMethodTypeConverter: public org.apache.activemq.command.ActiveMQMessage org.apache.activemq.camel.converter.ActiveMQMessageConverter.toMessage(org.apache.camel.Exchange) throws javax.jms.JMSException
+2017-11-05 02:26:17,280 | WARN  | FelixStartLevel  | DefaultTypeConverter             | 43 - org.apache.camel.camel-core - 2.16.5 | Overriding type converter from: InstanceMethodTypeConverter: public org.apache.camel.Processor org.apache.activemq.camel.converter.ActiveMQMessageConverter.toProcessor(javax.jms.MessageListener) to: InstanceMethodTypeConverter: public org.apache.camel.Processor org.apache.activemq.camel.converter.ActiveMQMessageConverter.toProcessor(javax.jms.MessageListener)
+2017-11-05 02:26:17,376 | INFO  | FelixStartLevel  | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Apache Camel 2.16.5 (CamelContext: camel-1) is starting
+2017-11-05 02:26:17,378 | INFO  | FelixStartLevel  | ManagedManagementStrategy        | 43 - org.apache.camel.camel-core - 2.16.5 | JMX is enabled
+2017-11-05 02:26:17,440 | INFO  | FelixStartLevel  | DefaultRuntimeEndpointRegistry   | 43 - org.apache.camel.camel-core - 2.16.5 | Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2017-11-05 02:26:17,882 | WARN  | mix-7.0.1/deploy | fileinstall                      | 4 - org.apache.felix.fileinstall - 3.5.8 | A bundle with the same symbolic name (implem) and version (1.0) is already installed.  Updating this bundle instead.
+2017-11-05 02:26:17,888 | INFO  | FelixStartLevel  | SaajSoapMessageFactory           | 236 - org.springframework.ws - 2.1.4.RELEASE | Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2017-11-05 02:26:18,085 | INFO  | FelixStartLevel  | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2017-11-05 02:26:18,086 | INFO  | FelixStartLevel  | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2017-11-05 02:26:18,197 | INFO  | FelixStartLevel  | AggregateProcessor               | 43 - org.apache.camel.camel-core - 2.16.5 | Defaulting to MemoryAggregationRepository
+2017-11-05 02:26:18,249 | INFO  | FelixStartLevel  | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: csv-input-car started and consuming from: Endpoint[file://../../microservices-uns/integration/input?fileName=car.csv]
+2017-11-05 02:26:18,250 | INFO  | FelixStartLevel  | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: search-car started and consuming from: Endpoint[direct://search-car]
+2017-11-05 02:26:18,251 | INFO  | FelixStartLevel  | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: route1 started and consuming from: Endpoint[direct://aggregation-car]
+2017-11-05 02:26:18,253 | INFO  | FelixStartLevel  | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: csv-input-hotel started and consuming from: Endpoint[file://../../microservices-uns/integration/input?fileName=hotels.csv]
+2017-11-05 02:26:18,296 | INFO  | FelixStartLevel  | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: spec hotel queue started and consuming from: Endpoint[activemq://handle-hotel-spec]
+2017-11-05 02:26:18,298 | INFO  | FelixStartLevel  | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: request-to-hotelrpc-1 started and consuming from: Endpoint[direct://search-hotel-1]
+2017-11-05 02:26:18,299 | INFO  | FelixStartLevel  | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: request-to-hotelrest started and consuming from: Endpoint[direct://search-hotel-2]
+2017-11-05 02:26:18,300 | INFO  | FelixStartLevel  | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: aggregation-hotel started and consuming from: Endpoint[direct://aggregation-hotel]
+2017-11-05 02:26:18,302 | INFO  | FelixStartLevel  | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: business-rest-call started and consuming from: Endpoint[direct://businesstravel-rest]
+2017-11-05 02:26:18,305 | INFO  | FelixStartLevel  | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: csv-to-Vol started and consuming from: Endpoint[file://../../microservices-uns/integration/input?fileName=vol.csv]
+2017-11-05 02:26:18,318 | INFO  | FelixStartLevel  | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: vols-req-queue started and consuming from: Endpoint[activemq://handle-vol-requests]
+2017-11-05 02:26:18,321 | INFO  | FelixStartLevel  | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: request-to-vol extern B started and consuming from: Endpoint[direct://search-vol-serviceB]
+2017-11-05 02:26:18,323 | INFO  | FelixStartLevel  | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Total 12 routes, of which 12 is started.
+2017-11-05 02:26:18,323 | INFO  | FelixStartLevel  | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Apache Camel 2.16.5 (CamelContext: camel-1) started in 0.947 seconds
+2017-11-05 02:26:18,334 | INFO  | mix-7.0.1/deploy | BlueprintExtender                | 28 - org.apache.aries.blueprint.core - 1.7.1 | Destroying BlueprintContainer for bundle implem/1.0.0
+2017-11-05 02:26:18,334 | INFO  | lixDispatchQueue | Main                             |  -  -  | Karaf started in 6s. Bundle stats: 235 active, 236 total
+2017-11-05 02:26:18,344 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Apache Camel 2.16.5 (CamelContext: camel-1) is shutting down
+2017-11-05 02:26:18,346 | INFO  | mix-7.0.1/deploy | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Starting to graceful shutdown 12 routes (timeout 300 seconds)
+2017-11-05 02:26:18,350 | INFO  | 5 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: request-to-vol extern B shutdown complete, was consuming from: Endpoint[direct://search-vol-serviceB]
+2017-11-05 02:26:19,334 | INFO  | 5 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: vols-req-queue shutdown complete, was consuming from: Endpoint[activemq://handle-vol-requests]
+2017-11-05 02:26:19,334 | INFO  | 5 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: csv-to-Vol shutdown complete, was consuming from: Endpoint[file://../../microservices-uns/integration/input?fileName=vol.csv]
+2017-11-05 02:26:19,334 | INFO  | 5 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: business-rest-call shutdown complete, was consuming from: Endpoint[direct://businesstravel-rest]
+2017-11-05 02:26:19,334 | INFO  | 5 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: aggregation-hotel shutdown complete, was consuming from: Endpoint[direct://aggregation-hotel]
+2017-11-05 02:26:19,335 | INFO  | 5 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: request-to-hotelrest shutdown complete, was consuming from: Endpoint[direct://search-hotel-2]
+2017-11-05 02:26:19,335 | INFO  | 5 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: request-to-hotelrpc-1 shutdown complete, was consuming from: Endpoint[direct://search-hotel-1]
+2017-11-05 02:26:19,338 | INFO  | 5 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: spec hotel queue shutdown complete, was consuming from: Endpoint[activemq://handle-hotel-spec]
+2017-11-05 02:26:19,339 | INFO  | 5 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: csv-input-hotel shutdown complete, was consuming from: Endpoint[file://../../microservices-uns/integration/input?fileName=hotels.csv]
+2017-11-05 02:26:19,339 | INFO  | 5 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: route1 shutdown complete, was consuming from: Endpoint[direct://aggregation-car]
+2017-11-05 02:26:19,339 | INFO  | 5 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: search-car shutdown complete, was consuming from: Endpoint[direct://search-car]
+2017-11-05 02:26:19,339 | INFO  | 5 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: csv-input-car shutdown complete, was consuming from: Endpoint[file://../../microservices-uns/integration/input?fileName=car.csv]
+2017-11-05 02:26:19,340 | INFO  | mix-7.0.1/deploy | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Graceful shutdown of 12 routes completed in 0 seconds
+2017-11-05 02:26:19,355 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Apache Camel 2.16.5 (CamelContext: camel-1) uptime 1.978 seconds
+2017-11-05 02:26:19,355 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Apache Camel 2.16.5 (CamelContext: camel-1) is shutdown in 1.010 seconds
+2017-11-05 02:26:19,411 | WARN  | mix-7.0.1/deploy | NamespaceHandlerRegistryImpl     | 28 - org.apache.aries.blueprint.core - 1.7.1 | NamespaceHandler org.apache.camel.blueprint.handler.CamelNamespaceHandler is behaving badly and should be fixed
+2017-11-05 02:26:19,490 | WARN  | mix-7.0.1/deploy | DefaultTypeConverter             | 43 - org.apache.camel.camel-core - 2.16.5 | Overriding type converter from: StaticMethodTypeConverter: public static org.apache.activemq.command.ActiveMQDestination org.apache.activemq.camel.converter.ActiveMQConverter.toDestination(java.lang.String) to: StaticMethodTypeConverter: public static org.apache.activemq.command.ActiveMQDestination org.apache.activemq.camel.converter.ActiveMQConverter.toDestination(java.lang.String)
+2017-11-05 02:26:19,490 | WARN  | mix-7.0.1/deploy | DefaultTypeConverter             | 43 - org.apache.camel.camel-core - 2.16.5 | Overriding type converter from: InstanceMethodTypeConverter: public org.apache.activemq.command.ActiveMQMessage org.apache.activemq.camel.converter.ActiveMQMessageConverter.toMessage(org.apache.camel.Exchange) throws javax.jms.JMSException to: InstanceMethodTypeConverter: public org.apache.activemq.command.ActiveMQMessage org.apache.activemq.camel.converter.ActiveMQMessageConverter.toMessage(org.apache.camel.Exchange) throws javax.jms.JMSException
+2017-11-05 02:26:19,490 | WARN  | mix-7.0.1/deploy | DefaultTypeConverter             | 43 - org.apache.camel.camel-core - 2.16.5 | Overriding type converter from: InstanceMethodTypeConverter: public org.apache.camel.Processor org.apache.activemq.camel.converter.ActiveMQMessageConverter.toProcessor(javax.jms.MessageListener) to: InstanceMethodTypeConverter: public org.apache.camel.Processor org.apache.activemq.camel.converter.ActiveMQMessageConverter.toProcessor(javax.jms.MessageListener)
+2017-11-05 02:26:19,525 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Apache Camel 2.16.5 (CamelContext: camel-2) is starting
+2017-11-05 02:26:19,525 | INFO  | mix-7.0.1/deploy | ManagedManagementStrategy        | 43 - org.apache.camel.camel-core - 2.16.5 | JMX is enabled
+2017-11-05 02:26:19,533 | INFO  | mix-7.0.1/deploy | DefaultRuntimeEndpointRegistry   | 43 - org.apache.camel.camel-core - 2.16.5 | Runtime endpoint registry is in extended mode gathering usage statistics of all incoming and outgoing endpoints (cache limit: 1000)
+2017-11-05 02:26:19,573 | INFO  | mix-7.0.1/deploy | SaajSoapMessageFactory           | 236 - org.springframework.ws - 2.1.4.RELEASE | Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2017-11-05 02:26:19,760 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+2017-11-05 02:26:19,760 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+2017-11-05 02:26:19,806 | INFO  | mix-7.0.1/deploy | AggregateProcessor               | 43 - org.apache.camel.camel-core - 2.16.5 | Defaulting to MemoryAggregationRepository
+2017-11-05 02:26:19,846 | INFO  | mix-7.0.1/deploy | AggregateProcessor               | 43 - org.apache.camel.camel-core - 2.16.5 | Defaulting to MemoryAggregationRepository
+2017-11-05 02:26:19,892 | INFO  | mix-7.0.1/deploy | AggregateProcessor               | 43 - org.apache.camel.camel-core - 2.16.5 | Defaulting to MemoryAggregationRepository
+2017-11-05 02:26:19,906 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: csv-input-car started and consuming from: Endpoint[file:///Users/iliasnaamane/microservices-uns/integration/input?fileName=cars.csv]
+2017-11-05 02:26:19,914 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: car queue started and consuming from: Endpoint[activemq://handle-car-requests]
+2017-11-05 02:26:19,915 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: search-car-1 started and consuming from: Endpoint[direct://search-car-1]
+2017-11-05 02:26:19,917 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: search-car-2 started and consuming from: Endpoint[direct://search-car-2]
+2017-11-05 02:26:19,918 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: car-aggregation started and consuming from: Endpoint[direct://aggregate-cars]
+2017-11-05 02:26:19,920 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: csv-input-hotel started and consuming from: Endpoint[file:///Users/iliasnaamane/microservices-uns/integration/input?fileName=hotels.csv]
+2017-11-05 02:26:19,926 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: spec hotel queue started and consuming from: Endpoint[activemq://handle-hotel-spec]
+2017-11-05 02:26:19,928 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: request-to-hotelrpc-1 started and consuming from: Endpoint[direct://search-hotel-1]
+2017-11-05 02:26:19,929 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: request-to-hotelrest started and consuming from: Endpoint[direct://search-hotel-2]
+2017-11-05 02:26:19,930 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: aggregation-hotel started and consuming from: Endpoint[direct://aggregation-hotel]
+2017-11-05 02:26:19,932 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: csv-to-Vol started and consuming from: Endpoint[file:///Users/iliasnaamane/microservices-uns/integration/input]
+2017-11-05 02:26:19,939 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: vols-req-queue started and consuming from: Endpoint[activemq://handle-vol-requests]
+2017-11-05 02:26:19,940 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: request-to-vol rest A started and consuming from: Endpoint[direct://search-vol-serviceA]
+2017-11-05 02:26:19,942 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: request-to-vol extern B started and consuming from: Endpoint[direct://search-vol-serviceB]
+2017-11-05 02:26:19,943 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: aggreg-flight started and consuming from: Endpoint[direct://aggregate-vols]
+2017-11-05 02:26:19,944 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Route: business-rest-call2 started and consuming from: Endpoint[direct://businesstravel-rest2]
+2017-11-05 02:26:19,945 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Total 16 routes, of which 16 is started.
+2017-11-05 02:26:19,945 | INFO  | mix-7.0.1/deploy | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Apache Camel 2.16.5 (CamelContext: camel-2) started in 0.420 seconds
+2017-11-05 02:26:19,952 | INFO  | mix-7.0.1/deploy | fileinstall                      | 4 - org.apache.felix.fileinstall - 3.5.8 | Started bundle: file:/home/user/Bureau/Projet%202%20ESB/microservices-uns/apache-servicemix-7.0.1/deploy/implem-1.0.jar
+2017-11-05 02:26:19,952 | INFO  | mix-7.0.1/deploy | fileinstall                      | 4 - org.apache.felix.fileinstall - 3.5.8 | Started bundle: file:/home/user/Bureau/Projet%202%20ESB/microservices-uns/apache-servicemix-7.0.1/deploy/implem-1.0.jar
+2017-11-05 02:26:43,093 | INFO  | ntegration/input | csv-to-Vol                       | 43 - org.apache.camel.camel-core - 2.16.5 | Processing vol.csv
+2017-11-05 02:26:43,095 | INFO  | ntegration/input | csv-to-Vol                       | 43 - org.apache.camel.camel-core - 2.16.5 |   Loading the file as a CSV document
+2017-11-05 02:26:43,098 | INFO  | ntegration/input | csv-to-Vol                       | 43 - org.apache.camel.camel-core - 2.16.5 |   Splitting the content of the file into atomic lines
+2017-11-05 02:26:43,104 | INFO  | pool-38-thread-1 | csv-to-Vol                       | 43 - org.apache.camel.camel-core - 2.16.5 |   CSV 2 VolRequest
+2017-11-05 02:26:43,107 | INFO  | pool-38-thread-1 | csv-to-Vol                       | 43 - org.apache.camel.camel-core - 2.16.5 | After Process (reading from csv)::::: simple{VolsRequest{Outbound_date=12-10-2017, from=Nice, to=Paris}}
+2017-11-05 02:26:43,137 | INFO  | le-vol-requests] | request-to-vol rest A            | 43 - org.apache.camel.camel-core - 2.16.5 | request to external hotel rest service
+2017-11-05 02:26:43,138 | INFO  | le-vol-requests] | request-to-vol rest A            | 43 - org.apache.camel.camel-core - 2.16.5 | Before Process reqRestservA ::::: simple{VolsRequest{Outbound_date=12-10-2017, from=Nice, to=Paris}}
+2017-11-05 02:26:43,138 | INFO  | le-vol-requests] | request-to-vol rest A            | 43 - org.apache.camel.camel-core - 2.16.5 | After Process ::::: simple{{"Outbound_date":"12-10-2017","from":"Nice","sortby":"Price","to":"Paris","event":"Search"}}
+2017-11-05 02:26:43,366 | INFO  | le-vol-requests] | aggreg-flight                    | 43 - org.apache.camel.camel-core - 2.16.5 | before aggregsimple{vol{
+'date'='12-10-2017', 
+'prix'='450', 
+'origine'='Nice' , 
+'destination'='Paris', 
+'id'='3', 
+'cmpny'='Ryanair', 
+'nb_escales'='1', 
+'rating'='2.5', 
+'duree'='4' 
+}}
+2017-11-05 02:26:43,368 | INFO  | le-vol-requests] | request-to-vol extern B          | 43 - org.apache.camel.camel-core - 2.16.5 | Before Process reqRestservB ::::: simple{VolsRequest{Outbound_date=12-10-2017, from=Nice, to=Paris}}
+2017-11-05 02:27:13,391 | ERROR | le-vol-requests] | DefaultErrorHandler              | 43 - org.apache.camel.camel-core - 2.16.5 | Failed delivery for (MessageId: ID-iliass-MacBook-Pro-local-50901-1509845177105-1-9 on ExchangeId: ID-iliass-MacBook-Pro-local-50901-1509845177105-1-10). Exhausted after delivery attempt: 1 caught: org.apache.camel.http.common.HttpOperationFailedException: HTTP operation failed invoking http://localhost:9080/flightreservation-service-document/registry with statusCode: 400
+
+Message History
+---------------------------------------------------------------------------------------------------------------------------------------
+RouteId              ProcessorId          Processor                                                                        Elapsed (ms)
+[vols-req-queue    ] [vols-req-queue    ] [activemq://handle-vol-requests                                                ] [     30255]
+[vols-req-queue    ] [multicast4        ] [multicast                                                                     ] [     30254]
+[vols-req-queue    ] [to35              ] [direct:search-vol-serviceB                                                    ] [     30022]
+[request-to-vol ext] [setHeader18       ] [setHeader[CamelHttpMethod]                                                    ] [         0]
+[request-to-vol ext] [setHeader19       ] [setHeader[Content-Type]                                                       ] [         0]
+[request-to-vol ext] [setHeader20       ] [setHeader[Accept]                                                             ] [         0]
+[request-to-vol ext] [log39             ] [log                                                                           ] [         0]
+[request-to-vol ext] [process23         ] [Processor@0x30621cda                                                          ] [         0]
+[request-to-vol ext] [to38              ] [http://localhost:9080/flightreservation-service-document/registry             ] [     30022]
+
+Exchange
+---------------------------------------------------------------------------------------------------------------------------------------
+Exchange[
+	Id                  ID-iliass-MacBook-Pro-local-50901-1509845177105-1-10
+	ExchangePattern     InOnly
+	Headers             {Accept=application/json, breadcrumbId=ID-iliass-MacBook-Pro-local-50901-1509845177105-1-1, CamelFileAbsolute=true, CamelFileAbsolutePath=/Users/iliasnaamane/microservices-uns/integration/input/vol.csv, CamelFileLastModified=1509845203000, CamelFileLength=53, CamelFileName=vol.csv, CamelFileNameConsumed=vol.csv, CamelFileNameOnly=vol.csv, CamelFileParent=/Users/iliasnaamane/microservices-uns/integration/input, CamelFilePath=/Users/iliasnaamane/microservices-uns/integration/input/vol.csv, CamelFileRelativePath=vol.csv, CamelHttpMethod=POST, CamelRedelivered=false, CamelRedeliveryCounter=0, Content-Type=application/json, JMSCorrelationID=null, JMSCorrelationIDAsBytes=null, JMSDeliveryMode=2, JMSDestination=queue://handle-vol-requests, JMSExpiration=0, JMSMessageID=ID:iliass-MacBook-Pro.local-50900-1509845176353-6:4:1:1:1, JMSPriority=4, JMSRedelivered=false, JMSReplyTo=null, JMSTimestamp=1509845203123, JMSType=null, JMSXGroupID=null, JMSXUserID=null}
+	BodyType            String
+	Body                { "event": "LIST", "filter": {"destination" : "Paris","date":"2017-10-12","isDirect":false}}
+]
+
+Stacktrace
+---------------------------------------------------------------------------------------------------------------------------------------
+org.apache.camel.http.common.HttpOperationFailedException: HTTP operation failed invoking http://localhost:9080/flightreservation-service-document/registry with statusCode: 400
+	at org.apache.camel.component.http.HttpProducer.populateHttpOperationFailedException(HttpProducer.java:240)[224:org.apache.camel.camel-http:2.16.5]
+	at org.apache.camel.component.http.HttpProducer.process(HttpProducer.java:162)[224:org.apache.camel.camel-http:2.16.5]
+	at org.apache.camel.util.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:61)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:460)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:121)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:83)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.direct.DirectProducer.process(DirectProducer.java:62)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:460)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.MulticastProcessor.doProcessSequential(MulticastProcessor.java:677)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.MulticastProcessor.doProcessSequential(MulticastProcessor.java:605)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.MulticastProcessor.process(MulticastProcessor.java:237)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.util.AsyncProcessorHelper.process(AsyncProcessorHelper.java:109)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.DelegateAsyncProcessor.process(DelegateAsyncProcessor.java:91)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.jms.EndpointMessageListener.onMessage(EndpointMessageListener.java:112)[46:org.apache.camel.camel-jms:2.16.5]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:555)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:515)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:485)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:325)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:263)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1103)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1095)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:992)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)[:1.8.0_121]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)[:1.8.0_121]
+	at java.lang.Thread.run(Thread.java:745)[:1.8.0_121]
+2017-11-05 02:27:13,394 | WARN  | le-vol-requests] | EndpointMessageListener          | 43 - org.apache.camel.camel-core - 2.16.5 | Execution of JMS message listener failed. Caused by: [org.apache.camel.RuntimeCamelException - org.apache.camel.http.common.HttpOperationFailedException: HTTP operation failed invoking http://localhost:9080/flightreservation-service-document/registry with statusCode: 400]
+org.apache.camel.RuntimeCamelException: org.apache.camel.http.common.HttpOperationFailedException: HTTP operation failed invoking http://localhost:9080/flightreservation-service-document/registry with statusCode: 400
+	at org.apache.camel.util.ObjectHelper.wrapRuntimeCamelException(ObjectHelper.java:1652)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.jms.EndpointMessageListener$EndpointMessageListenerAsyncCallback.done(EndpointMessageListener.java:195)[46:org.apache.camel.camel-jms:2.16.5]
+	at org.apache.camel.component.jms.EndpointMessageListener.onMessage(EndpointMessageListener.java:116)[46:org.apache.camel.camel-jms:2.16.5]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:555)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:515)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:485)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:325)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:263)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1103)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1095)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:992)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)[:1.8.0_121]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)[:1.8.0_121]
+	at java.lang.Thread.run(Thread.java:745)[:1.8.0_121]
+Caused by: org.apache.camel.http.common.HttpOperationFailedException: HTTP operation failed invoking http://localhost:9080/flightreservation-service-document/registry with statusCode: 400
+	at org.apache.camel.component.http.HttpProducer.populateHttpOperationFailedException(HttpProducer.java:240)[224:org.apache.camel.camel-http:2.16.5]
+	at org.apache.camel.component.http.HttpProducer.process(HttpProducer.java:162)[224:org.apache.camel.camel-http:2.16.5]
+	at org.apache.camel.util.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:61)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:460)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:121)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:83)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.direct.DirectProducer.process(DirectProducer.java:62)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:460)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.MulticastProcessor.doProcessSequential(MulticastProcessor.java:677)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.MulticastProcessor.doProcessSequential(MulticastProcessor.java:605)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.MulticastProcessor.process(MulticastProcessor.java:237)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.util.AsyncProcessorHelper.process(AsyncProcessorHelper.java:109)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.DelegateAsyncProcessor.process(DelegateAsyncProcessor.java:91)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.jms.EndpointMessageListener.onMessage(EndpointMessageListener.java:112)[46:org.apache.camel.camel-jms:2.16.5]
+	... 11 more
+2017-11-05 02:27:27,345 | INFO  | ntegration/input | csv-to-Vol                       | 43 - org.apache.camel.camel-core - 2.16.5 | Processing vol.csv
+2017-11-05 02:27:27,346 | INFO  | ntegration/input | csv-to-Vol                       | 43 - org.apache.camel.camel-core - 2.16.5 |   Loading the file as a CSV document
+2017-11-05 02:27:27,346 | INFO  | ntegration/input | csv-to-Vol                       | 43 - org.apache.camel.camel-core - 2.16.5 |   Splitting the content of the file into atomic lines
+2017-11-05 02:27:27,347 | INFO  | pool-38-thread-2 | csv-to-Vol                       | 43 - org.apache.camel.camel-core - 2.16.5 |   CSV 2 VolRequest
+2017-11-05 02:27:27,349 | INFO  | pool-38-thread-2 | csv-to-Vol                       | 43 - org.apache.camel.camel-core - 2.16.5 | After Process (reading from csv)::::: simple{VolsRequest{Outbound_date=12-10-2017, from=Nice, to=Paris}}
+2017-11-05 02:27:27,361 | INFO  | le-vol-requests] | request-to-vol rest A            | 43 - org.apache.camel.camel-core - 2.16.5 | request to external hotel rest service
+2017-11-05 02:27:27,362 | INFO  | le-vol-requests] | request-to-vol rest A            | 43 - org.apache.camel.camel-core - 2.16.5 | Before Process reqRestservA ::::: simple{VolsRequest{Outbound_date=12-10-2017, from=Nice, to=Paris}}
+2017-11-05 02:27:27,362 | INFO  | le-vol-requests] | request-to-vol rest A            | 43 - org.apache.camel.camel-core - 2.16.5 | After Process ::::: simple{{"Outbound_date":"12-10-2017","from":"Nice","sortby":"Price","to":"Paris","event":"Search"}}
+2017-11-05 02:27:27,373 | INFO  | le-vol-requests] | aggreg-flight                    | 43 - org.apache.camel.camel-core - 2.16.5 | before aggregsimple{vol{
+'date'='12-10-2017', 
+'prix'='450', 
+'origine'='Nice' , 
+'destination'='Paris', 
+'id'='3', 
+'cmpny'='Ryanair', 
+'nb_escales'='1', 
+'rating'='2.5', 
+'duree'='4' 
+}}
+2017-11-05 02:27:27,374 | INFO  | le-vol-requests] | aggreg-flight                    | 43 - org.apache.camel.camel-core - 2.16.5 | After Aggregator
+2017-11-05 02:27:27,374 | INFO  | le-vol-requests] | aggreg-flight                    | 43 - org.apache.camel.camel-core - 2.16.5 | after aggregsimple{vol{
+'date'='12-10-2017', 
+'prix'='450', 
+'origine'='Nice' , 
+'destination'='Paris', 
+'id'='3', 
+'cmpny'='Ryanair', 
+'nb_escales'='1', 
+'rating'='2.5', 
+'duree'='4' 
+}}
+2017-11-05 02:27:27,374 | INFO  | le-vol-requests] | aggreg-flight                    | 43 - org.apache.camel.camel-core - 2.16.5 | nothing left but to wright on the file
+2017-11-05 02:27:27,375 | INFO  | le-vol-requests] | business-rest-call2              | 43 - org.apache.camel.camel-core - 2.16.5 | simple{vol{
+'date'='12-10-2017', 
+'prix'='450', 
+'origine'='Nice' , 
+'destination'='Paris', 
+'id'='3', 
+'cmpny'='Ryanair', 
+'nb_escales'='1', 
+'rating'='2.5', 
+'duree'='4' 
+}}
+2017-11-05 02:27:27,378 | ERROR | le-vol-requests] | DefaultErrorHandler              | 43 - org.apache.camel.camel-core - 2.16.5 | Failed delivery for (MessageId: ID-iliass-MacBook-Pro-local-50901-1509845177105-1-20 on ExchangeId: ID-iliass-MacBook-Pro-local-50901-1509845177105-1-19). Exhausted after delivery attempt: 1 caught: org.apache.camel.component.file.GenericFileOperationFailedException: Cannot store file: ../../microservices-uns/integration/output/volss.txt
+
+Message History
+---------------------------------------------------------------------------------------------------------------------------------------
+RouteId              ProcessorId          Processor                                                                        Elapsed (ms)
+[vols-req-queue    ] [vols-req-queue    ] [activemq://handle-vol-requests                                                ] [     44241]
+[vols-req-queue    ] [multicast4        ] [multicast                                                                     ] [     30257]
+[vols-req-queue    ] [to34              ] [direct:search-vol-serviceA                                                    ] [       231]
+[request-to-vol res] [log36             ] [log                                                                           ] [         1]
+[request-to-vol res] [setHeader15       ] [setHeader[CamelHttpMethod]                                                    ] [         0]
+[request-to-vol res] [setHeader16       ] [setHeader[Content-Type]                                                       ] [         0]
+[request-to-vol res] [setHeader17       ] [setHeader[Accept]                                                             ] [         0]
+[request-to-vol res] [log37             ] [log                                                                           ] [         0]
+[request-to-vol res] [process21         ] [Processor@0x1fb8807b                                                          ] [         0]
+[request-to-vol res] [log38             ] [log                                                                           ] [         1]
+[request-to-vol res] [to36              ] [http://localhost:9030/vols/webapi/vols                                        ] [       212]
+[request-to-vol res] [unmarshal17       ] [unmarshal[org.apache.camel.model.dataformat.StringDataFormat@62c71704]        ] [         0]
+[request-to-vol res] [process22         ] [Processor@0xb1d4ae4                                                           ] [        15]
+[request-to-vol res] [to37              ] [direct:aggregate-vols                                                         ] [         1]
+[aggreg-flight     ] [log40             ] [log                                                                           ] [         0]
+[aggreg-flight     ] [aggregate4        ] [aggregate[true]                                                               ] [         0]
+[aggreg-flight     ] [log41             ] [log                                                                           ] [         0]
+[aggreg-flight     ] [log42             ] [log                                                                           ] [         0]
+[aggreg-flight     ] [log43             ] [log                                                                           ] [         0]
+[aggreg-flight     ] [to40              ] [direct:businesstravel-rest2                                                   ] [         3]
+[business-rest-call] [log44             ] [log                                                                           ] [         1]
+[business-rest-call] [setHeader21       ] [setHeader[CamelHttpMethod]                                                    ] [         0]
+[business-rest-call] [setHeader22       ] [setHeader[Content-Type]                                                       ] [         0]
+[business-rest-call] [setHeader23       ] [setHeader[Accept]                                                             ] [         0]
+[business-rest-call] [to41              ] [file:../../microservices-uns/integration/output?fileName=volss.txt            ] [         1]
+
+Exchange
+---------------------------------------------------------------------------------------------------------------------------------------
+Exchange[
+	Id                  ID-iliass-MacBook-Pro-local-50901-1509845177105-1-19
+	ExchangePattern     InOnly
+	Headers             {Accept=application/json, breadcrumbId=ID-iliass-MacBook-Pro-local-50901-1509845177105-1-1, CamelFileAbsolute=true, CamelFileAbsolutePath=/Users/iliasnaamane/microservices-uns/integration/input/vol.csv, CamelFileLastModified=1509845203000, CamelFileLength=53, CamelFileName=vol.csv, CamelFileNameConsumed=vol.csv, CamelFileNameOnly=vol.csv, CamelFileParent=/Users/iliasnaamane/microservices-uns/integration/input, CamelFilePath=/Users/iliasnaamane/microservices-uns/integration/input/vol.csv, CamelFileRelativePath=vol.csv, CamelHttpMethod=POST, CamelHttpResponseCode=200, CamelHttpResponseText=, CamelRedelivered=false, CamelRedeliveryCounter=0, Content-Length=600, Content-Type=application/json, Date=Sun, 05 Nov 2017 01:26:43 GMT, JMSDeliveryMode=2, JMSDestination=queue://handle-vol-requests, JMSExpiration=0, JMSMessageID=ID:iliass-MacBook-Pro.local-50900-1509845176353-6:4:1:1:1, JMSPriority=4, JMSRedelivered=false, JMSTimestamp=1509845203123, Server=Apache TomEE}
+	BodyType            esb.flows.implem.data.Flight.vol
+	Body                vol{'date'='12-10-2017', 'prix'='450', 'origine'='Nice' , 'destination'='Paris', 'id'='3', 'cmpny'='Ryanair', 'nb_escales'='1', 'rating'='2.5', 'duree'='4' }
+]
+
+Stacktrace
+---------------------------------------------------------------------------------------------------------------------------------------
+org.apache.camel.component.file.GenericFileOperationFailedException: Cannot store file: ../../microservices-uns/integration/output/volss.txt
+	at org.apache.camel.component.file.FileOperations.storeFile(FileOperations.java:308)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.file.GenericFileProducer.writeFile(GenericFileProducer.java:277)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.file.GenericFileProducer.processExchange(GenericFileProducer.java:165)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.file.GenericFileProducer.process(GenericFileProducer.java:79)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.util.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:61)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:460)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:121)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:83)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.direct.DirectProducer.process(DirectProducer.java:62)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:460)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:121)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:83)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.util.AsyncProcessorHelper.process(AsyncProcessorHelper.java:109)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.DelegateAsyncProcessor.process(DelegateAsyncProcessor.java:91)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.aggregate.AggregateProcessor$1.run(AggregateProcessor.java:732)[43:org.apache.camel.camel-core:2.16.5]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)[:1.8.0_121]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)[:1.8.0_121]
+	at org.apache.camel.util.concurrent.SynchronousExecutorService.execute(SynchronousExecutorService.java:62)[43:org.apache.camel.camel-core:2.16.5]
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)[:1.8.0_121]
+	at org.apache.camel.processor.aggregate.AggregateProcessor.onSubmitCompletion(AggregateProcessor.java:724)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.aggregate.AggregateProcessor.doProcess(AggregateProcessor.java:353)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.aggregate.AggregateProcessor.process(AggregateProcessor.java:266)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:460)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:121)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:83)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.direct.DirectProducer.process(DirectProducer.java:62)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:460)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:121)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:83)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.direct.DirectProducer.process(DirectProducer.java:62)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:460)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.MulticastProcessor.doProcessSequential(MulticastProcessor.java:677)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.MulticastProcessor.doProcessSequential(MulticastProcessor.java:605)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.MulticastProcessor.process(MulticastProcessor.java:237)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.util.AsyncProcessorHelper.process(AsyncProcessorHelper.java:109)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.DelegateAsyncProcessor.process(DelegateAsyncProcessor.java:91)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.jms.EndpointMessageListener.onMessage(EndpointMessageListener.java:112)[46:org.apache.camel.camel-jms:2.16.5]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:555)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:515)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:485)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:325)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:263)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1103)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1095)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:992)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)[:1.8.0_121]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)[:1.8.0_121]
+	at java.lang.Thread.run(Thread.java:745)[:1.8.0_121]
+Caused by: org.apache.camel.InvalidPayloadException: No body available of type: java.io.InputStream but has value: vol{
+'date'='12-10-2017', 
+'prix'='450', 
+'origine'='Nice' , 
+'destination'='Paris', 
+'id'='3', 
+'cmpny'='Ryanair', 
+'nb_escales'='1', 
+'rating'='2.5', 
+'duree'='4' 
+} of type: esb.flows.implem.data.Flight.vol on: Message: vol{
+'date'='12-10-2017', 
+'prix'='450', 
+'origine'='Nice' , 
+'destination'='Paris', 
+'id'='3', 
+'cmpny'='Ryanair', 
+'nb_escales'='1', 
+'rating'='2.5', 
+'duree'='4' 
+}. Caused by: No type converter available to convert from type: esb.flows.implem.data.Flight.vol to the required type: java.io.InputStream with value vol{
+'date'='12-10-2017', 
+'prix'='450', 
+'origine'='Nice' , 
+'destination'='Paris', 
+'id'='3', 
+'cmpny'='Ryanair', 
+'nb_escales'='1', 
+'rating'='2.5', 
+'duree'='4' 
+}. Exchange[ID-iliass-MacBook-Pro-local-50901-1509845177105-1-19][Message: vol{
+'date'='12-10-2017', 
+'prix'='450', 
+'origine'='Nice' , 
+'destination'='Paris', 
+'id'='3', 
+'cmpny'='Ryanair', 
+'nb_escales'='1', 
+'rating'='2.5', 
+'duree'='4' 
+}]. Caused by: [org.apache.camel.NoTypeConversionAvailableException - No type converter available to convert from type: esb.flows.implem.data.Flight.vol to the required type: java.io.InputStream with value vol{
+'date'='12-10-2017', 
+'prix'='450', 
+'origine'='Nice' , 
+'destination'='Paris', 
+'id'='3', 
+'cmpny'='Ryanair', 
+'nb_escales'='1', 
+'rating'='2.5', 
+'duree'='4' 
+}]
+	at org.apache.camel.impl.MessageSupport.getMandatoryBody(MessageSupport.java:101)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.file.FileOperations.storeFile(FileOperations.java:289)[43:org.apache.camel.camel-core:2.16.5]
+	... 69 more
+Caused by: org.apache.camel.NoTypeConversionAvailableException: No type converter available to convert from type: esb.flows.implem.data.Flight.vol to the required type: java.io.InputStream with value vol{
+'date'='12-10-2017', 
+'prix'='450', 
+'origine'='Nice' , 
+'destination'='Paris', 
+'id'='3', 
+'cmpny'='Ryanair', 
+'nb_escales'='1', 
+'rating'='2.5', 
+'duree'='4' 
+}
+	at org.apache.camel.impl.converter.BaseTypeConverterRegistry.mandatoryConvertTo(BaseTypeConverterRegistry.java:185)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.core.osgi.OsgiTypeConverter.mandatoryConvertTo(OsgiTypeConverter.java:116)[40:org.apache.camel.camel-blueprint:2.16.5]
+	at org.apache.camel.impl.MessageSupport.getMandatoryBody(MessageSupport.java:99)[43:org.apache.camel.camel-core:2.16.5]
+	... 70 more
+2017-11-05 02:27:27,383 | WARN  | le-vol-requests] | AggregateProcessor               | 43 - org.apache.camel.camel-core - 2.16.5 | Error processing aggregated exchange. Exchange[ID-iliass-MacBook-Pro-local-50901-1509845177105-1-19][Message: vol{
+'date'='12-10-2017', 
+'prix'='450', 
+'origine'='Nice' , 
+'destination'='Paris', 
+'id'='3', 
+'cmpny'='Ryanair', 
+'nb_escales'='1', 
+'rating'='2.5', 
+'duree'='4' 
+}]. Caused by: [org.apache.camel.component.file.GenericFileOperationFailedException - Cannot store file: ../../microservices-uns/integration/output/volss.txt]
+org.apache.camel.component.file.GenericFileOperationFailedException: Cannot store file: ../../microservices-uns/integration/output/volss.txt
+	at org.apache.camel.component.file.FileOperations.storeFile(FileOperations.java:308)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.file.GenericFileProducer.writeFile(GenericFileProducer.java:277)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.file.GenericFileProducer.processExchange(GenericFileProducer.java:165)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.file.GenericFileProducer.process(GenericFileProducer.java:79)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.util.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:61)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:460)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:121)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:83)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.direct.DirectProducer.process(DirectProducer.java:62)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:460)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:121)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:83)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.util.AsyncProcessorHelper.process(AsyncProcessorHelper.java:109)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.DelegateAsyncProcessor.process(DelegateAsyncProcessor.java:91)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.aggregate.AggregateProcessor$1.run(AggregateProcessor.java:732)[43:org.apache.camel.camel-core:2.16.5]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)[:1.8.0_121]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)[:1.8.0_121]
+	at org.apache.camel.util.concurrent.SynchronousExecutorService.execute(SynchronousExecutorService.java:62)[43:org.apache.camel.camel-core:2.16.5]
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)[:1.8.0_121]
+	at org.apache.camel.processor.aggregate.AggregateProcessor.onSubmitCompletion(AggregateProcessor.java:724)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.aggregate.AggregateProcessor.doProcess(AggregateProcessor.java:353)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.aggregate.AggregateProcessor.process(AggregateProcessor.java:266)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:460)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:121)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:83)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.direct.DirectProducer.process(DirectProducer.java:62)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:460)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:121)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:83)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.direct.DirectProducer.process(DirectProducer.java:62)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:460)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.MulticastProcessor.doProcessSequential(MulticastProcessor.java:677)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.MulticastProcessor.doProcessSequential(MulticastProcessor.java:605)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.MulticastProcessor.process(MulticastProcessor.java:237)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.util.AsyncProcessorHelper.process(AsyncProcessorHelper.java:109)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.DelegateAsyncProcessor.process(DelegateAsyncProcessor.java:91)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.jms.EndpointMessageListener.onMessage(EndpointMessageListener.java:112)[46:org.apache.camel.camel-jms:2.16.5]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:555)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:515)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:485)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:325)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:263)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1103)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1095)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:992)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)[:1.8.0_121]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)[:1.8.0_121]
+	at java.lang.Thread.run(Thread.java:745)[:1.8.0_121]
+Caused by: org.apache.camel.InvalidPayloadException: No body available of type: java.io.InputStream but has value: vol{
+'date'='12-10-2017', 
+'prix'='450', 
+'origine'='Nice' , 
+'destination'='Paris', 
+'id'='3', 
+'cmpny'='Ryanair', 
+'nb_escales'='1', 
+'rating'='2.5', 
+'duree'='4' 
+} of type: esb.flows.implem.data.Flight.vol on: Message: vol{
+'date'='12-10-2017', 
+'prix'='450', 
+'origine'='Nice' , 
+'destination'='Paris', 
+'id'='3', 
+'cmpny'='Ryanair', 
+'nb_escales'='1', 
+'rating'='2.5', 
+'duree'='4' 
+}. Caused by: No type converter available to convert from type: esb.flows.implem.data.Flight.vol to the required type: java.io.InputStream with value vol{
+'date'='12-10-2017', 
+'prix'='450', 
+'origine'='Nice' , 
+'destination'='Paris', 
+'id'='3', 
+'cmpny'='Ryanair', 
+'nb_escales'='1', 
+'rating'='2.5', 
+'duree'='4' 
+}. Exchange[ID-iliass-MacBook-Pro-local-50901-1509845177105-1-19][Message: vol{
+'date'='12-10-2017', 
+'prix'='450', 
+'origine'='Nice' , 
+'destination'='Paris', 
+'id'='3', 
+'cmpny'='Ryanair', 
+'nb_escales'='1', 
+'rating'='2.5', 
+'duree'='4' 
+}]. Caused by: [org.apache.camel.NoTypeConversionAvailableException - No type converter available to convert from type: esb.flows.implem.data.Flight.vol to the required type: java.io.InputStream with value vol{
+'date'='12-10-2017', 
+'prix'='450', 
+'origine'='Nice' , 
+'destination'='Paris', 
+'id'='3', 
+'cmpny'='Ryanair', 
+'nb_escales'='1', 
+'rating'='2.5', 
+'duree'='4' 
+}]
+	at org.apache.camel.impl.MessageSupport.getMandatoryBody(MessageSupport.java:101)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.file.FileOperations.storeFile(FileOperations.java:289)[43:org.apache.camel.camel-core:2.16.5]
+	... 69 more
+Caused by: org.apache.camel.NoTypeConversionAvailableException: No type converter available to convert from type: esb.flows.implem.data.Flight.vol to the required type: java.io.InputStream with value vol{
+'date'='12-10-2017', 
+'prix'='450', 
+'origine'='Nice' , 
+'destination'='Paris', 
+'id'='3', 
+'cmpny'='Ryanair', 
+'nb_escales'='1', 
+'rating'='2.5', 
+'duree'='4' 
+}
+	at org.apache.camel.impl.converter.BaseTypeConverterRegistry.mandatoryConvertTo(BaseTypeConverterRegistry.java:185)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.core.osgi.OsgiTypeConverter.mandatoryConvertTo(OsgiTypeConverter.java:116)[40:org.apache.camel.camel-blueprint:2.16.5]
+	at org.apache.camel.impl.MessageSupport.getMandatoryBody(MessageSupport.java:99)[43:org.apache.camel.camel-core:2.16.5]
+	... 70 more
+2017-11-05 02:27:27,385 | INFO  | le-vol-requests] | request-to-vol extern B          | 43 - org.apache.camel.camel-core - 2.16.5 | Before Process reqRestservB ::::: simple{VolsRequest{Outbound_date=12-10-2017, from=Nice, to=Paris}}
+2017-11-05 02:27:45,540 | WARN  | le-car-requests] | faultJmsMessageListenerContainer | 154 - org.apache.servicemix.bundles.spring-jms - 3.2.18.RELEASE_1 | Setup of JMS message listener invoker failed for destination 'handle-car-requests' - trying to recover. Cause: java.io.EOFException
+2017-11-05 02:27:45,541 | WARN  | ndle-hotel-spec] | faultJmsMessageListenerContainer | 154 - org.apache.servicemix.bundles.spring-jms - 3.2.18.RELEASE_1 | Setup of JMS message listener invoker failed for destination 'handle-hotel-spec' - trying to recover. Cause: java.io.EOFException
+2017-11-05 02:27:45,543 | ERROR | ndle-hotel-spec] | faultJmsMessageListenerContainer | 154 - org.apache.servicemix.bundles.spring-jms - 3.2.18.RELEASE_1 | Could not refresh JMS Connection for destination 'handle-hotel-spec' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused (Connection refused)
+2017-11-05 02:27:45,543 | ERROR | le-car-requests] | faultJmsMessageListenerContainer | 154 - org.apache.servicemix.bundles.spring-jms - 3.2.18.RELEASE_1 | Could not refresh JMS Connection for destination 'handle-car-requests' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused (Connection refused)
+2017-11-05 02:27:49,757 | INFO  | FelixShutdown    | BlueprintExtender                | 28 - org.apache.aries.blueprint.core - 1.7.1 | Destroying BlueprintContainer for bundle org.apache.servicemix.activemq.service/7.0.1
+2017-11-05 02:27:49,762 | INFO  | FelixShutdown    | BlueprintExtender                | 28 - org.apache.aries.blueprint.core - 1.7.1 | Destroying BlueprintContainer for bundle org.apache.servicemix.activemq.camel/7.0.1
+2017-11-05 02:27:49,765 | INFO  | FelixShutdown    | BlueprintExtender                | 28 - org.apache.aries.blueprint.core - 1.7.1 | Destroying BlueprintContainer for bundle implem/1.0.0
+2017-11-05 02:27:49,771 | INFO  | FelixShutdown    | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Apache Camel 2.16.5 (CamelContext: camel-2) is shutting down
+2017-11-05 02:27:49,772 | INFO  | FelixShutdown    | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Starting to graceful shutdown 16 routes (timeout 300 seconds)
+2017-11-05 02:27:49,774 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 300 seconds. Inflights per route: [request-to-vol extern B = 1, vols-req-queue = 1]
+2017-11-05 02:27:50,776 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 299 seconds. Inflights per route: [request-to-vol extern B = 1, vols-req-queue = 1]
+2017-11-05 02:27:51,779 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 298 seconds. Inflights per route: [request-to-vol extern B = 1, vols-req-queue = 1]
+2017-11-05 02:27:52,780 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 297 seconds. Inflights per route: [request-to-vol extern B = 1, vols-req-queue = 1]
+2017-11-05 02:27:53,786 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 296 seconds. Inflights per route: [request-to-vol extern B = 1, vols-req-queue = 1]
+2017-11-05 02:27:54,789 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 295 seconds. Inflights per route: [request-to-vol extern B = 1, vols-req-queue = 1]
+2017-11-05 02:27:55,794 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 294 seconds. Inflights per route: [request-to-vol extern B = 1, vols-req-queue = 1]
+2017-11-05 02:27:56,795 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Waiting as there are still 2 inflight and pending exchanges to complete, timeout in 293 seconds. Inflights per route: [request-to-vol extern B = 1, vols-req-queue = 1]
+2017-11-05 02:27:57,413 | ERROR | le-vol-requests] | DefaultErrorHandler              | 43 - org.apache.camel.camel-core - 2.16.5 | Failed delivery for (MessageId: ID-iliass-MacBook-Pro-local-50901-1509845177105-1-21 on ExchangeId: ID-iliass-MacBook-Pro-local-50901-1509845177105-1-22). Exhausted after delivery attempt: 1 caught: org.apache.camel.http.common.HttpOperationFailedException: HTTP operation failed invoking http://localhost:9080/flightreservation-service-document/registry with statusCode: 400
+
+Message History
+---------------------------------------------------------------------------------------------------------------------------------------
+RouteId              ProcessorId          Processor                                                                        Elapsed (ms)
+[vols-req-queue    ] [vols-req-queue    ] [activemq://handle-vol-requests                                                ] [     30051]
+[vols-req-queue    ] [multicast4        ] [multicast                                                                     ] [     30051]
+[vols-req-queue    ] [to35              ] [direct:search-vol-serviceB                                                    ] [     30028]
+[request-to-vol ext] [setHeader18       ] [setHeader[CamelHttpMethod]                                                    ] [         0]
+[request-to-vol ext] [setHeader19       ] [setHeader[Content-Type]                                                       ] [         0]
+[request-to-vol ext] [setHeader20       ] [setHeader[Accept]                                                             ] [         0]
+[request-to-vol ext] [log39             ] [log                                                                           ] [         0]
+[request-to-vol ext] [process23         ] [Processor@0x30621cda                                                          ] [         0]
+[request-to-vol ext] [to38              ] [http://localhost:9080/flightreservation-service-document/registry             ] [     30027]
+
+Exchange
+---------------------------------------------------------------------------------------------------------------------------------------
+Exchange[
+	Id                  ID-iliass-MacBook-Pro-local-50901-1509845177105-1-22
+	ExchangePattern     InOnly
+	Headers             {Accept=application/json, breadcrumbId=ID-iliass-MacBook-Pro-local-50901-1509845177105-1-11, CamelFileAbsolute=true, CamelFileAbsolutePath=/Users/iliasnaamane/microservices-uns/integration/input/vol.csv, CamelFileLastModified=1509845247000, CamelFileLength=53, CamelFileName=vol.csv, CamelFileNameConsumed=vol.csv, CamelFileNameOnly=vol.csv, CamelFileParent=/Users/iliasnaamane/microservices-uns/integration/input, CamelFilePath=/Users/iliasnaamane/microservices-uns/integration/input/vol.csv, CamelFileRelativePath=vol.csv, CamelHttpMethod=POST, CamelRedelivered=false, CamelRedeliveryCounter=0, Content-Type=application/json, JMSCorrelationID=null, JMSCorrelationIDAsBytes=null, JMSDeliveryMode=2, JMSDestination=queue://handle-vol-requests, JMSExpiration=0, JMSMessageID=ID:iliass-MacBook-Pro.local-50900-1509845176353-6:5:1:1:1, JMSPriority=4, JMSRedelivered=false, JMSReplyTo=null, JMSTimestamp=1509845247359, JMSType=null, JMSXGroupID=null, JMSXUserID=null}
+	BodyType            String
+	Body                { "event": "LIST", "filter": {"destination" : "Paris","date":"2017-10-12","isDirect":false}}
+]
+
+Stacktrace
+---------------------------------------------------------------------------------------------------------------------------------------
+org.apache.camel.http.common.HttpOperationFailedException: HTTP operation failed invoking http://localhost:9080/flightreservation-service-document/registry with statusCode: 400
+	at org.apache.camel.component.http.HttpProducer.populateHttpOperationFailedException(HttpProducer.java:240)[224:org.apache.camel.camel-http:2.16.5]
+	at org.apache.camel.component.http.HttpProducer.process(HttpProducer.java:162)[224:org.apache.camel.camel-http:2.16.5]
+	at org.apache.camel.util.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:61)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:460)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:121)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:83)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.direct.DirectProducer.process(DirectProducer.java:62)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:460)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.MulticastProcessor.doProcessSequential(MulticastProcessor.java:677)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.MulticastProcessor.doProcessSequential(MulticastProcessor.java:605)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.MulticastProcessor.process(MulticastProcessor.java:237)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.util.AsyncProcessorHelper.process(AsyncProcessorHelper.java:109)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.DelegateAsyncProcessor.process(DelegateAsyncProcessor.java:91)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.jms.EndpointMessageListener.onMessage(EndpointMessageListener.java:112)[46:org.apache.camel.camel-jms:2.16.5]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:555)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:515)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:485)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:325)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:263)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1103)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1095)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:992)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)[:1.8.0_121]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)[:1.8.0_121]
+	at java.lang.Thread.run(Thread.java:745)[:1.8.0_121]
+2017-11-05 02:27:57,416 | ERROR | le-vol-requests] | faultJmsMessageListenerContainer | 154 - org.apache.servicemix.bundles.spring-jms - 3.2.18.RELEASE_1 | Application exception overridden by rollback exception
+org.apache.camel.RuntimeCamelException: org.apache.camel.http.common.HttpOperationFailedException: HTTP operation failed invoking http://localhost:9080/flightreservation-service-document/registry with statusCode: 400
+	at org.apache.camel.util.ObjectHelper.wrapRuntimeCamelException(ObjectHelper.java:1652)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.jms.EndpointMessageListener$EndpointMessageListenerAsyncCallback.done(EndpointMessageListener.java:195)[46:org.apache.camel.camel-jms:2.16.5]
+	at org.apache.camel.component.jms.EndpointMessageListener.onMessage(EndpointMessageListener.java:116)[46:org.apache.camel.camel-jms:2.16.5]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:555)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:515)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:485)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:325)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:263)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1103)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1095)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:992)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)[:1.8.0_121]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)[:1.8.0_121]
+	at java.lang.Thread.run(Thread.java:745)[:1.8.0_121]
+Caused by: org.apache.camel.http.common.HttpOperationFailedException: HTTP operation failed invoking http://localhost:9080/flightreservation-service-document/registry with statusCode: 400
+	at org.apache.camel.component.http.HttpProducer.populateHttpOperationFailedException(HttpProducer.java:240)[224:org.apache.camel.camel-http:2.16.5]
+	at org.apache.camel.component.http.HttpProducer.process(HttpProducer.java:162)[224:org.apache.camel.camel-http:2.16.5]
+	at org.apache.camel.util.AsyncProcessorConverterHelper$ProcessorToAsyncProcessorBridge.process(AsyncProcessorConverterHelper.java:61)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:460)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:121)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:83)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.direct.DirectProducer.process(DirectProducer.java:62)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.SendProcessor.process(SendProcessor.java:145)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:460)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.MulticastProcessor.doProcessSequential(MulticastProcessor.java:677)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.MulticastProcessor.doProcessSequential(MulticastProcessor.java:605)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.MulticastProcessor.process(MulticastProcessor.java:237)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.management.InstrumentationProcessor.process(InstrumentationProcessor.java:77)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:196)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.util.AsyncProcessorHelper.process(AsyncProcessorHelper.java:109)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.processor.DelegateAsyncProcessor.process(DelegateAsyncProcessor.java:91)[43:org.apache.camel.camel-core:2.16.5]
+	at org.apache.camel.component.jms.EndpointMessageListener.onMessage(EndpointMessageListener.java:112)[46:org.apache.camel.camel-jms:2.16.5]
+	... 11 more
+2017-11-05 02:27:57,416 | WARN  | le-vol-requests] | EndpointMessageListener          | 43 - org.apache.camel.camel-core - 2.16.5 | Execution of JMS message listener failed. Caused by: [javax.jms.IllegalStateException - The Session is closed]
+javax.jms.IllegalStateException: The Session is closed
+	at org.apache.activemq.ActiveMQSession.checkClosed(ActiveMQSession.java:771)[25:org.apache.activemq.activemq-osgi:5.14.5]
+	at org.apache.activemq.ActiveMQSession.getTransacted(ActiveMQSession.java:540)[25:org.apache.activemq.activemq-osgi:5.14.5]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.rollbackOnExceptionIfNecessary(AbstractMessageListenerContainer.java:628)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:492)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:325)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:263)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1103)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1095)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:992)[154:org.apache.servicemix.bundles.spring-jms:3.2.18.RELEASE_1]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)[:1.8.0_121]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)[:1.8.0_121]
+	at java.lang.Thread.run(Thread.java:745)[:1.8.0_121]
+2017-11-05 02:27:57,417 | WARN  | le-vol-requests] | faultJmsMessageListenerContainer | 154 - org.apache.servicemix.bundles.spring-jms - 3.2.18.RELEASE_1 | Setup of JMS message listener invoker failed for destination 'handle-vol-requests' - trying to recover. Cause: The Session is closed
+2017-11-05 02:27:57,801 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: business-rest-call2 shutdown complete, was consuming from: Endpoint[direct://businesstravel-rest2]
+2017-11-05 02:27:57,802 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: aggreg-flight shutdown complete, was consuming from: Endpoint[direct://aggregate-vols]
+2017-11-05 02:27:57,802 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: request-to-vol extern B shutdown complete, was consuming from: Endpoint[direct://search-vol-serviceB]
+2017-11-05 02:27:57,802 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: request-to-vol rest A shutdown complete, was consuming from: Endpoint[direct://search-vol-serviceA]
+2017-11-05 02:27:57,804 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: vols-req-queue shutdown complete, was consuming from: Endpoint[activemq://handle-vol-requests]
+2017-11-05 02:27:57,805 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: csv-to-Vol shutdown complete, was consuming from: Endpoint[file:///Users/iliasnaamane/microservices-uns/integration/input]
+2017-11-05 02:27:57,805 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: aggregation-hotel shutdown complete, was consuming from: Endpoint[direct://aggregation-hotel]
+2017-11-05 02:27:57,805 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: request-to-hotelrest shutdown complete, was consuming from: Endpoint[direct://search-hotel-2]
+2017-11-05 02:27:57,805 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: request-to-hotelrpc-1 shutdown complete, was consuming from: Endpoint[direct://search-hotel-1]
+2017-11-05 02:27:57,806 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: spec hotel queue shutdown complete, was consuming from: Endpoint[activemq://handle-hotel-spec]
+2017-11-05 02:27:57,806 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: csv-input-hotel shutdown complete, was consuming from: Endpoint[file:///Users/iliasnaamane/microservices-uns/integration/input?fileName=hotels.csv]
+2017-11-05 02:27:57,806 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: car-aggregation shutdown complete, was consuming from: Endpoint[direct://aggregate-cars]
+2017-11-05 02:27:57,806 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: search-car-2 shutdown complete, was consuming from: Endpoint[direct://search-car-2]
+2017-11-05 02:27:57,807 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: search-car-1 shutdown complete, was consuming from: Endpoint[direct://search-car-1]
+2017-11-05 02:27:57,807 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: car queue shutdown complete, was consuming from: Endpoint[activemq://handle-car-requests]
+2017-11-05 02:27:57,807 | INFO  | 3 - ShutdownTask | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Route: csv-input-car shutdown complete, was consuming from: Endpoint[file:///Users/iliasnaamane/microservices-uns/integration/input?fileName=cars.csv]
+2017-11-05 02:27:57,808 | INFO  | FelixShutdown    | DefaultShutdownStrategy          | 43 - org.apache.camel.camel-core - 2.16.5 | Graceful shutdown of 16 routes completed in 8 seconds
+2017-11-05 02:27:57,826 | INFO  | FelixShutdown    | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Apache Camel 2.16.5 (CamelContext: camel-2) uptime 1 minute
+2017-11-05 02:27:57,826 | INFO  | FelixShutdown    | BlueprintCamelContext            | 43 - org.apache.camel.camel-core - 2.16.5 | Apache Camel 2.16.5 (CamelContext: camel-2) is shutdown in 8.054 seconds
+2017-11-05 02:27:57,829 | INFO  | FelixShutdown    | BlueprintExtender                | 28 - org.apache.aries.blueprint.core - 1.7.1 | Destroying BlueprintContainer for bundle org.apache.camel.karaf.camel-karaf-commands/2.16.5
+2017-11-05 02:27:57,858 | INFO  | FelixShutdown    | BlueprintExtender                | 28 - org.apache.aries.blueprint.core - 1.7.1 | Destroying BlueprintContainer for bundle org.apache.xbean.blueprint/4.2.0
+2017-11-05 02:27:57,861 | INFO  | FelixShutdown    | BlueprintExtender                | 28 - org.apache.aries.blueprint.core - 1.7.1 | Destroying BlueprintContainer for bundle org.apache.camel.camel-cxf-transport/2.16.5
+2017-11-05 02:27:57,863 | INFO  | FelixShutdown    | BlueprintExtender                | 28 - org.apache.aries.blueprint.core - 1.7.1 | Destroying BlueprintContainer for bundle org.apache.camel.camel-cxf/2.16.5
+2017-11-05 02:27:57,866 | INFO  | FelixShutdown    | BlueprintExtender                | 28 - org.apache.aries.blueprint.core - 1.7.1 | Destroying BlueprintContainer for bundle org.apache.activemq.activemq-osgi/5.14.5
+2017-11-05 02:27:57,869 | INFO  | FelixShutdown    | BlueprintExtender                | 28 - org.apache.aries.blueprint.core - 1.7.1 | Destroying BlueprintContainer for bundle org.apache.camel.camel-blueprint/2.16.5
+2017-11-05 02:27:57,871 | INFO  | FelixShutdown    | BlueprintExtender                | 28 - org.apache.aries.blueprint.core - 1.7.1 | Destroying BlueprintContainer for bundle activemq-karaf/5.14.5
+2017-11-05 02:27:57,878 | INFO  | FelixShutdown    | BlueprintExtender                | 28 - org.apache.aries.blueprint.core - 1.7.1 | Destroying BlueprintContainer for bundle org.apache.cxf.cxf-rt-features-clustering/3.1.9
+2017-11-05 02:27:57,879 | INFO  | FelixShutdown    | BlueprintExtender                | 28 - org.apache.aries.blueprint.core - 1.7.1 | Destroying BlueprintContainer for bundle org.apache.karaf.shell.core/4.0.9
+2017-11-05 02:27:57,882 | INFO  | FelixShutdown    | BlueprintExtender                | 28 - org.apache.aries.blueprint.core - 1.7.1 | Destroying BlueprintContainer for bundle org.apache.karaf.jaas.blueprint.config/4.0.9
+2017-11-05 02:27:57,884 | INFO  | FelixShutdown    | BlueprintExtender                | 28 - org.apache.aries.blueprint.core - 1.7.1 | Destroying BlueprintContainer for bundle org.apache.aries.blueprint.core/1.7.1
+2017-11-05 02:27:57,889 | INFO  | FelixShutdown    | BlueprintExtender                | 28 - org.apache.aries.blueprint.core - 1.7.1 | Destroying BlueprintContainer for bundle org.apache.aries.blueprint.cm/1.0.9
+2017-11-05 02:27:57,895 | INFO  | FelixShutdown    | ContextLoaderListener            | 217 - org.springframework.osgi.extender - 1.2.1 | Stopping [org.springframework.osgi.extender] bundle v.[1.2.1]
+2017-11-05 02:27:57,902 | INFO  | FelixShutdown    | TimerTaskExecutor                | 150 - org.apache.servicemix.bundles.spring-context - 3.2.18.RELEASE_1 | Cancelling Timer
+2017-11-05 02:27:57,930 | INFO  | FelixStartLevel  | Activator                        | 43 - org.apache.camel.camel-core - 2.16.5 | Camel activator stopping
+2017-11-05 02:27:57,933 | INFO  | FelixStartLevel  | Activator                        | 43 - org.apache.camel.camel-core - 2.16.5 | Camel activator stopped
+2017-11-05 02:27:57,961 | INFO  | FelixStartLevel  | Server                           | 190 - org.eclipse.jetty.util - 9.2.19.v20160908 | jetty-9.2.19.v20160908
+2017-11-05 02:27:57,976 | INFO  | FelixStartLevel  | ServerConnector                  | 190 - org.eclipse.jetty.util - 9.2.19.v20160908 | Started default@3707fa60{HTTP/1.1}{0.0.0.0:8181}
+2017-11-05 02:27:57,976 | INFO  | FelixStartLevel  | Server                           | 190 - org.eclipse.jetty.util - 9.2.19.v20160908 | Started @106766ms
+2017-11-05 02:27:57,984 | INFO  | FelixStartLevel  | HttpServiceFactoryImpl           | 213 - org.ops4j.pax.web.pax-web-runtime - 4.3.0 | Unbinding bundle: [org.apache.cxf.cxf-rt-transports-http [82]]
+2017-11-05 02:27:57,986 | INFO  | FelixStartLevel  | HttpServiceContext               | 211 - org.ops4j.pax.web.pax-web-jetty - 4.3.0 | ServletContext service already removed
+2017-11-05 02:27:57,988 | INFO  | FelixStartLevel  | ContextHandler                   | 190 - org.eclipse.jetty.util - 9.2.19.v20160908 | Stopped HttpServiceContext{httpContext=DefaultHttpContext [bundle=org.apache.cxf.cxf-rt-transports-http [82], contextID=default]}
+2017-11-05 02:27:57,996 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Removing the extensions for bundle 68
+2017-11-05 02:27:57,996 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Removing the extensions for bundle 71
+2017-11-05 02:27:57,996 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Removing the extensions for bundle 74
+2017-11-05 02:27:57,996 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Removing the extensions for bundle 75
+2017-11-05 02:27:57,996 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Removing the extensions for bundle 45
+2017-11-05 02:27:57,996 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Removing the extensions for bundle 82
+2017-11-05 02:27:57,996 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Removing the extensions for bundle 83
+2017-11-05 02:27:57,997 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Removing the extensions for bundle 84
+2017-11-05 02:27:57,997 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Removing the extensions for bundle 85
+2017-11-05 02:27:57,997 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Removing the extensions for bundle 86
+2017-11-05 02:27:57,997 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Removing the extensions for bundle 87
+2017-11-05 02:27:57,997 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Removing the extensions for bundle 88
+2017-11-05 02:27:57,997 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Removing the extensions for bundle 89
+2017-11-05 02:27:57,997 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Removing the extensions for bundle 90
+2017-11-05 02:27:57,997 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Removing the extensions for bundle 59
+2017-11-05 02:27:57,997 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Removing the extensions for bundle 91
+2017-11-05 02:27:57,997 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Removing the extensions for bundle 92
+2017-11-05 02:27:57,998 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Removing the extensions for bundle 60
+2017-11-05 02:27:57,998 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Removing the extensions for bundle 61
+2017-11-05 02:27:57,998 | INFO  | FelixStartLevel  | CXFActivator                     | 57 - org.apache.cxf.cxf-core - 3.1.9 | Removing the extensions for bundle 62
+2017-11-05 02:27:58,009 | INFO  | onfig-2-thread-2 | ServerConnector                  | 190 - org.eclipse.jetty.util - 9.2.19.v20160908 | Stopped default@3707fa60{HTTP/1.1}{0.0.0.0:8181}
+2017-11-05 02:27:58,011 | INFO  | FelixStartLevel  | Activator                        | 213 - org.ops4j.pax.web.pax-web-runtime - 4.3.0 | Pax Web stopped
+2017-11-05 02:27:58,015 | INFO  | pool-28-thread-3 | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Unregistering commands for bundle org.apache.karaf.web.core/4.0.9
+2017-11-05 02:27:58,017 | INFO  | FelixStartLevel  | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Unregistering commands for bundle org.apache.karaf.shell.commands/4.0.9
+2017-11-05 02:27:58,023 | INFO  | FelixStartLevel  | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Unregistering commands for bundle org.apache.karaf.system.core/4.0.9
+2017-11-05 02:27:58,025 | INFO  | FelixStartLevel  | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Unregistering commands for bundle org.apache.karaf.shell.ssh/4.0.9
+2017-11-05 02:27:58,040 | INFO  | FelixStartLevel  | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Unregistering commands for bundle org.apache.karaf.instance.core/4.0.9
+2017-11-05 02:27:58,041 | INFO  | FelixStartLevel  | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Unregistering commands for bundle org.apache.karaf.log.core/4.0.9
+2017-11-05 02:27:58,041 | INFO  | FelixStartLevel  | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Unregistering commands for bundle org.apache.karaf.package.core/4.0.9
+2017-11-05 02:27:58,041 | INFO  | FelixStartLevel  | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Unregistering commands for bundle org.apache.karaf.jaas.command/4.0.9
+2017-11-05 02:27:58,041 | INFO  | FelixStartLevel  | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Unregistering commands for bundle org.apache.karaf.bundle.core/4.0.9
+2017-11-05 02:27:58,041 | INFO  | FelixStartLevel  | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Unregistering commands for bundle org.apache.karaf.diagnostic.core/4.0.9
+2017-11-05 02:27:58,042 | INFO  | FelixStartLevel  | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Unregistering commands for bundle org.apache.karaf.features.command/4.0.9
+2017-11-05 02:27:58,042 | INFO  | FelixStartLevel  | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Unregistering commands for bundle org.apache.karaf.http.core/4.0.9
+2017-11-05 02:27:58,042 | INFO  | FelixStartLevel  | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Unregistering commands for bundle org.apache.karaf.deployer.kar/4.0.9
+2017-11-05 02:27:58,042 | INFO  | FelixStartLevel  | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Unregistering commands for bundle org.apache.karaf.service.core/4.0.9
+2017-11-05 02:27:58,042 | INFO  | FelixStartLevel  | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Unregistering commands for bundle org.apache.karaf.config.core/4.0.9
+2017-11-05 02:27:58,043 | INFO  | FelixStartLevel  | CommandExtension                 | 124 - org.apache.karaf.shell.core - 4.0.9 | Unregistering commands for bundle org.apache.karaf.kar.core/4.0.9
+2017-11-05 02:27:58,046 | INFO  | FelixStartLevel  | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Unregistering org.osgi.jmx.service.cm.ConfigurationAdminMBean to MBeanServer com.sun.jmx.mbeanserver.JmxMBeanServer@5e481248 with name osgi.compendium:service=cm,version=1.3,framework=org.apache.felix.framework,uuid=21b5c317-39f5-4cdc-91da-61b1073f3f21
+2017-11-05 02:27:58,046 | INFO  | FelixStartLevel  | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Unregistering org.osgi.jmx.framework.PackageStateMBean to MBeanServer com.sun.jmx.mbeanserver.JmxMBeanServer@5e481248 with name osgi.core:type=packageState,version=1.5,framework=org.apache.felix.framework,uuid=21b5c317-39f5-4cdc-91da-61b1073f3f21
+2017-11-05 02:27:58,046 | INFO  | FelixStartLevel  | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Unregistering org.osgi.jmx.framework.wiring.BundleWiringStateMBean to MBeanServer com.sun.jmx.mbeanserver.JmxMBeanServer@5e481248 with name osgi.core:type=wiringState,version=1.1,framework=org.apache.felix.framework,uuid=21b5c317-39f5-4cdc-91da-61b1073f3f21
+2017-11-05 02:27:58,046 | INFO  | FelixStartLevel  | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Unregistering org.osgi.jmx.framework.BundleStateMBean to MBeanServer com.sun.jmx.mbeanserver.JmxMBeanServer@5e481248 with name osgi.core:type=bundleState,version=1.7,framework=org.apache.felix.framework,uuid=21b5c317-39f5-4cdc-91da-61b1073f3f21
+2017-11-05 02:27:58,046 | INFO  | FelixStartLevel  | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Unregistering org.osgi.jmx.framework.ServiceStateMBean to MBeanServer com.sun.jmx.mbeanserver.JmxMBeanServer@5e481248 with name osgi.core:type=serviceState,version=1.7,framework=org.apache.felix.framework,uuid=21b5c317-39f5-4cdc-91da-61b1073f3f21
+2017-11-05 02:27:58,046 | INFO  | FelixStartLevel  | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Unregistering org.osgi.jmx.framework.FrameworkMBean to MBeanServer com.sun.jmx.mbeanserver.JmxMBeanServer@5e481248 with name osgi.core:type=framework,version=1.7,framework=org.apache.felix.framework,uuid=21b5c317-39f5-4cdc-91da-61b1073f3f21
+2017-11-05 02:27:58,046 | WARN  | FelixStartLevel  | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Task rejected for JMX Notification dispatch of event [org.osgi.framework.ServiceEvent[source=[javax.management.MBeanServer]]] - Dispatcher may have been shutdown
+2017-11-05 02:27:58,058 | INFO  | FelixStartLevel  | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Stopping JMX OSGi agent
+2017-11-05 02:27:58,058 | INFO  | FelixStartLevel  | core                             | 33 - org.apache.aries.jmx.core - 1.1.7 | Unregistering MBean with ObjectName [osgi.compendium:service=cm,version=1.3,framework=org.apache.felix.framework,uuid=21b5c317-39f5-4cdc-91da-61b1073f3f21] for service with service.id [15]
