@@ -3,3 +3,6 @@
 /services/externals/hotels/target/
 /services/carRPC/target/
 /services/hotelRPC/target/
+/deployment/mongo_data/
+/flows/target/
+/tests/acceptation/target/

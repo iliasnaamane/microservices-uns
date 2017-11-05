@@ -1,14 +1,5 @@
 Manifest-Version: 1.0
-<<<<<<< HEAD
-<<<<<<< HEAD
-Bnd-LastModified: 1509843716354
-=======
-<<<<<<< HEAD
-Bnd-LastModified: 1509820594233
->>>>>>> 0819603e8dfc59ce8c20f3c2d473e95fdbf5e76b
-=======
-Bnd-LastModified: 1509846103493
->>>>>>> d380edad648d519bce4e77b1dece023d1bb03c0e
+Bnd-LastModified: 1509849588911
 Build-Jdk: 1.8.0_121
 Built-By: iliasnaamane
 Bundle-Blueprint: OSGI-INF/blueprint/camel-context.xml
