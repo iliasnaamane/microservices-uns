@@ -105,9 +105,9 @@ public class VolsFlow extends RouteBuilder {
            .routeId("business-rest-call2")
               .routeDescription("send request to rest service2")
               .log(body().toString())
-                .setHeader(Exchange.HTTP_METHOD, constant("POST")) 
-                .setHeader("Content-Type", constant("application/json"))
-                .setHeader("Accept", constant("application/json"))
+               // .setHeader(Exchange.HTTP_METHOD, constant("POST")) 
+              //  .setHeader("Content-Type", constant("application/json"))
+               // .setHeader("Accept", constant("application/json"))
               //  .unmarshal().string()
                 .to(LETTER_OUTPUT_DIR+"?fileName=volss.txt")
         ;

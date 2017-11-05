@@ -1,17 +1,16 @@
 Manifest-Version: 1.0
 <<<<<<< HEAD
+<<<<<<< HEAD
 Bnd-LastModified: 1509843716354
 =======
 <<<<<<< HEAD
 Bnd-LastModified: 1509820594233
 >>>>>>> 0819603e8dfc59ce8c20f3c2d473e95fdbf5e76b
+=======
+Bnd-LastModified: 1509846103493
+>>>>>>> d380edad648d519bce4e77b1dece023d1bb03c0e
 Build-Jdk: 1.8.0_121
 Built-By: iliasnaamane
-=======
-Bnd-LastModified: 1509827339809
-Build-Jdk: 1.8.0_131
-Built-By: user
->>>>>>> fac171f12408ee638e4ce0192033ab1d01bcc76e
 Bundle-Blueprint: OSGI-INF/blueprint/camel-context.xml
 Bundle-ClassPath: .,gson-2.8.2.jar
 Bundle-ManifestVersion: 2

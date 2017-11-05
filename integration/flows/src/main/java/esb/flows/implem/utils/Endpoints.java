@@ -6,13 +6,15 @@ public class Endpoints {
     public static final String CSV_INPUT_FILE_HOTEL = "file:/Users/iliasnaamane/microservices-uns/integration/input"
             + "?fileName=hotels.csv" ;
     public static final String CSV_INPUT_FILE_CAR = "file:/Users/iliasnaamane/microservices-uns/integration/input"
-            + "?fileName=cars.csv" ;
-    public static final String CSV_INPUT_FILE_VOLS ="file:/Users/iliasnaamane/microservices-uns/integration/input" ;
+
+    public static final String CSV_INPUT_FILE_VOLS ="file:/Users/iliasnaamane/microservices-uns/integration/input"
+            + "?fileName=vol.csv" ;
+
 
     
    
     // file outputs
-    public static final String LETTER_OUTPUT_DIR = "file:../../microservices-uns/integration/output";
+    public static final String LETTER_OUTPUT_DIR = "file:/Users/iliasnaamane/microservices-uns/integration/output";
     
     // activemq endpoints
     public static final String BUILD_HOTEL_SPEC = "activemq:handle-hotel-spec";
@@ -34,6 +36,9 @@ public class Endpoints {
 
 
     public static final String BUSINESS_TRAVEL_REST = "direct:businesstravel-rest";
+
+    
+    public static final String BUSINESS_TRAVEL_REST2 = "direct:businesstravel-rest2";
 
     
     //services endpoints
