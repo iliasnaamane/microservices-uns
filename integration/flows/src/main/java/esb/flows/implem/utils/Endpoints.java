@@ -6,6 +6,7 @@ public class Endpoints {
     public static final String CSV_INPUT_FILE_HOTEL = "file:/Users/iliasnaamane/microservices-uns/integration/input"
             + "?fileName=hotels.csv" ;
     public static final String CSV_INPUT_FILE_CAR = "file:/Users/iliasnaamane/microservices-uns/integration/input"
+            + "?fileName=car.csv";
 
     public static final String CSV_INPUT_FILE_VOLS ="file:/Users/iliasnaamane/microservices-uns/integration/input"
             + "?fileName=vol.csv" ;
