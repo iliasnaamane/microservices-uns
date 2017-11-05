@@ -1,0 +1,256 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+                      Apache ServiceMix 7.0.1
+                  ================================
+ Overview
+ --------
+
+Apache ServiceMix is a flexible, open-source integration container that unifies the features and functionality
+of Apache ActiveMQ, Camel, CXF, and Karaf into a powerful runtime platform you can use to build your own
+integrations solutions.
+
+Apache ServiceMix 7.0.1 is a new patch release, which includes a few bug fixes and
+a new version of Apache Camel, Apache CXF, Apache ActiveMQ and Apache Karaf.
+This release includes:
+
+- Apache ActiveMQ 5.14.5 (http://activemq.apache.org)
+- Apache Camel 2.16.5 (http://camel.apache.org)
+- Apache CXF 3.1.9 (http://cxf.apache.org)
+- Apache Karaf 4.0.9 (http://karaf.apache.org)
+
+
+ Changelog
+ ---------
+
+** Bug
+    * [SM-3225] - Examples compile error
+    * [SM-3264] - Upgrade to Apache Karaf 4.0.9
+
+** Improvement
+    * [SM-3303] - Expose proces configuration to cfg file
+
+** Task
+    * [SM-3222] - ServiceMix should not use non-free json.org
+    * [SM-3226] - Release Apache ServiceMix 7.0.1
+    * [SM-3228] - Upgrade to Apache Camel 2.16.5 and Apache CXF 3.1.9
+    * [SM-3268] - Upgrade to Apache ActiveMQ 5.14.5
+    * [SM-3357] - Upgrade to depends-maven-plugin 1.4.0
+    * [SM-3358] - Upgrade to maven-bundle-plugin 3.3.0
+    * [SM-3359] - Upgrade maven plugin versions and parent pom
+
+                      Apache ServiceMix 7.0.0
+                  ================================
+ Overview
+ --------
+
+Apache ServiceMix is a flexible, open-source integration container that unifies the features and functionality
+of Apache ActiveMQ, Camel, CXF, and Karaf into a powerful runtime platform you can use to build your own
+integrations solutions.
+
+Apache ServiceMix 7.0.0 is the first production ready release based on Karaf 4.0.x, which includes numerous
+new features, improvements, and bug fixes. Apache ServiceMix 7.0.0 includes:
+
+- Apache ActiveMQ 5.14.3 (http://activemq.apache.org)
+- Apache Camel 2.16.4 (http://camel.apache.org)
+- Apache CXF 3.1.5 (http://cxf.apache.org)
+- Apache Karaf 4.0.8 (http://karaf.apache.org)
+
+
+ Changelog
+ ---------
+
+** Sub-task
+    * [SM-3223] - Add notice about usage of non-free json library
+
+** Bug
+    * [SM-3170] - Small bug in example feature file
+
+** Task
+    * [SM-3025] - Release Apache ServiceMix 7.0.0
+    * [SM-3177] - Upgrade to Apache ActiveMQ 5.14.3
+    * [SM-3213] - Upgrade to Apache karaf 4.0.8
+
+
+                      Apache ServiceMix 7.0.0.M3
+                  ================================
+ Overview
+ --------
+
+  !! This is a technology preview release of Apache ServiceMix, and should NOT be considered production ready !!
+
+Apache ServiceMix is a flexible, open-source integration container that unifies the features and functionality
+of Apache ActiveMQ, Camel, CXF, and Karaf into a powerful runtime platform you can use to build your own 
+integrations solutions.
+
+Apache ServiceMix 7.0.0 will be the first release based on Karaf 4.0.x, which includes numerous new features. 
+We ask that users provide the community with their feed back so that the full Apache ServiceMix 7.0.0 release 
+can be as feature complete and stable as possible.
+
+Apache ServiceMix 7.0.0.M3 is a new preview release of the project, which includes:
+
+- Apache ActiveMQ 5.14.1 (http://activemq.apache.org)
+- Apache Camel 2.16.4 (http://camel.apache.org)
+- Apache CXF 3.1.5 (http://cxf.apache.org)
+- Apache Karaf 4.0.7 (http://karaf.apache.org)
+
+
+ Changelog
+ ---------
+
+** Bug
+    * [SM-3040] - Multiple staging repositories while releasing ServiceMix
+    * [SM-3045] - Assembly descriptor contains a *nix-specific root-relative-reference
+    * [SM-3093] - Examples compile error
+    * [SM-3106] - exec-maven-plugin.version is not set in examples pom.xml
+
+** Task
+    * [SM-3067] - Upgrade to Apache ActiveMQ 5.13.4
+    * [SM-3081] - Upgrade to Apache Karaf 4.0.6
+    * [SM-3082] - Update Exec Maven Plugin to version 1.5.0
+    * [SM-3083] - Upgrade to Apache ActiveMQ 5.14.x
+    * [SM-3103] - Upgrade to Apache Karaf 4.0.7
+    * [SM-3110] - Upgrade to Apache Camel 2.16.4
+    * [SM-3123] - Use values from system.properties in several ActiveMQ configurartion files
+    * [SM-3167] - Release Apache ServiceMix 7.0.0.M3
+
+
+                      Apache ServiceMix 7.0.0.M2
+                  ================================
+ Overview
+ --------
+
+  !! This is a technology preview release of Apache ServiceMix, and should NOT be considered production ready !!
+
+Apache ServiceMix is a flexible, open-source integration container that unifies the features and functionality
+of Apache ActiveMQ, Camel, CXF, and Karaf into a powerful runtime platform you can use to build your own 
+integrations solutions.
+
+Apache ServiceMix 7.0.0 will be the first release based on Karaf 4.0.x, which includes numerous new features. 
+We ask that users provide the community with their feed back so that the full Apache ServiceMix 7.0.0 release 
+can be as feature complete and stable as possible.
+
+Apache ServiceMix 7.0.0.M2 is a new preview release of the project, which includes:
+
+- Apache ActiveMQ 5.13.3 (http://activemq.apache.org)
+- Apache Camel 2.16.3 (http://camel.apache.org)
+- Apache CXF 3.1.5 (http://cxf.apache.org)
+- Apache Karaf 4.0.5 (http://karaf.apache.org)
+
+
+ Changelog
+ ---------
+
+** Bug
+    * [SM-2850] -  JMSAppenderTest.testReconnectToBroker fails
+    * [SM-2863] - Test failure when building examples
+    * [SM-2864] - Update example README.txt files for new Karaf commands
+    * [SM-2867] - Intermittent test failures in ActivitiExamplesTest
+    * [SM-2883] - Intermittent test failures in CamelDrools5ExamplesTest
+    * [SM-2976] - stax-ex-1.7.6.jar is under CDDL+GPL  license
+    * [SM-2978] - Jackson 2.7.0 in ServiceMix 7.0.0.M1 throws java.lang.NoSuchMethodError
+    * [SM-2984] - Correct the shutdown command in branding.properties
+    * [SM-2991] - ServiceMix doesn't start in offline environment
+
+** Improvement
+    * [SM-2395] - Download pages should correctly refer the documentation pages
+
+** Task
+    * [SM-2852] - Upgrade to Apache ActiveMQ 5.13.1
+    * [SM-2866] - Release Apache ServiceMix 7.0.0.M2
+    * [SM-2895] - Upgrade to Apache ActiveMQ 5.13.2
+    * [SM-2931] - Upgrade to Apache Karaf 4.0.5
+    * [SM-2934] - Upgrade to Apache Camel 2.16.3 and Apache CXF 3.1.5
+    * [SM-2937] - Upgrade Xalan bundle to 2.7.2_3
+    * [SM-2946] - Upgrade to Pax Exam 4.9.0
+    * [SM-2947] - Migrate itests to Java
+    * [SM-2953] - Upgrade to Pax Exam 4.9.1
+    * [SM-2955] - Upgrade to Apache ActiveMQ 5.13.3
+    * [SM-2989] - Upgrade maven-remote-resources-plugin configuration
+    * [SM-2990] - Update maven plugins
+
+
+                      Apache ServiceMix 7.0.0.M1
+                  ================================
+ Overview
+ --------
+
+  !! This is a technology preview release of Apache ServiceMix, and should NOT be considered production ready !!
+
+Apache ServiceMix is a flexible, open-source integration container that unifies the features and functionality
+of Apache ActiveMQ, Camel, CXF, and Karaf into a powerful runtime platform you can use to build your own 
+integrations solutions.
+
+Apache ServiceMix 7.0.0 will be the first release based on Karaf 4.0.x, which includes numerous new features. 
+We ask that users provide the community with their feed back so that the full Apache ServiceMix 7.0.0 release 
+can be as feature complete and stable as possible.
+
+Apache ServiceMix 7.0.0.M1 is a new preview release of the project, which includes:
+
+- Apache ActiveMQ 5.13.0 (http://activemq.apache.org)
+- Apache Camel 2.16.2 (http://camel.apache.org)
+- Apache CXF 3.1.4 (http://cxf.apache.org)
+- Apache Karaf 4.0.4 (http://karaf.apache.org)
+
+
+ Changelog
+ ---------
+
+** Bug
+    * [SM-2251] - Intermittent test failure in JMSAppenderTest
+    * [SM-2698] - ActiveMQ web console fails on J8
+    * [SM-2786] - Drools 5 examples fail due to missing Eclipse JDT
+    * [SM-2787] - Test failures in CxfWsnExamplesTest
+    * [SM-2813] - Drools6CamelServiceExamplesTest fails with error
+    * [SM-2814] - Drools6ExamplesTest fails with error
+    * [SM-2818] - ServiceMix installs randomly spring 3.1.4.RELEASE feature
+    * [SM-2823] - ActivitiExamplesTest fails accidentally 
+    * [SM-2824] - Missing dependencies in system folder
+    * [SM-2825] - Installation of CXF WSN sample fails
+    * [SM-2845] - Installation of the cxf-wsn feature fails accidentally
+    * [SM-2848] - cxf-wsn-client client fails due to wrong slf4j version
+    * [SM-2851] - Some itests fail accidentally with NPE
+    * [SM-2854] - Doclint for Javadoc fails on JDK 8
+
+** Task
+    * [SM-2355] - Remove the workaround jaxrs-api feature
+    * [SM-2759] - Upgrade to Apache ActiveMQ 5.13.0
+    * [SM-2763] - Upgrade to Activiti 5.19.0.1
+    * [SM-2768] - Upgrade to Apache Karaf 4
+    * [SM-2778] - Upgrade to Apache ActiveMQ 5.12.2
+    * [SM-2803] - Refactor the assembly creation
+    * [SM-2806] - Ensure ServiceMix uses Apache Commons Collections 3.2.2
+    * [SM-2807] - Upgrade to Apache POM 17
+    * [SM-2808] - Avoid warnings about 'parent.relativePath' during the maven build
+    * [SM-2819] - Upgrade to Pax Exam 4.8.0
+    * [SM-2820] - Upgrade to Apache Karaf 4.0.4
+    * [SM-2821] - Upgrade to Apache Camel 2.16.2
+    * [SM-2822] - Upgrade Maven-bundle-plugin to version 3.0.1
+    * [SM-2826] - Upgrade to ServiceMix Specs 2.6.0
+    * [SM-2844] - Upgrade to Activiti 5.19.0.2
+    * [SM-2846] - Upgrade maven-compiler-plugin to 3.3
+    * [SM-2847] - Upgrade maven-eclipse-plugin to 2.10
+    * [SM-2849] - Upgrade to Jackson 2.6.3
+    * [SM-2853] - Release Apache ServiceMix 7.0.0.M1
+
+See the README file for more general information about ServiceMix 7.
+
+Thanks you for downloading ServiceMix.  Enjoy !
+
+The ServiceMix Team
+http://servicemix.apache.org/community/team.html
+

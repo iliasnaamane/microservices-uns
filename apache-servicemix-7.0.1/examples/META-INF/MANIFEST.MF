@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Implementation-Title: Apache ServiceMix :: Assemblies :: ServiceMix Ex
+ amples
+Implementation-Version: 7.0.1
+Archiver-Version: Plexus Archiver
+Built-By: kso
+Specification-Vendor: The Apache Software Foundation
+Specification-Title: Apache ServiceMix :: Assemblies :: ServiceMix Exa
+ mples
+Implementation-Vendor-Id: org.apache.servicemix
+Implementation-Vendor: The Apache Software Foundation
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_112
+Specification-Version: 7.0
+Implementation-URL: http://servicemix.apache.org/parent/assemblies-par
+ ent/features-parent/apache-servicemix-examples/
+

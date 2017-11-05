@@ -4,6 +4,7 @@ package esb.flows.implem.utils.Helpers;
 import esb.flows.implem.data.Car.CarRequest;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathFactory;
+import stubs.car_rpc.*;
 
 public class CarRentalHelper {
 
@@ -26,8 +27,4 @@ public class CarRentalHelper {
         builder.append("</soapenv:Envelope>");
         return builder.toString();
     }
-    
-    
-   
-
 }

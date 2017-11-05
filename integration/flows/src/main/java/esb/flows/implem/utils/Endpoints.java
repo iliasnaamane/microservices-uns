@@ -4,12 +4,14 @@ public class Endpoints {
     // file inputs
     public static final String CSV_INPUT_FILE_HOTEL = "file:/Users/iliasnaamane/microservices-uns/integration/input"
             + "?fileName=hotels.csv" ;
-     public static final String CSV_INPUT_FILE_CAR = "file:/Users/iliasnaamane/microservices-uns/integration/input"
+    public static final String CSV_INPUT_FILE_CAR = "file:/Users/iliasnaamane/microservices-uns/integration/input"
             + "?fileName=cars.csv" ;
-    public static final String CSV_INPUT_FILE_VOLS ="file:/Users/iliasnaamane/microservices-uns/integration/input" 
-            + "?fileName=vol.csv" ;;
+    public static final String CSV_INPUT_FILE_VOLS ="file:/Users/iliasnaamane/microservices-uns/integration/input" ;
+
+    
+   
     // file outputs
-    public static final String LETTER_OUTPUT_DIR = "file:/Users/iliasnaamane/microservices-uns/integration/output";
+    public static final String LETTER_OUTPUT_DIR = "file:../../microservices-uns/integration/output";
     
     // activemq endpoints
     public static final String BUILD_HOTEL_SPEC = "activemq:handle-hotel-spec";
@@ -20,12 +22,16 @@ public class Endpoints {
     public static final String SEARCH_HOTEL_1 = "direct:search-hotel-1";
     public static final String SEARCH_HOTEL_2 = "direct:search-hotel-2";
     public static final String AGGREGATION_HOTEL = "direct:aggregation-hotel";
+
     public static final String SEARCH_CAR_1 = "direct:search-car-1";
     public static final String SEARCH_CAR_2 = "direct:search-car-2";
     public static final String SEARCH_VOLA = "direct:search-vol-serviceA";
     public static final String SEARCH_VOLB = "direct:search-vol-serviceB";
     public static final String VOLS_AGGREGATE = "direct:aggregate-vols";
     public static final String CARS_AGGREGATE = "direct:aggregate-cars";
+
+
+
     public static final String BUSINESS_TRAVEL_REST = "direct:businesstravel-rest";
 
     
@@ -34,7 +40,7 @@ public class Endpoints {
 
     public static final String HOTEL_EXTERNAL_REST_ENDPOINT = "http://localhost:8003/tcs-hotel-service/hotels";
 
-    public static final String CAR_RPC_ENDPOINT = "http://localhost:9020/car-rpc/ExternalCarRentalService";
+    public static final String CAR_RPC_ENDPOINT = "spring-ws:http://localhost:9020/car-rpc/ExternalCarRentalService";
     
     public static final String BUSINESS_TRAVEL_ENDPOINT = "http://localhost:9040/travels";
 
