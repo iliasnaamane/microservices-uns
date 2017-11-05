@@ -1,4 +1,4 @@
-FROM dskow/apache-servicemix
+FROM petitroll/esb
 # Installing OSGi dependencies at build time
 COPY ./install-deps.sh .
 RUN chmod 777 ./install-deps.sh

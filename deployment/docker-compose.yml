@@ -55,26 +55,26 @@ services:
     ports:
      - "9080:8080"
 
-  #integration-bus:  # To attach to this container at runtime: docker exec -it tcs-bus sh
-    #container_name: wow-bus
-    #image: iliasnaamane/wow-bus
-    #volumes:
-     # - "./camel_input:/servicemix/camel/input"
-          #-  - "./camel_output:/servicemix/camel/output"
+  integration-bus:  # To attach to this container at runtime: docker exec -it tcs-bus sh
+    container_name: tcs-bus
+    image: petitroll/tcs-bus
+    volumes:
+      - "../integration/input:/servicemix/camel/input"
+      - "../integration/output:/servicemix/camel/output"
     #depends_on:
-      #- flightreservation-registry
-        #-    - database
-           #- - tcs-businesstravel-service
-           #- - vols-document
-           #- - car-rpc
-           #- - hotel-rpc
-          #-  - hotels
-          #-  - cars
-          #-ports:
-            #-- "8181:8181"
-           #-      #- - "8101:8101"
-            #-- "1099:1099"
-            #-- "61616:61616"
-           #- - "44444:44444"
+    #  - flightreservation-registry
+    #  - database
+    #  - tcs-businesstravel-service
+    #  - vols-document
+    #  - car-rpc
+    #  - hotel-rpc
+    #  - hotels
+    #  - cars
+    ports:
+      - "8181:8181"
+      - "8101:8101"
+      - "1099:1099"
+      - "61616:61616"
+      - "44444:44444"
 
  
