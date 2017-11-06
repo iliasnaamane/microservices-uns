@@ -19,22 +19,30 @@ public class BusinessTravelStrategy implements AggregationStrategy{
         System.out.println("hello aggregation old and new");
         
         if(oldExchange == null) {
-           System.out.println("oldExchange null");
+           System.out.println("type:"+newExchange.getIn().getHeader("type").toString());
+           String type = newExchange.getIn().getHeader("type").toString();       
             String str = newExchange.getIn().getBody(String.class);
+            System.out.println(str);
            newExchange.getIn().setBody(str);
            return newExchange;
         }
         else {
+            System.out.println("type:"+newExchange.getIn().getHeader("type").toString());
+            String type = newExchange.getIn().getHeader("type").toString();
+            
             String str = oldExchange.getIn().getBody(String.class);
-            String concatStr = str+newExchange.getIn().getBody(String.class);
-            System.out.println(concatStr);
-            oldExchange.getIn().setBody(concatStr);
+            if(!str.contains(type)){
+                  str = str+","+newExchange.getIn().getBody(String.class);
+                 System.out.println(str);
+                 
+            }
+               
+            
+            oldExchange.getIn().setBody(str);
             return oldExchange;
             
             
-        }
-       
-        
+        }   
     }
     
 }

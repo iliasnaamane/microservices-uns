@@ -18,11 +18,9 @@ public class VolsStrategy implements AggregationStrategy {
 
      @Override
     public Exchange aggregate(Exchange internal, Exchange external) {
-     System.out.println("hello");
+
         if(internal == null){
             internal = external;
-            System.out.println("null");
-            System.out.println(internal.getIn().getBody().toString());
             return external;
         }
             
@@ -32,11 +30,9 @@ public class VolsStrategy implements AggregationStrategy {
             System.out.println("ch: "+ch.getPrice());
             System.out.println("che:"+che.getPrice());
         //    if(ch.getPrice() > che.getPrice())
-        System.out.println("Integer.valueOf(ch.getPrice()) > Integer.valueOf(che.getPrice())"+"\n"+Integer.valueOf(ch.getPrice())+" "+ Integer.valueOf(che.getPrice()));
+       // System.out.println("Integer.valueOf(ch.getPrice()) > Integer.valueOf(che.getPrice())"+"\n"+Integer.valueOf(ch.getPrice())+" "+ Integer.valueOf(che.getPrice()));
             if(Integer.valueOf(ch.getPrice()) > Integer.valueOf(che.getPrice())){
-                System.out.println( "Maybe  the prob is here" +che + "   "+ch);
-                internal.getIn().setBody(che.toString());
-                System.out.println("return value : "+internal.getIn().getBody());
+                internal.getIn().setBody(che.tobusnissTJson().toString());
                 return internal;
                
             }     

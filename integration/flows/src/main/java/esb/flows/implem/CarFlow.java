@@ -62,9 +62,6 @@ public class CarFlow extends RouteBuilder {
             .setHeader(Exchange.HTTP_METHOD, constant("POST"))
             .setHeader("Content-Type", constant("text/xml"))
             .process(CarProcessors.RequestRPC)
-            .inOut(CAR_RPC_ENDPOINT)
-            .unmarshal().string()
-            .process(CarProcessors.consolidateResponse)
             .to(CARS_AGGREGATE); 
         
         from(SEARCH_CAR_2)
@@ -87,7 +84,7 @@ public class CarFlow extends RouteBuilder {
                 .completionSize(2)
                 .process(CarProcessors.CarForm2json)
                 .unmarshal().string()
-                .setHeader("type",constant("car-flow"))
+                .setHeader("type",constant("carRental"))
                 .to(BUSINESS_TRAVEL_REST)
         ;
         

@@ -43,7 +43,6 @@ public class HotelProcessors {
 "       \"nights\":"+ cheapHotel.getDuration()+",\n" +
 "       \"price\":"+ cheapHotel.getPrice() + "\n" +
 "       }";
-         System.out.println(cheapHotel);
         exchange.getIn().setBody(CheapHotelJson);
         
     };
@@ -55,21 +54,16 @@ public class HotelProcessors {
      */
     public static final Processor hotel2Json = (Exchange exchange) -> {
         CheapHotel cheapHotel = (CheapHotel)exchange.getIn().getBody();
-        String CheapHotelJson = "{\n" +
+        String CheapHotelJson = 
 "\n" +
-"  \"email\": \"ilias.naamane1@gmail.com\",\n" +
-"  \"destination\": \"Rabat\",\n" +
-"   \"hotels\":[\n" +
+"   \"hotel\":"+
 "     {\n" +
 "       \"id_hotel\":\""+cheapHotel.getIdentifier()+"\",\n" +
-"       \"nights\": "+cheapHotel.getDuration()+",\n" +
 "       \"price\": "+cheapHotel.getPrice()+"\n" +
-"     }\n" +
-"\n" +
-"   ]\n" +
-"   \n" +
-"}";
-        exchange.getIn().setBody(CheapHotelJson);
+"     }\n" 
+            
+                ;
+   exchange.getIn().setBody(CheapHotelJson);
         
     };
     
@@ -99,15 +93,12 @@ public class HotelProcessors {
         Map<String, String> data = (Map<String, String>) exchange.getIn().getBody();
         HotelSpec hs = new HotelSpec();
         data.entrySet().forEach((Map.Entry<String, String> entry) -> {
-            System.out.println(entry.getKey() + ", " + entry.getValue());
             if(entry.getKey().equals("duration")){
                 hs.setDuration(Integer.parseInt(entry.getValue()));
-                System.out.println("duration: "+Integer.parseInt(entry.getValue()));
             }
                 
             else{
                 hs.setDest(entry.getValue());
-                System.out.println("destination: " + entry.getValue());
             }
              
         });
@@ -144,7 +135,6 @@ public class HotelProcessors {
 "       \"nights\":"+ hs.getDuration()+",\n" +
 "       \"price\":"+ total_price + "\n" +
 "       }";*/
-        System.out.println("rpc"+CheapHotel.toString());
         exchange.getIn().setBody(CheapHotel);
 
     };

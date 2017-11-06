@@ -39,12 +39,12 @@ cd ..
 cd ..
 
 
-cd integration
-cd esb
-docker build -t petitroll/esb .
-cd ..
-docker build -t petitroll/tcs-bus .
-cd ..
+#cd integration
+#cd esb
+#docker build -t petitroll/esb .
+#cd ..
+#docker build -t petitroll/tcs-bus .
+#cd ..
 
 
 

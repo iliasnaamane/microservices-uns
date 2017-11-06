@@ -17,9 +17,7 @@ public class CarStrategy implements AggregationStrategy {
 
     @Override
     public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
-        System.out.println("hello");
-        
-        
+                
         if(oldExchange == null){
             oldExchange = newExchange;
             System.out.println("null");
@@ -38,7 +36,6 @@ public class CarStrategy implements AggregationStrategy {
                
             }     
         }
-        System.out.println("wesh");
         return oldExchange;
     }
     

@@ -17,12 +17,9 @@ import java.util.Map;
 public class vol implements Serializable,ItemPriceComparator {
      String date=null;
      String prix=null;
-     String cmpny=null;
-     String nb_escales=null;
      String destination=null;
-     String rating=null;
-     String duree=null;
-     String id=null;
+   
+     String id="1";
      String origine=null;
 
     @Override
@@ -33,11 +30,7 @@ public class vol implements Serializable,ItemPriceComparator {
                 "'origine'='" + origine +"' , \n"+
                 "'destination'='" + destination + "', \n"+
                 "'id'='" + id + "', \n"+
-                "'cmpny'='" +cmpny + "', \n"+
-                "'nb_escales'='" + nb_escales + "', \n"+
-                "'rating'='" + rating + "', \n"+
-                "'duree'='" + duree +"' \n"+
-                '}';
+                               '}';
     }
 
     public vol() {
@@ -46,11 +39,9 @@ public class vol implements Serializable,ItemPriceComparator {
     public vol(String date, String prix, String cmpny, String nb_escales, String destination, String rating, String duree, String id, String origine) {
         this.date = date;
         this.prix = prix;
-        this.cmpny = cmpny;
-        this.nb_escales = nb_escales;
+        
         this.destination = destination;
-        this.rating = rating;
-        this.duree = duree;
+        
         this.id = id;
         this.origine = origine;
     }
@@ -59,11 +50,9 @@ public class vol implements Serializable,ItemPriceComparator {
              this.destination=(jsn.get("destination").getAsString());
              this.date=(jsn.get("date").getAsString());
              this.origine=(jsn.get("origine").getAsString());
-             this.cmpny=(jsn.get("cmpny").getAsString());
-             this.duree=(jsn.get("duree").getAsString());
+            
              this.id=(jsn.get("id").getAsString());
-             this.nb_escales=(jsn.get("nb_escales").getAsString());
-             this.rating=(jsn.get("rating").getAsString());
+             
        }
    
      
@@ -85,21 +74,7 @@ public class vol implements Serializable,ItemPriceComparator {
         this.prix = prix;
     }
 
-    public String getCmpny() {
-        return cmpny;
-    }
-
-    public void setCmpny(String cmpny) {
-        this.cmpny = cmpny;
-    }
-
-    public String getNb_escales() {
-        return nb_escales;
-    }
-
-    public void setNb_escales(String nb_escales) {
-        this.nb_escales = nb_escales;
-    }
+   
 
     public String getDestination() {
         return destination;
@@ -109,20 +84,17 @@ public class vol implements Serializable,ItemPriceComparator {
         this.destination = destination;
     }
 
-    public String getRating() {
-        return rating;
-    }
-
-    public void setRating(String rating) {
-        this.rating = rating;
-    }
-
-    public String getDuree() {
-        return duree;
-    }
-
-    public void setDuree(String duree) {
-        this.duree = duree;
+   
+    public String tobusnissTJson(){
+       String CheapFlight = 
+"\n" +
+"   \"flight\":" +
+"     {\n" +
+"       \"id_flight\":\"1\",\n" +
+"       \"price\": "+getPrice()+"\n" +
+"     }\n" ;
+          
+      return CheapFlight;
     }
 
     public String getId() {

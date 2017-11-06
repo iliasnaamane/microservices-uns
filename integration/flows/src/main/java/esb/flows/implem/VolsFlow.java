@@ -26,7 +26,7 @@ import org.apache.camel.Exchange;
  * @author obisama
  */
 public class VolsFlow extends RouteBuilder {
- private static final ExecutorService WORKERS = Executors.newFixedThreadPool(4);
+ private static final ExecutorService WORKERS = Executors.newFixedThreadPool(3);
     @Override
     public void configure() throws Exception {
        
@@ -95,8 +95,10 @@ public class VolsFlow extends RouteBuilder {
                   .log("After Aggregator")
                 .completionSize(2)
                 .log("after aggreg" + body())
+                
 //                .unmarshal().string()
                 //.marshal().json(JsonLibrary.Jackson)
+                 .setHeader("type",constant("flight"))
                 .to(BUSINESS_TRAVEL_REST)
         ;
           
@@ -108,16 +110,12 @@ public class VolsFlow extends RouteBuilder {
     private static Processor csv2volRequest = (Exchange exchange) -> {
             Map<String, Object> data = (Map<String, Object>) exchange.getIn().getBody();
             VolsRequest p =  new VolsRequest(data);
-            System.out.println(p.toString());
+          
             if(p.getOutbound_date()==null) 
-            {   System.out.println("Date Is NULL AGAAAAIN and data contains Outbound_date ?? ="+data.containsKey("Outbound_date"));
-                  for(Map.Entry<String, Object> entry : data.entrySet()) {
-                         System.out.println( 
-                                 entry.getKey() +
-                                 ":"+entry.getValue());}
+            {  
                 p.setOutbound_date("12-10-2017");
             }
-            System.out.println(p.toString());
+          
             exchange.getIn().setBody(p);
     };
      
@@ -195,36 +193,32 @@ private static final Processor Answer2ToFlight = (Exchange exchange) -> {
                     .getAsJsonObject()
                     .get("vols")
                     .getAsJsonArray();
-            
-            System.out.println("j'ai transformé le json" + list) ;
+           
             for(JsonElement j : list){
-                System.out.println("0::dans la boucle for") ;
+              
                 JsonObject jsontmp = j.getAsJsonObject();
-                System.out.println("1::dans la boucle for") ;
+                
                
                 if(Integer.valueOf(jsontmp.get("price").getAsString()) < Integer.valueOf(resultat.getPrice())){
-                     System.out.println("2::dans la boucle for, dans if") ;
+                    
                     resultat.setDestination(jsontmp.get("destination").getAsString());
-                      System.out.println("3::dans la boucle for, dans if") ;
+                     
                     resultat.setDate(jsontmp.get("date").getAsString());
-                      System.out.println("4::dans la boucle for, dans if") ;
+                     
                     resultat.setPrix(jsontmp.get("price").getAsString());
-                      System.out.println("5::dans la boucle for, dans if") ;
+                      
                     JsonArray stops = j.getAsJsonObject()
                                        .get("stops")
                                        .getAsJsonArray();
-                      System.out.println("6::dans la boucle for, dans if") ;
                     
                     if(!stops.isJsonNull())
-                    {
-                          System.out.println("7::dans la boucle for, dans if") ;
+                    {    
                         StringBuilder ss =new StringBuilder();
                         for(JsonElement k :stops )
                         { 
                             // JsonObject jsontmp2 = k.getAsJsonObject();
                              ss.append(k.toString()+"/");
                         }
-                          System.out.println("8::dans la boucle for, dans if") ;
                         ss.deleteCharAt(ss.length()-1);
                       resultat.setOrigine(ss.toString());
                     }
@@ -233,12 +227,8 @@ private static final Processor Answer2ToFlight = (Exchange exchange) -> {
         }
         catch(JsonSyntaxException | NumberFormatException e){
             e.printStackTrace();
-            System.out.println("9::dans catch") ;
-            System.out.println(exchange.getIn().getBody().toString() + " \n" + exchange.getIn().getHeaders());
             exchange.getIn().setBody(resultat);
         }
-        System.out.println(resultat.toString());
-        System.out.println("10::sortie") ;
         exchange.getIn().setBody(resultat);
 };
 }

@@ -109,6 +109,27 @@
                             <goal>wsdl2java</goal>
                         </goals>
                     </execution>
+                    <execution>
+                        <id>generate-sources-2</id>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <sourceRoot>${basedir}/src/main/java/</sourceRoot>
+                            <wsdlOptions>
+                                <wsdlOption>
+                                    <wsdl>${basedir}/src/main/resources/car.wsdl</wsdl>
+                                    <extraargs>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://informatique.polytech.unice.fr/soa1/cookbook/=stubs.car_rpc</extraarg>
+                                    </extraargs>  
+                                    
+                                </wsdlOption>
+                            </wsdlOptions>
+                        </configuration>
+                        
+                        <goals>
+                            <goal>wsdl2java</goal>
+                        </goals>
+                    </execution>
                 </executions>
             </plugin>
         </plugins>

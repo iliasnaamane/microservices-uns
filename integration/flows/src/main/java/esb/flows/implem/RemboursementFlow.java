@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-
+/*
 package esb.flows.implem;
 
 import java.util.concurrent.ExecutorService;
@@ -46,3 +46,4 @@ public class RemboursementFlow extends RouteBuilder {
 
 
 }
+*/

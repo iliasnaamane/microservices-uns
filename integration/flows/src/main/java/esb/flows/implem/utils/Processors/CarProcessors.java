@@ -11,6 +11,7 @@ import com.google.gson.reflect.TypeToken;
 import esb.flows.implem.data.Car.CarExternalForm;
 import esb.flows.implem.data.Car.CarForm;
 import esb.flows.implem.data.Car.CarRequest;
+import esb.flows.implem.utils.Helpers.CarRentalHelper;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Map;
@@ -19,6 +20,8 @@ import javax.xml.xpath.XPathFactory;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 import org.xml.sax.InputSource;
+import stubs.car_rpc.Car;
+import stubs.car_rpc.CarRental;
 
 /**
  *
@@ -30,12 +33,17 @@ import org.xml.sax.InputSource;
  */
 public class CarProcessors {
      
-   /**
+    
+    
+    
+    
+    /**
     * build json request body for Car rental part
     */
     
     public static Processor CarForm2json = (Exchange exchange) -> {
         CarForm car = (CarForm)exchange.getIn().getBody();
+        
         String bodyJson = "	\"carRental\":    \n" +
 "  	{      \n" +
 "  		\"id_rentcar\":\""+car.getIdCar()+"-extern\",       \n" +
@@ -44,7 +52,6 @@ public class CarProcessors {
 "  		\"marque\":\""+car.getMarque()+"\"    \n" +
 "  		\n" +
 "  	} ";
-        System.out.println(bodyJson);
         exchange.getIn().setBody(bodyJson);
         
     };
@@ -59,8 +66,7 @@ public class CarProcessors {
                                             .getType());
         CarForm cheapCar = new CarForm();
         for (CarExternalForm c : Cars) {
-            System.out.println(c.getModel());
-             cheapCar.setIdCar(c.getId());
+            cheapCar.setIdCar(c.getId());
              cheapCar.setMarque(c.getMake());
              cheapCar.setModele(c.getModel());
              cheapCar.setPrix(c.getPriceperday());
@@ -69,8 +75,6 @@ public class CarProcessors {
             break;
         }
         
-        System.out.println("cheap car returned");
-      
         exchange.getIn().setBody(cheapCar);
         
     };
@@ -80,8 +84,10 @@ public class CarProcessors {
      * Request REST to external car service
      */
     public static Processor RequestREST = (Exchange exchange) -> {
+      
         CarRequest cr = (CarRequest) exchange.getIn().getBody();
-        exchange.getIn().setHeader(Exchange.HTTP_QUERY,"location="+cr.getPlace()+"&start="+cr.getDateStart()+"&end="+cr.getDateEnd()+"&sort=asc");
+          System.out.println("request rest car"+cr.getPlace());
+        exchange.getIn().setHeader(Exchange.HTTP_QUERY,"location="+cr.getPlace());
         exchange.getIn().setBody(null);
     };
     
@@ -92,10 +98,10 @@ public class CarProcessors {
      */
     
     public static final Processor RequestRPC = (Exchange exchange) -> {
-        System.out.println("weweeee");
+        System.out.println("Request RPC to car internal service");
         
-        StringBuilder builder = new StringBuilder();
-        builder.append("<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:cook=\"http://informatique.polytech.unice.fr/soa1/cookbook/\">\n");
+       /* StringBuilder builder = new StringBuilder();
+        builder.append("<soapenv:Envelope  xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:cook=\"http://informatique.polytech.unice.fr/soa1/cookbook/\">\n");
         builder.append("<soapenv:Header/>\n");
         builder.append(" <soapenv:Body>\n");
         builder.append("<cook:getCarsByPreferences>\n");
@@ -107,7 +113,33 @@ public class CarProcessors {
         builder.append("</soapenv:Envelope>");
         System.out.println(builder);
         
-        exchange.getIn().setBody(builder);
+        exchange.getIn().setBody(builder.toString());*/
+      
+        CarRequest request = (CarRequest)exchange.getIn().getBody();
+         System.out.println("date: " +request.getDateStart());
+         System.out.println("date end: " +request.getDateEnd());
+        CarRental cr = CarRentalHelper.getWS();
+        System.out.println(cr);
+        ArrayList<Car> response = new ArrayList<>();
+        response = (ArrayList<Car>)cr.getCarsByPreferences(request.getPlace(), request.getDateStart(), request.getDateEnd());
+        System.out.println("wahaalalala");
+        System.out.println("response"+response);
+        CarForm cf = new CarForm();
+        for (Car c : response) {
+            System.out.println("weeeeweeee");
+            System.out.println("model cheap car in rpc intenrnal service:"+c.getModele());
+            
+            cf.setIdCar(c.getIdCar());
+            cf.setMarque(c.getMarque());
+            cf.setModele(c.getModele());
+            cf.setPlace(c.getPlace());
+            cf.setPrix(c.getPrix());
+            
+             
+            break;
+        }
+        exchange.getIn().setBody(cf);  
+        
         
     };
     
@@ -117,7 +149,7 @@ public class CarProcessors {
     public static final Processor consolidateResponse = (Exchange exchange) -> {
        
         String response = (String)exchange.getIn().getBody();
-        System.out.println(response);
+        System.out.println("response car rpc:"+response);
         XPath xpath = XPathFactory.newInstance().newXPath();
         CarForm cf = new CarForm();
 
@@ -145,14 +177,20 @@ public class CarProcessors {
      */
     
     public static   Processor csv2Request = (Exchange exchange)-> {
-    System.out.println("csv2Request");
-    Map<String, Object> data = (Map<String, Object>) exchange.getIn().getBody();
+    Map<String, String> data = (Map<String, String>) exchange.getIn().getBody();
     CarRequest req = new CarRequest();
-    req.setPlace((String)data.get("place"));
-    req.setDateStart((String)data.get("dateStart"));
-    req.setDateEnd((String)data.get("dateEnd"));
-    System.out.println(req.toString());
+    data.entrySet().forEach((Map.Entry<String, String> entry) -> {
+        if(entry.getKey().equals("place"))
+            req.setPlace(entry.getValue());
+        else if(entry.getKey().equals("dateStart"))
+            req.setDateStart(entry.getValue());
+        else
+            req.setDateEnd(entry.getValue());
+                
+             
+    });
+    System.out.println("csv 2 request");
+    System.out.println(req.getDateStart());
     exchange.getIn().setBody(req);
-    System.out.println("Fin csv2Request");
     };
 }

@@ -5,7 +5,6 @@ public class Endpoints {
      // file inputs
     public static final String CSV_INPUT_FILE_HOTEL = "file:/Users/iliasnaamane/microservices-uns/integration/input"
             + "?fileName=hotels.csv" ;
-<<<<<<< HEAD
     public static final String CSV_INPUT_FILE_CAR = "file:/Users/iliasnaamane/microservices-uns/integration/input"
             + "?fileName=cars.csv";
 
@@ -15,14 +14,7 @@ public class Endpoints {
 
     
    
-=======
-     public static final String CSV_INPUT_FILE_CAR = "file:/servicemix/camel/input"
-            + "?fileName=car.csv" ;
-    public static final String CSV_INPUT_FILE_VOLS ="file:/servicemix/camel/input" 
-            + "?fileName=vol.csv" ;;
-    public static final String CSV_INPUT_FILE_MAIL ="file:/servicemix/camel/input" 
-            + "?fileName=mail.csv" ;;
->>>>>>> 45677d36f273804289da0753304587d8160faac7
+
     // file outputs
     public static final String LETTER_OUTPUT_DIR = "file:/Users/iliasnaamane/microservices-uns/integration/output";
     
@@ -30,6 +22,8 @@ public class Endpoints {
     public static final String BUILD_HOTEL_SPEC = "activemq:handle-hotel-spec";
      public static final String BUILD_VOL_QUEUE = "activemq:handle-vol-requests";
     public static final String BUILD_CAR_QUEUE = "activemq:handle-car-requests";
+      // Error handling.
+    public static final String DEATH_POOL = "activemq:global:dead";
     
     // direct endpoints
     public static final String SEARCH_HOTEL_1 = "direct:search-hotel-1";
@@ -66,10 +60,10 @@ public class Endpoints {
     
     public static final String CAR_EXTERNAL_REST_ENDPOINT = "http://localhost:9090/cars";
     
-    public static final String OCR_ENDPOINT = "http:ocr-mock:8080/ocr/ocr";
+  //  public static final String OCR_ENDPOINT = "http:ocr-mock:8080/ocr/ocr";
     
   
-    public static final String DEATH_POOL = "activemq:global:dead";
+    
     
   
     
