@@ -96,21 +96,12 @@ public class VolsFlow extends RouteBuilder {
                 .completionSize(2)
                 .log("after aggreg" + body())
 //                .unmarshal().string()
-                .log("nothing left but to wright on the file")
                 //.marshal().json(JsonLibrary.Jackson)
-                .to(BUSINESS_TRAVEL_REST2)
+                .to(BUSINESS_TRAVEL_REST)
         ;
           
-           from(BUSINESS_TRAVEL_REST2)
-           .routeId("business-rest-call2")
-              .routeDescription("send request to rest service2")
-              .log(body().toString())
-               // .setHeader(Exchange.HTTP_METHOD, constant("POST")) 
-              //  .setHeader("Content-Type", constant("application/json"))
-               // .setHeader("Accept", constant("application/json"))
-              //  .unmarshal().string()
-                .to(LETTER_OUTPUT_DIR+"?fileName=volss.txt")
-        ;
+          
+        
 
     }
     

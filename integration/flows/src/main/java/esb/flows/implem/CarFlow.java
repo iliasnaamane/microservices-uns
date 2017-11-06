@@ -87,6 +87,7 @@ public class CarFlow extends RouteBuilder {
                 .completionSize(2)
                 .process(CarProcessors.CarForm2json)
                 .unmarshal().string()
+                .setHeader("type",constant("car-flow"))
                 .to(BUSINESS_TRAVEL_REST)
         ;
         

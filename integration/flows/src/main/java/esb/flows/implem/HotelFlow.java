@@ -79,6 +79,7 @@ public class HotelFlow extends RouteBuilder {
                 .completionSize(2)
                 .process(HotelProcessors.hotel2Json)
                 .unmarshal().string()
+                .setHeader("type",constant("hotel-flow"))
                 .to(BUSINESS_TRAVEL_REST)
                 
         ;

@@ -2,15 +2,20 @@ package esb.flows.implem.utils;
 
 public class Endpoints {
  
-    // file inputs
-    public static final String CSV_INPUT_FILE_HOTEL = "file:/servicemix/camel/input"
+     // file inputs
+    public static final String CSV_INPUT_FILE_HOTEL = "file:/Users/iliasnaamane/microservices-uns/integration/input"
             + "?fileName=hotels.csv" ;
-     public static final String CSV_INPUT_FILE_CAR = "file:/servicemix/camel/input"
-            + "?fileName=car.csv" ;
-    public static final String CSV_INPUT_FILE_VOLS ="file:/servicemix/camel/input" 
-            + "?fileName=vol.csv" ;;
+    public static final String CSV_INPUT_FILE_CAR = "file:/Users/iliasnaamane/microservices-uns/integration/input"
+            + "?fileName=cars.csv";
+
+    public static final String CSV_INPUT_FILE_VOLS ="file:/Users/iliasnaamane/microservices-uns/integration/input"
+            + "?fileName=vol.csv" ;
+
+
+    
+   
     // file outputs
-    public static final String LETTER_OUTPUT_DIR = "file:/servicemix/camel/output";
+    public static final String LETTER_OUTPUT_DIR = "file:/Users/iliasnaamane/microservices-uns/integration/output";
     
     // activemq endpoints
     public static final String BUILD_HOTEL_SPEC = "activemq:handle-hotel-spec";
@@ -38,23 +43,23 @@ public class Endpoints {
 
     
     //services endpoints
-    public static final String HOTEL_RPC_ENDPOINT = "http:hotel-rpc:8080/hotel-rpc/ExternalHotelFinderService";
+    public static final String HOTEL_RPC_ENDPOINT = "http://localhost:9010/hotel-rpc/ExternalHotelFinderService";
 
-    public static final String HOTEL_EXTERNAL_REST_ENDPOINT = "http:tcs-hotel-rpc:8080/tcs-hotel-service/hotels";
+    public static final String HOTEL_EXTERNAL_REST_ENDPOINT = "http://localhost:8003/tcs-hotel-service/hotels";
 
-    public static final String CAR_RPC_ENDPOINT = "http:car-rpc:8080/car-rpc/ExternalCarRentalService";
+    public static final String CAR_RPC_ENDPOINT = "spring-ws:http://localhost:9020/car-rpc/ExternalCarRentalService";
     
-    public static final String BUSINESS_TRAVEL_ENDPOINT = "http:businesstravel-resource:8080/travels";
+    public static final String BUSINESS_TRAVEL_ENDPOINT = "http://localhost:9040/travels";
 
-    public static final String VOL_JAXRS_ENDPOINT ="http:vols-document:8080/vols/webapi/vols";
+    public static final String VOL_JAXRS_ENDPOINT ="http://localhost:9030/vols/webapi/vols";
     
-    public static final String VOLS_EXTERNAL_JAXRS_ENDPOINT ="http:flightreservation:8080/flightreservation-service-document/registry";
+    public static final String VOLS_EXTERNAL_JAXRS_ENDPOINT ="http://localhost:9080/flightreservation-service-document/registry";
     
-    public static final String CAR_EXTERNAL_REST_ENDPOINT = "http:tcs-cars:9060/cars";
+    public static final String CAR_EXTERNAL_REST_ENDPOINT = "http://localhost:9090/cars";
     
     
   
- public static final String DEATH_POOL = "activemq:global:dead";
+    public static final String DEATH_POOL = "activemq:global:dead";
     
   
     

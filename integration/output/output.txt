@@ -1,13 +1,16 @@
-vol{
-'date'='2017-10-12', 
-'prix'='200', 
-'origine'='"Marseille"/"Toulouse"' , 
-'destination'='Paris', 
-'id'='null', 
-'cmpny'='null', 
-'nb_escales'='null', 
-'rating'='null', 
-'duree'='null' 
+{
+
+  "email": "ilias.naamane1@gmail.com",
+  "destination": "Rabat",
+   "hotels":[
+     {
+       "id_hotel":"service-2",
+       "nights": 0,
+       "price": 50
+     }
+
+   ]
+   
 }{
 
   "email": "ilias.naamane1@gmail.com",
@@ -21,14 +24,11 @@ vol{
 
    ]
    
-}vol{
-'date'='2017-10-12', 
-'prix'='200', 
-'origine'='"Marseille"/"Toulouse"' , 
-'destination'='Paris', 
-'id'='null', 
-'cmpny'='null', 
-'nb_escales'='null', 
-'rating'='null', 
-'duree'='null' 
-}
+}	"carRental":    
+  	{      
+  		"id_rentcar":"100-extern",       
+  		"price":"77.3",       
+  		"modele":"S-Class",       
+  		"marque":"Mercedes-Benz"    
+  		
+  	} 

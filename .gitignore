@@ -7,5 +7,6 @@
 /flows/target/
 
 /tests/acceptation/target/
+tests/acceptation/src/main/java/stubs/
 cp-files.sh
 deploy-servicemix.sh
