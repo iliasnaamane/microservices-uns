@@ -20,6 +20,7 @@ build vols result/document-vol
 build hotelRPC result/hotel-rpc
 build carRPC result/car-rpc
 build resourceBusinessTravel result/businesstravel-resource
+build ocr ocr/mock
 
 #cd services
 cd externals
@@ -39,7 +40,7 @@ cd ..
 
 cd integration
 cd esb
-docker build -t  docker build -t petitroll/esb .
+docker build -t petitroll/esb .
 cd ..
 docker build -t petitroll/tcs-bus .
 cd ..

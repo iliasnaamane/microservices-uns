@@ -5,7 +5,6 @@
                  http://maven.apache.org/maven-v4_0_0.xsd">
 
    <modelVersion>4.0.0</modelVersion>
-
    <artifactId>services</artifactId>
    <version>1.0</version>
    <packaging>pom</packaging>
@@ -22,6 +21,7 @@
        <module>carRPC</module>
        <module>vols</module>
        <module>externals</module>
+       <module>ocr</module>
    </modules>
 
    <properties>

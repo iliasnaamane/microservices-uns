@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  ocrmock:
+    container_name: ocr-mock
+    image: ocr/mock
+    ports:
+      - "9100:8080" 
