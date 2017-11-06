@@ -1,8 +1,15 @@
 version: '2'
 
 services:
-  ocrmock:
-    container_name: ocr-mock
-    image: ocr/mock
+  cars:
+    container_name: tcs-cars-test
+    image: soa-team-2/cars
     ports:
-      - "9100:8080" 
+      - "9090:9060"
+
+
+  #ocrmock:
+  #  container_name: ocr-mock
+  #  image: ocr/mock
+  #  ports:
+  #    - "9100:8080" 
