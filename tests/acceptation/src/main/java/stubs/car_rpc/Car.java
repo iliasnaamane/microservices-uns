@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java pour car complex type.
+ * <p>Java class for car complex type.
  * 
- * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="car"&gt;
@@ -53,7 +53,7 @@ public class Car {
     protected float prix;
 
     /**
-     * Obtient la valeur de la propriété idCar.
+     * Gets the value of the idCar property.
      * 
      */
     public int getIdCar() {
@@ -61,7 +61,7 @@ public class Car {
     }
 
     /**
-     * Définit la valeur de la propriété idCar.
+     * Sets the value of the idCar property.
      * 
      */
     public void setIdCar(int value) {
@@ -69,7 +69,7 @@ public class Car {
     }
 
     /**
-     * Obtient la valeur de la propriété marque.
+     * Gets the value of the marque property.
      * 
      * @return
      *     possible object is
@@ -81,7 +81,7 @@ public class Car {
     }
 
     /**
-     * Définit la valeur de la propriété marque.
+     * Sets the value of the marque property.
      * 
      * @param value
      *     allowed object is
@@ -93,7 +93,7 @@ public class Car {
     }
 
     /**
-     * Obtient la valeur de la propriété modele.
+     * Gets the value of the modele property.
      * 
      * @return
      *     possible object is
@@ -105,7 +105,7 @@ public class Car {
     }
 
     /**
-     * Définit la valeur de la propriété modele.
+     * Sets the value of the modele property.
      * 
      * @param value
      *     allowed object is
@@ -117,7 +117,7 @@ public class Car {
     }
 
     /**
-     * Obtient la valeur de la propriété numSerie.
+     * Gets the value of the numSerie property.
      * 
      */
     public int getNumSerie() {
@@ -125,7 +125,7 @@ public class Car {
     }
 
     /**
-     * Définit la valeur de la propriété numSerie.
+     * Sets the value of the numSerie property.
      * 
      */
     public void setNumSerie(int value) {
@@ -133,7 +133,7 @@ public class Car {
     }
 
     /**
-     * Obtient la valeur de la propriété place.
+     * Gets the value of the place property.
      * 
      * @return
      *     possible object is
@@ -145,7 +145,7 @@ public class Car {
     }
 
     /**
-     * Définit la valeur de la propriété place.
+     * Sets the value of the place property.
      * 
      * @param value
      *     allowed object is
@@ -157,7 +157,7 @@ public class Car {
     }
 
     /**
-     * Obtient la valeur de la propriété prix.
+     * Gets the value of the prix property.
      * 
      */
     public float getPrix() {
@@ -165,7 +165,7 @@ public class Car {
     }
 
     /**
-     * Définit la valeur de la propriété prix.
+     * Sets the value of the prix property.
      * 
      */
     public void setPrix(float value) {

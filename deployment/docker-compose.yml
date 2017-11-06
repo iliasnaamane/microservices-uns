@@ -51,7 +51,7 @@ services:
     image: ocr/mock
     ports:
       - "9100:8080"
-  
+
   flightreservation-registry:               # Flight reservation registry, on port 9080
     container_name: flightreservation
     image: matthieugenovese/flightreservation-document
@@ -81,5 +81,6 @@ services:
       - "1099:1099"
       - "61616:61616"
       - "44444:44444"
+    tty: true
 
  

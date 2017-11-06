@@ -21,7 +21,6 @@
        <module>carRPC</module>
        <module>vols</module>
        <module>externals</module>
-       <module>ocr</module>
    </modules>
 
    <properties>
