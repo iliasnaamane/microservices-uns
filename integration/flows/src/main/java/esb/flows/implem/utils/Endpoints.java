@@ -9,6 +9,8 @@ public class Endpoints {
             + "?fileName=car.csv" ;
     public static final String CSV_INPUT_FILE_VOLS ="file:/servicemix/camel/input" 
             + "?fileName=vol.csv" ;;
+    public static final String CSV_INPUT_FILE_MAIL ="file:/servicemix/camel/input" 
+            + "?fileName=mail.csv" ;;
     // file outputs
     public static final String LETTER_OUTPUT_DIR = "file:/servicemix/camel/output";
     
@@ -52,6 +54,7 @@ public class Endpoints {
     
     public static final String CAR_EXTERNAL_REST_ENDPOINT = "http:tcs-cars:9060/cars";
     
+    public static final String OCR_ENDPOINT = "http:ocr-mock:8080/ocr/ocr";
     
   
  public static final String DEATH_POOL = "activemq:global:dead";

@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for getCarsByPreferences complex type.
+ * <p>Classe Java pour getCarsByPreferences complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType name="getCarsByPreferences"&gt;
@@ -40,7 +40,7 @@ public class GetCarsByPreferences {
     protected String dateEnd;
 
     /**
-     * Gets the value of the place property.
+     * Obtient la valeur de la propriété place.
      * 
      * @return
      *     possible object is
@@ -52,7 +52,7 @@ public class GetCarsByPreferences {
     }
 
     /**
-     * Sets the value of the place property.
+     * Définit la valeur de la propriété place.
      * 
      * @param value
      *     allowed object is
@@ -64,7 +64,7 @@ public class GetCarsByPreferences {
     }
 
     /**
-     * Gets the value of the dateStart property.
+     * Obtient la valeur de la propriété dateStart.
      * 
      * @return
      *     possible object is
@@ -76,7 +76,7 @@ public class GetCarsByPreferences {
     }
 
     /**
-     * Sets the value of the dateStart property.
+     * Définit la valeur de la propriété dateStart.
      * 
      * @param value
      *     allowed object is
@@ -88,7 +88,7 @@ public class GetCarsByPreferences {
     }
 
     /**
-     * Gets the value of the dateEnd property.
+     * Obtient la valeur de la propriété dateEnd.
      * 
      * @return
      *     possible object is
@@ -100,7 +100,7 @@ public class GetCarsByPreferences {
     }
 
     /**
-     * Sets the value of the dateEnd property.
+     * Définit la valeur de la propriété dateEnd.
      * 
      * @param value
      *     allowed object is

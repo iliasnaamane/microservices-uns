@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for recherche complex type.
+ * <p>Classe Java pour recherche complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType name="recherche"&gt;
@@ -40,7 +40,7 @@ public class Recherche {
     protected boolean arg2;
 
     /**
-     * Gets the value of the lieu property.
+     * Obtient la valeur de la propriété lieu.
      * 
      * @return
      *     possible object is
@@ -52,7 +52,7 @@ public class Recherche {
     }
 
     /**
-     * Sets the value of the lieu property.
+     * Définit la valeur de la propriété lieu.
      * 
      * @param value
      *     allowed object is
@@ -64,7 +64,7 @@ public class Recherche {
     }
 
     /**
-     * Gets the value of the dure property.
+     * Obtient la valeur de la propriété dure.
      * 
      */
     public int getDure() {
@@ -72,7 +72,7 @@ public class Recherche {
     }
 
     /**
-     * Sets the value of the dure property.
+     * Définit la valeur de la propriété dure.
      * 
      */
     public void setDure(int value) {
@@ -80,7 +80,7 @@ public class Recherche {
     }
 
     /**
-     * Gets the value of the arg2 property.
+     * Obtient la valeur de la propriété arg2.
      * 
      */
     public boolean isArg2() {
@@ -88,7 +88,7 @@ public class Recherche {
     }
 
     /**
-     * Sets the value of the arg2 property.
+     * Définit la valeur de la propriété arg2.
      * 
      */
     public void setArg2(boolean value) {

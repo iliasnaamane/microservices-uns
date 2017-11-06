@@ -2,9 +2,6 @@ package esb.flows.implem.utils.Processors;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import esb.flows.implem.data.Car.CarExternalForm;
-import esb.flows.implem.data.Car.CarForm;
-import esb.flows.implem.data.Car.CarRequest;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Map;
@@ -25,15 +22,14 @@ public class RemboursementProcessor{
     Map<String, Object> data = (Map<String, Object>) exchange.getIn().getBody();
 
     String request = "{ \"event\": \"POST\","+
-                        " \"remboursement\": "+
-                                     "{\"idEmploye\" : \"" +(String)data.get("idEmploye") +"\","+
-                                      "\"idBusinessTravel\":\"" +(String)data.get("idBusinessTravel")+"\","+
-                                      "\"nomImage\":\"" +(String)data.get("nomImage")+"\","+
-                                      "\"fin\":\"" +(String)data.get("fin")+"\","+
-                        "}}";
+                        " \"remboursement\": \"" +""+"\","+
+                         "\"idEmploye\" : \"" +(String)data.get("idEmploye") +"\","+
+                         "\"idBusinessTravel\":\"" +(String)data.get("idBusinessTravel")+"\","+
+                         "\"nomImage\":\"" +(String)data.get("nomImage")+"\","+
+                         "\"fin\":\"" +data.get("fin")+"\","+
+                        "}";
 
-    exchange.getIn().setBody(req);
+    exchange.getIn().setBody(request);
     System.out.println("Fin csv2Request");
     };
-}
 }

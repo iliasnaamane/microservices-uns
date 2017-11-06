@@ -9,17 +9,13 @@
 
 package esb.flows.implem;
 
-
-
-
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import org.apache.camel.builder.RouteBuilder;
 import esb.flows.implem.utils.Helpers.CsvFormat;
 import static esb.flows.implem.utils.Endpoints.*;
 
-import esb.flows.implem.utils.Processors.CarProcessors;
-import esb.flows.implem.utils.Strategies.CarStrategy;
+import esb.flows.implem.utils.Processors.RemboursementProcessor;
 
 import org.apache.camel.Exchange;
 
@@ -30,7 +26,7 @@ public class RemboursementFlow extends RouteBuilder {
     public void configure() throws Exception 
     {
 
-        from(CSV_INPUT_FILE_CAR)
+        from(CSV_INPUT_FILE_MAIL)
         .routeId("csv-input-remboursement")
         .routeDescription("Loads a CSV containg request to remboursement")
         .log("Processing ${file:name}")
@@ -39,10 +35,10 @@ public class RemboursementFlow extends RouteBuilder {
         .setHeader(Exchange.HTTP_METHOD, constant("POST")) 
         .setHeader("Content-Type", constant("application/json"))
         .setHeader("Accept", constant("application/json"))
-		.process(RemboursementProcessors.csv2Request)
+		.process(RemboursementProcessor.csv2Request)
         .inOut(OCR_ENDPOINT) 
         .unmarshal().string()
-        .to(LETTER_OUTPUT_DIR+ "?fileName=OCR.txt")
+        .to(LETTER_OUTPUT_DIR+ "?fileName=OCR.txt");
           
        
     }  
