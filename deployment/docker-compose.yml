@@ -46,7 +46,12 @@ services:
       - database
     environment:
       - MONGODB_ADDRESS=database
-  
+  ocr:
+    container_name: ocr-mock
+    image: ocr/mock
+    ports:
+      - "9100:8080"
+
   flightreservation-registry:               # Flight reservation registry, on port 9080
     container_name: flightreservation
     image: matthieugenovese/flightreservation-document
@@ -70,11 +75,21 @@ services:
     #  - hotel-rpc
     #  - hotels
     #  - cars
+<<<<<<< HEAD
    # ports:
     #  - "8181:8181"
     #  - "8101:8101"
     #  - "1099:1099"
     #  - "61616:61616"
      # - "44444:44444"
+=======
+    ports:
+      - "8181:8181"
+      - "8101:8101"
+      - "1099:1099"
+      - "61616:61616"
+      - "44444:44444"
+    tty: true
+>>>>>>> 45677d36f273804289da0753304587d8160faac7
 
  
