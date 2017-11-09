@@ -18,3 +18,5 @@ RUN ./install-deps.sh
 
 # Port exposition
 EXPOSE 8181 8101 1099 61616 44444
+
+ENTRYPOINT ["./bin/servicemix"]

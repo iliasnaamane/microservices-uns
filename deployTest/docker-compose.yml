@@ -2,14 +2,27 @@ version: '2'
 
 services:
   cars:
-    container_name: tcs-cars-test
+    container_name: tcs-cars
     image: soa-team-2/cars
     ports:
       - "9090:9060"
 
+  car-rpc:
+    container_name: car-rpc
+    image: result/car-rpc
+    ports:
+      - "9020:8080"
 
-  #ocrmock:
-  #  container_name: ocr-mock
-  #  image: ocr/mock
-  #  ports:
-  #    - "9100:8080" 
+  integration-bus:  # To attach to this container at runtime: docker exec -it tcs-bus sh
+    container_name: tcs-bus
+    image: petitroll/tcs-bus
+    volumes:
+      - "../integration/input:/servicemix/camel/input"
+      - "../integration/output:/servicemix/camel/output"    
+    ports:
+      - "8181:8181"
+      - "8101:8101"
+      - "1099:1099"
+      - "61616:61616"
+      - "44444:44444"
+    tty: true
