@@ -5,10 +5,6 @@
  */
 package esb.flows.implem.utils.Processors;
 
-import esb.flows.implem.data.Hotel.CheapHotel;
-import org.apache.camel.Exchange;
-import org.apache.camel.Processor;
-
 /**
  *
  * @author iliasnaamane
