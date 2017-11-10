@@ -25,7 +25,8 @@ build ocr ocr/mock
 #cd services
 cd externals
 cd cars 
-#npm i 
+#npm i
+rm -rf node_modules
 npm install
 npm run build
 cd ..
