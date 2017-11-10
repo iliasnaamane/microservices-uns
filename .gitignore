@@ -3,9 +3,10 @@
 /services/externals/hotels/target/
 /services/carRPC/target/
 /services/hotelRPC/target/
+/services/ocr/target/
 /deployment/mongo_data/
 /flows/target/
-
+/integration/flows/src/main/java/stubs/
 /tests/acceptation/target/
 tests/acceptation/src/main/java/stubs/
 cp-files.sh

@@ -7,7 +7,7 @@ PUSH=false
 build() { # $1: directory, $2: image_name
   
   cd $1
-  docker build -t $2 .
+  docker build -t $2 . 
   cd ..
 }
 
@@ -22,10 +22,10 @@ build carRPC result/car-rpc
 build resourceBusinessTravel result/businesstravel-resource
 build ocr ocr/mock
 
-#cd services
+cd services
 cd externals
 cd cars 
-#npm i
+npm i
 rm -rf node_modules
 npm install
 npm run build
@@ -40,12 +40,12 @@ cd ..
 cd ..
 
 
-#cd integration
-#cd esb
-#docker build -t petitroll/esb .
-#cd ..
-#docker build -t petitroll/tcs-bus .
-#cd ..
+cd integration
+cd esb
+docker build -t petitroll/esb . --no-cache
+cd ..
+docker build -t petitroll/tcs-bus . --no-cache
+cd ..
 
 
 

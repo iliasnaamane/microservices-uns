@@ -17,7 +17,7 @@ public class Endpoints {
     public static final String CSV_INPUT_FILE_HOTEL = "file:/servicemix/camel/input"
             + "?fileName=hotels.csv" ;
      public static final String CSV_INPUT_FILE_CAR = "file:/servicemix/camel/input"
-            + "?fileName=car.csv" ;
+            + "?fileName=cars.csv" ;
     public static final String CSV_INPUT_FILE_VOLS ="file:/servicemix/camel/input" 
             + "?fileName=vol.csv" ;;
     public static final String CSV_INPUT_FILE_MAIL ="file:/servicemix/camel/input" 

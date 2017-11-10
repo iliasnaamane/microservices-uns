@@ -5,9 +5,9 @@
  */
 package esb.flows.implem.utils.Helpers;
 
-import static esb.flows.implem.utils.Endpoints.HOTEL_RPC_ENDPOINT;
 import java.net.MalformedURLException;
 import java.net.URL;
+import javax.xml.ws.BindingProvider;
 import stubs.hotel_rpc.ExternalHotelFinderService;
 import stubs.hotel_rpc.HotelFinderService;
 
@@ -17,15 +17,11 @@ import stubs.hotel_rpc.HotelFinderService;
  */
 public class HotelHelper {
     public static  HotelFinderService getWS() {
-        URL wsdl=null;
-        try {
-            wsdl = new URL("http://localhost:9010/hotel-rpc/ExternalHotelFinderService?wsdl");
-        } catch (MalformedURLException ex) {
-            ex.printStackTrace();
-        }
+        URL wsdl = HotelHelper.class.getResource("hotel.wsdl");
         ExternalHotelFinderService factory = new ExternalHotelFinderService(wsdl);
         HotelFinderService ws = factory.getExternalHotelFinderPort();
-        String address = HOTEL_RPC_ENDPOINT;
+        String address = "http://hotel-rpc:8080/hotel-rpc/ExternalHotelFinderService";
+        ((BindingProvider) ws).getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, address);
         return ws;
     }
 }
