@@ -42,7 +42,7 @@ cd ..
 
 cd integration
 cd esb
-docker build -t petitroll/esb . --no-cache
+#docker build -t petitroll/esb . --no-cache
 cd ..
 docker build -t petitroll/tcs-bus . --no-cache
 cd ..
