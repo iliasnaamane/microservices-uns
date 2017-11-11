@@ -22,6 +22,7 @@
        <module>vols</module>
        <module>externals</module>
        <module>ocr</module>
+       <module>service_report</module>
    </modules>
 
    <properties>

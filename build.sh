@@ -20,6 +20,7 @@ build vols result/document-vol
 build hotelRPC result/hotel-rpc
 build carRPC result/car-rpc
 build resourceBusinessTravel result/businesstravel-resource
+build service_report result/reports-services
 build ocr ocr/mock
 
 cd services

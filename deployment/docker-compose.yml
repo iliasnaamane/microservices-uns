@@ -36,6 +36,15 @@ services:
     image: result/document-vol
     ports:
       - "9030:8080"
+  reports-document:
+    container_name: reports-document
+    image: result/reports-service
+    links:
+      - database
+    depends_on:
+      - database
+    ports:
+      - "9050:8080"
   tcs-businesstravel-service:
     command: npm start
     container_name: businesstravel-resource
