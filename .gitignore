@@ -7,7 +7,9 @@
 /deployment/mongo_data/
 /flows/target/
 /integration/flows/src/main/java/stubs/
+/integration/flows/target/
 /tests/acceptation/target/
-tests/acceptation/src/main/java/stubs/
+/tests/acceptation/src/main/java/stubs/
+/stress/target/
 cp-files.sh
 deploy-servicemix.sh
