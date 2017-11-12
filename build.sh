@@ -21,6 +21,7 @@ build hotelRPC result/hotel-rpc
 build carRPC result/car-rpc
 build resourceBusinessTravel result/businesstravel-resource
 build ocr ocr/mock
+build service_report result/service_report
 
 cd services
 cd externals

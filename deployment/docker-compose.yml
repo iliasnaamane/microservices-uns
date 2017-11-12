@@ -31,11 +31,22 @@ services:
     image: result/car-rpc
     ports:
       - "9020:8080"
+  reports-document:
+    container_name: vols-document
+    image: result/service_report
+    ports:
+      - "9050:8080"
+    depends_on:
+      - database
+
   vols-document:
     container_name: vols-document
     image: result/document-vol
     ports:
       - "9030:8080"
+
+
+
   tcs-businesstravel-service:
     command: npm start
     container_name: businesstravel-resource
