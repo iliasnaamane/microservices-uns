@@ -17,7 +17,7 @@ class Network {
 
  
 
-  static final String HOST = "localhost";
+  static final String HOST = "tcs-database";
   static final int PORT = 27017;
   static final String DATABASE = "Service_Report";
   static final String COLLECTION = "Reports";

@@ -13,6 +13,7 @@ import esb.flows.implem.utils.Helpers.CsvFormat;
 import static esb.flows.implem.utils.Endpoints.*;
 import esb.flows.implem.utils.Processors.HotelProcessors;
 import esb.flows.implem.utils.Strategies.HotelStrategy;
+import java.io.IOException;
 import org.apache.camel.Exchange;
 
 
@@ -47,7 +48,13 @@ public class HotelFlow extends RouteBuilder {
         ;
         
         from(SEARCH_HOTEL_1)
-            .routeId("request-to-hotelrpc-1")
+            .onException(IOException.class).handled(true)
+                .log("failed to get hotel from internal service - RPC")
+                .process(HotelProcessors.fakeHotelBuilder)
+                .setHeader("err1:", constant("service hotel internal not found"))
+                .to(AGGREGATION_HOTEL)
+            .end()
+                .routeId("request-to-hotelrpc-1")
                 .routeDescription("send request data from queue to service")
                 .log(body().toString())
                 .process(HotelProcessors.RequestRPC)
@@ -58,6 +65,11 @@ public class HotelFlow extends RouteBuilder {
 
                 
         from(SEARCH_HOTEL_2)
+            .onException(IOException.class).handled(true)
+                .log("failed to get hotel from internal service - REST")
+                .process(HotelProcessors.fakeHotelBuilder)
+                .setHeader("err2:", constant("service hotel external not found"))
+                .to(AGGREGATION_HOTEL)
             .routeId("request-to-hotelrest")
                 .routeDescription("send request data from queue to service")
                 .log(body().toString())
@@ -72,6 +84,7 @@ public class HotelFlow extends RouteBuilder {
         ;
         
         from(AGGREGATION_HOTEL)
+            
             .routeId("aggregation-hotel")
                 .routeDescription("send request ")
                 .log(body().toString())

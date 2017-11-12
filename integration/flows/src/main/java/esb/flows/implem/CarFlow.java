@@ -20,6 +20,7 @@ import static esb.flows.implem.utils.Endpoints.*;
 
 import esb.flows.implem.utils.Processors.CarProcessors;
 import esb.flows.implem.utils.Strategies.CarStrategy;
+import java.io.IOException;
 
 import org.apache.camel.Exchange;
 
@@ -55,6 +56,12 @@ public class CarFlow extends RouteBuilder {
 
     
         from(SEARCH_CAR_1)
+            .onException(IOException.class).handled(true)
+                .log("failed to get car from internal service - RPC")
+                .process(CarProcessors.fakeRentCarBuilder) 
+                .setHeader("err1:",constant("service car internal not found"))
+                .to(CARS_AGGREGATE)
+            .end()
             .routeId("search-car-1")
             .routeDescription("Call our car rental RPC service")
             .log("Processing ${file:name}")
@@ -65,6 +72,12 @@ public class CarFlow extends RouteBuilder {
             .to(CARS_AGGREGATE); 
         
         from(SEARCH_CAR_2)
+           .onException(IOException.class).handled(true)
+                .log("failed to get car from external service - REST")
+                .process(CarProcessors.fakeRentCarBuilder) 
+                .setHeader("err2:",constant("service-car-notfound"))
+                .to(CARS_AGGREGATE)
+            .end()
             .routeId("search-car-2")
                 .routeDescription("Call external rental REST service ")
                 .setHeader(Exchange.HTTP_METHOD, constant("GET"))
@@ -82,10 +95,11 @@ public class CarFlow extends RouteBuilder {
                 .log(body().toString())
                 .aggregate(constant(true),new CarStrategy())
                 .completionSize(2)
-                .process(CarProcessors.CarForm2json)
-                .unmarshal().string()
-                .setHeader("type",constant("carRental"))
-                .to(BUSINESS_TRAVEL_REST)
+                    .process(CarProcessors.CarForm2json)
+                    .unmarshal().string()
+                    .setHeader("type", constant("carRental"))
+                    .to(BUSINESS_TRAVEL_REST)   
+                
         ;
         
        

@@ -31,8 +31,9 @@ services:
     image: result/car-rpc
     ports:
       - "9020:8080"
+  
   reports-document:
-    container_name: vols-document
+    container_name: report-document
     image: result/service_report
     ports:
       - "9050:8080"
@@ -77,6 +78,7 @@ services:
     volumes:
       - "../integration/input:/servicemix/camel/input"
       - "../integration/output:/servicemix/camel/output"
+      - "../integration/errors:/servicemix/camel/errors"
     #depends_on:
     #  - flightreservation-registry
     #  - database

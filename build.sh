@@ -12,7 +12,7 @@ build() { # $1: directory, $2: image_name
 }
 
 # Compile services code
-mvn -q clean package
+mvn clean package
 cd services
 
 #Build docker images
@@ -47,6 +47,3 @@ cd esb
 cd ..
 docker build -t petitroll/tcs-bus . --no-cache
 cd ..
-
-
-

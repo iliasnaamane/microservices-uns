@@ -148,6 +148,14 @@ public class HotelProcessors {
     
     
     
+     public static final Processor fakeHotelBuilder = (Exchange exchange) -> {
+       CheapHotel CheapHotel = new CheapHotel();
+       CheapHotel.setIdentifier("00");
+       CheapHotel.setDuration(0);
+       CheapHotel.setPrice(Integer.MAX_VALUE);
+       exchange.getIn().setBody(CheapHotel);
+        
+    };
     
    
 }
