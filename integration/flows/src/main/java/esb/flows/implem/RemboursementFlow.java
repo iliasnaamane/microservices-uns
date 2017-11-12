@@ -6,7 +6,6 @@
  * and open the template in the editor.
  */
 
-/*
 package esb.flows.implem;
 
 import java.util.concurrent.ExecutorService;
@@ -32,18 +31,22 @@ public class RemboursementFlow extends RouteBuilder {
         .log("Processing ${file:name}")
         .unmarshal(CsvFormat.buildCsvFormat())
         .log("Loading the file as a CSV document")
-        .setHeader(Exchange.HTTP_METHOD, constant("POST")) 
-        .setHeader("Content-Type", constant("application/json"))
-        .setHeader("Accept", constant("application/json"))
-		.process(RemboursementProcessor.csv2Request)
-        .inOut(OCR_ENDPOINT) 
-        .unmarshal().string()
-        .to(LETTER_OUTPUT_DIR+ "?fileName=OCR.txt");
-          
-       
+        .split(body())
+            .parallelProcessing().executorService(WORKERS)
+                .setHeader(Exchange.HTTP_METHOD, constant("POST")) 
+                .setHeader("Content-Type", constant("application/json"))
+                .setHeader("Accept", constant("application/json"))
+        		.process(RemboursementProcessor.csv2Request)
+                .inOut(OCR_ENDPOINT) 
+                .unmarshal().string()
+                //.to(LETTER_OUTPUT_DIR+ "?fileName=OCR.txt");
+                /*.choice()
+                    .when().jsonpath("$.[?(@.fin == 'True')]")
+                        .to(LETTER_OUTPUT_DIR+ "?fileName=OCRTrue.txt")
+                    .when().jsonpath("$.[?(@.fin == 'False')]")
+                        .to(LETTER_OUTPUT_DIR+ "?fileName=OCRFalse.txt")
+                    .otherwise()*/
+                        .to(LETTER_OUTPUT_DIR+ "?fileName=OCROther.txt");
+                //.end();
     }  
-
-
-
 }
-*/
