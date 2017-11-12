@@ -37,7 +37,7 @@ public class CarStrategy implements AggregationStrategy {
             Object chHeader = oldExchange.getIn().getHeader("err1:");
            Object cheHeader = newExchange.getIn().getHeader("err2:");
             if(chHeader != null && cheHeader != null ){
-                System.out.println("Both car Services  not found");
+                System.out.println("Both car Services  not found - Write Error");
                 oldExchange.getIn().setHeader("message","both-service-car");
               //oldExchange.getIn().setBody("Both Car Rental Services  not found");
                 WriteInFile(ERR_FILE_CAR, "both services are not available");

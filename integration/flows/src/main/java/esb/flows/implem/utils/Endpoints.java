@@ -26,11 +26,9 @@ public class Endpoints {
     public static final String LETTER_OUTPUT_DIR = "file:/servicemix/camel/output";
     
     public static final String ERR_FILE_CAR = "/apache-servicemix-7.0.1/camel/errors/car-err.txt";
-    public static final String ERR_FILE_HOTEL = "/apache-servicemix-7.0.1/camel/errors"
-            + "?fileName=hotel-err.txt";
-    public static final String ERR_FILE_VOL = "/apache-servicemix-7.0.1/camel/errors"
-            + "?fileName=vol-err.txt";
-     
+    public static final String ERR_FILE_HOTEL = "/apache-servicemix-7.0.1/camel/errors/hotel-err.txt";
+    public static final String ERR_FILE_VOL = "/apache-servicemix-7.0.1/camel/errors/vol-err.txt";
+           
 
     
    

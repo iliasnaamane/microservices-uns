@@ -59,17 +59,18 @@ public class HotelFlow extends RouteBuilder {
                 .log(body().toString())
                 .process(HotelProcessors.RequestRPC)
                 .to(AGGREGATION_HOTEL)
-        ;
+        ;   
 
 
 
                 
         from(SEARCH_HOTEL_2)
-            .onException(IOException.class).handled(true)
+           .onException(IOException.class).handled(true)
                 .log("failed to get hotel from internal service - REST")
                 .process(HotelProcessors.fakeHotelBuilder)
                 .setHeader("err2:", constant("service hotel external not found"))
                 .to(AGGREGATION_HOTEL)
+            .end()
             .routeId("request-to-hotelrest")
                 .routeDescription("send request data from queue to service")
                 .log(body().toString())
