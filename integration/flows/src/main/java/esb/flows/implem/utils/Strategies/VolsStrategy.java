@@ -27,10 +27,7 @@ public class VolsStrategy implements AggregationStrategy {
         else if(external != null)  {
             vol ch = (vol)internal.getIn().getBody();
             vol che = (vol)external.getIn().getBody();
-            System.out.println("ch: "+ch.getPrice());
-            System.out.println("che:"+che.getPrice());
-        //    if(ch.getPrice() > che.getPrice())
-       // System.out.println("Integer.valueOf(ch.getPrice()) > Integer.valueOf(che.getPrice())"+"\n"+Integer.valueOf(ch.getPrice())+" "+ Integer.valueOf(che.getPrice()));
+          
             if(Integer.valueOf(ch.getPrice()) > Integer.valueOf(che.getPrice())){
                 internal.getIn().setBody(che.tobusnissTJson().toString());
                 return internal;

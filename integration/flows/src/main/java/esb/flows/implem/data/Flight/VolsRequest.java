@@ -23,9 +23,23 @@ public class VolsRequest implements Serializable {
   
     public VolsRequest( Map<String, Object> data )
     {
-           from=((String) data.get("from"));
-           to=((String) data.get("to"));
-           Outbound_date=((String) data.get("Outbound_date")); 
+
+    for (Map.Entry<String, Object> entry : data.entrySet())
+    {
+       
+        if(entry.getKey().equals("from"))
+        {
+            from=((String)entry.getValue());
+        }
+        else if (entry.getKey().equals("to"))
+        {
+            to=((String)entry.getValue());
+        }
+        else 
+        {
+        Outbound_date=((String)entry.getValue());
+        }
+    }
     }
 
     public String getOutbound_date() {
