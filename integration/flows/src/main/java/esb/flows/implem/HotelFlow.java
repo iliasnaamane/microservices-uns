@@ -11,7 +11,6 @@ import java.util.concurrent.Executors;
 import org.apache.camel.builder.RouteBuilder;
 import esb.flows.implem.utils.Helpers.CsvFormat;
 import static esb.flows.implem.utils.Endpoints.*;
-import esb.flows.implem.utils.Processors.CarProcessors;
 import esb.flows.implem.utils.Processors.HotelProcessors;
 import esb.flows.implem.utils.Strategies.HotelStrategy;
 import java.io.IOException;

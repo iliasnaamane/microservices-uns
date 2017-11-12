@@ -152,7 +152,7 @@ public class HotelProcessors {
        CheapHotel CheapHotel = new CheapHotel();
        CheapHotel.setIdentifier("00");
        CheapHotel.setDuration(0);
-       CheapHotel.setPrice(0);
+       CheapHotel.setPrice(Integer.MAX_VALUE);
        exchange.getIn().setBody(CheapHotel);
         
     };
