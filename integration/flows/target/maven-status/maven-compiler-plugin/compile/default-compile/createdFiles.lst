@@ -21,6 +21,7 @@ stubs/car_rpc/package-info.class
 esb/flows/implem/CarFlow.class
 stubs/hotel_rpc/ExternalHotelFinderService.class
 esb/flows/implem/data/Hotel/HotelSpec.class
+esb/flows/implem/RemboursementFlow.class
 esb/flows/implem/utils/Processors/HotelProcessors.class
 esb/flows/implem/data/Hotel/CheapHotelExternal.class
 esb/flows/implem/utils/Processors/RemboursementProcessor.class

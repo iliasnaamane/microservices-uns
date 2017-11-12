@@ -54,16 +54,28 @@ public class HotelProcessors {
      */
     public static final Processor hotel2Json = (Exchange exchange) -> {
         CheapHotel cheapHotel = (CheapHotel)exchange.getIn().getBody();
-        String CheapHotelJson = 
-"\n" +
-"   \"hotel\":"+
-"     {\n" +
-"       \"id_hotel\":\""+cheapHotel.getIdentifier()+"\",\n" +
-"       \"price\": "+cheapHotel.getPrice()+"\n" +
-"     }\n" 
-            
-                ;
-   exchange.getIn().setBody(CheapHotelJson);
+        String CheapHotelJson;
+        if(cheapHotel.getIdentifier().equals("00")){
+             CheapHotelJson
+                    = "\n"
+                    + "   \"hotel\":"
+                    + "     {\n"
+                    + "       \"id_hotel\":\"\",\n"
+                    + "       \"price\":\n"
+                    + "     }\n";
+        }
+        else{
+            CheapHotelJson = 
+             "\n" +
+             "   \"hotel\":"+
+             "     {\n" +
+             "       \"id_hotel\":\""+cheapHotel.getIdentifier()+"\",\n" +
+             "       \"price\": "+cheapHotel.getPrice()+"\n" +
+             "     }\n" 
+                         ;
+        }
+  
+        exchange.getIn().setBody(CheapHotelJson);
         
     };
     
