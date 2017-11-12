@@ -21,7 +21,7 @@ public class Ocr {
     public Response process(String input) {
         JSONObject obj = new JSONObject(input);
         try {
-            switch (EVENT.valueOf(obj.getString("nomImage"))) {
+            switch (EVENT.valueOf(obj.getString("file"))) {
                 case image1:
                     return Response.ok().entity(price1(obj).toString(INDENT_FACTOR)).build();
                 case image2:

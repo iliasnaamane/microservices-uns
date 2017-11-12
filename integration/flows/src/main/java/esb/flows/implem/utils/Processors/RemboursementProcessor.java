@@ -21,12 +21,14 @@ public class RemboursementProcessor{
     System.out.println("csv2Request");
     Map<String, Object> data = (Map<String, Object>) exchange.getIn().getBody();
 
-    String request = "{ \"event\": \"POST\","+
-                        " \"remboursement\": \"" +""+"\","+
-                         "\"idEmploye\" : \"" +(String)data.get("idEmploye") +"\","+
-                         "\"idBusinessTravel\":\"" +(String)data.get("idBusinessTravel")+"\","+
-                         "\"nomImage\":\"" +(String)data.get("nomImage")+"\","+
-                         "\"fin\":\"" +data.get("fin")+"\","+
+    String request = "{ \"event\": \"Append\","+
+                        "\"file\":\"" +(String)data.get("file")+"\","+
+                        "\"idBusinessTravel\":\"" +(String)data.get("idBusinessTravel")+"\","+
+                        "\"fin\":\"" +data.get("fin")+"\","+
+                        "\"spending_no\":\"" +data.get("spending_no")+"\","+
+                        "\"idEmploye\" : \"" +(String)data.get("idEmploye") +"\","+
+                        " \"Montant\": \"" +""+"\","+
+                         "\"duree_BT\":\"" +(String)data.get("duree_BT")+"\","+
                         "}";
 
     exchange.getIn().setBody(request);
