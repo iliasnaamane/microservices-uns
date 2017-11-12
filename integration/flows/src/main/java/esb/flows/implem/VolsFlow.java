@@ -21,6 +21,7 @@ import esb.flows.implem.utils.Helpers.CsvFormat;
 import static esb.flows.implem.utils.Endpoints.*;
 import esb.flows.implem.utils.Strategies.VolsStrategy;
 import org.apache.camel.Exchange;
+import esb.flows.implem.utils.Processors.VolProcessors;
 /**
  *
  * @author obisama
@@ -40,7 +41,7 @@ public class VolsFlow extends RouteBuilder {
                 .split(body())
                 .parallelProcessing().executorService(WORKERS)
                         .log("  CSV 2 VolRequest")
-                        .process(csv2volRequest)
+                        .process(VolProcessors.csv2volRequest)
                         .log("After Process (reading from csv)::::: "+body().toString())
                         .to(BUILD_VOL_QUEUE)
                                    
@@ -50,8 +51,7 @@ public class VolsFlow extends RouteBuilder {
                 .routeId("vols-req-queue")
                 .routeDescription("queue des requetes de vols")
                 .multicast() 
-                .to(SEARCH_VOLA, SEARCH_VOLB)
-//                  .to(SEARCH_VOLA)        
+                .to(SEARCH_VOLA, SEARCH_VOLB)   
         ;
 
                 
@@ -64,26 +64,24 @@ public class VolsFlow extends RouteBuilder {
                 .setHeader("Content-Type", constant("application/json"))
                 .setHeader("Accept", constant("application/json"))
                 .log("Before Process reqRestservA ::::: "+body().toString())
-                .process(reqRestservA)
+                .process(VolProcessors.reqRestservA)
                 .log("After Process ::::: "+body().toString())
                 .inOut(VOL_JAXRS_ENDPOINT)
                 .unmarshal().string()
-                .process(Answer1ToFlight)
-//                .to(VOLS_AGGREGATE)
+                .process(VolProcessors.Answer1ToFlight)
                 .to(VOLS_AGGREGATE)
                 ; 
-         from(SEARCH_VOLB) // transforme des FlightRequest
+         from(SEARCH_VOLB) 
                 .routeId("request-to-vol extern B")
                 .routeDescription(" request data from external service")
                 .setHeader(Exchange.HTTP_METHOD, constant("POST")) 
                 .setHeader("Content-Type", constant("application/json"))
                 .setHeader("Accept", constant("application/json"))
                 .log("Before Process reqRestservB ::::: "+body().toString())
-                .process(reqRestservB)
+                .process(VolProcessors.reqRestservB)
                 .inOut(VOLS_EXTERNAL_JAXRS_ENDPOINT) 
                 .unmarshal().string()
-                .process(Answer2ToFlight)
-                //.marshal().json(JsonLibrary.Jackson)
+                .process(VolProcessors.Answer2ToFlight)
                 .to(VOLS_AGGREGATE)
         ;
          
@@ -95,9 +93,6 @@ public class VolsFlow extends RouteBuilder {
                   .log("After Aggregator")
                 .completionSize(2)
                 .log("after aggreg" + body())
-                
-//                .unmarshal().string()
-                //.marshal().json(JsonLibrary.Jackson)
                  .setHeader("type",constant("flight"))
                 .to(BUSINESS_TRAVEL_REST)
         ;
@@ -106,129 +101,5 @@ public class VolsFlow extends RouteBuilder {
         
 
     }
-    
-    private static Processor csv2volRequest = (Exchange exchange) -> {
-            Map<String, Object> data = (Map<String, Object>) exchange.getIn().getBody();
-            VolsRequest p =  new VolsRequest(data);
-          
-            if(p.getOutbound_date()==null) 
-            {  
-                p.setOutbound_date("12-10-2017");
-            }
-          
-            exchange.getIn().setBody(p);
-    };
-     
-    private static Processor reqRestservA = (Exchange exchange) -> {
-            VolsRequest p =  exchange.getIn().getBody(VolsRequest.class);
-            Map<String,String> map = p.vol2Map();
-            map.put("event", "Search");
-            map.put("sortby", "Price");
-            StringBuilder str = new StringBuilder();
-            str.append("{");
-            
-            for(Map.Entry<String, String> entry : map.entrySet()) {
-            String key = entry.getKey();
-            String value = entry.getValue();
-            str.append("\""+key +"\""+":"+"\""+value+"\""+",");
-            }
-            str.deleteCharAt(str.length()-1);
-             str.append("}");
-             System.out.println(str);
 
-            exchange.getIn().setBody(str);
-    };
-    
-     private static Processor reqRestservB = (Exchange exchange) -> { 
-         VolsRequest p = (VolsRequest) exchange.getIn().getBody();
-        String[] date2format = p.getOutbound_date().split("-");
-        String dateformat2 = (date2format[2] + "-" + date2format[1] + "-" + date2format[0]);
-
-        String request = "{ \"event\": \"LIST\","+
-                        " \"filter\": "+
-                                     "{\"destination\" : \"" +p.getTo() +"\","+
-                                      "\"date\":\"" + dateformat2+"\","+
-                                      "\"isDirect\":false"+
-                        "}}";
-     
-
-            System.out.println("erqRestservB resultat::::: "+request);
-         exchange.getIn().setBody(request);
-    };
-    
-
-private static final Processor Answer1ToFlight = (Exchange exchange) -> {
-     vol resultat = new vol();
-        resultat.setPrix(String.valueOf(Integer.MAX_VALUE));
-        resultat.setDate("not found");
-        resultat.setDestination("not found");
-        try {
-            JsonParser jparser = new JsonParser();
-            JsonArray list = jparser.parse((String) exchange.getIn().getBody())
-                             .getAsJsonObject().get("Outbound")
-                             .getAsJsonArray();
-            
-            for (JsonElement j : list) {
-                JsonObject jsontmp = j.getAsJsonObject();
-                if(Integer.valueOf(jsontmp.get("prix").getAsString()) < Integer.valueOf(resultat.getPrice())){
-                    resultat=new vol(jsontmp);
-                }
-            }
-        }
-        catch(JsonSyntaxException | NumberFormatException e){
-            exchange.getIn().setBody(resultat);
-        }
-
-        exchange.getIn().setBody(resultat);
-};
-
-private static final Processor Answer2ToFlight = (Exchange exchange) -> {
-     vol resultat = new vol();
-        resultat.setPrix(String.valueOf(Integer.MAX_VALUE));
-        resultat.setDate("not found");
-        resultat.setDestination("not found");
-        try { 
-            JsonArray list =new JsonParser()
-                    .parse((String) exchange.getIn().getBody())
-                    .getAsJsonObject()
-                    .get("vols")
-                    .getAsJsonArray();
-           
-            for(JsonElement j : list){
-              
-                JsonObject jsontmp = j.getAsJsonObject();
-                
-               
-                if(Integer.valueOf(jsontmp.get("price").getAsString()) < Integer.valueOf(resultat.getPrice())){
-                    
-                    resultat.setDestination(jsontmp.get("destination").getAsString());
-                     
-                    resultat.setDate(jsontmp.get("date").getAsString());
-                     
-                    resultat.setPrix(jsontmp.get("price").getAsString());
-                      
-                    JsonArray stops = j.getAsJsonObject()
-                                       .get("stops")
-                                       .getAsJsonArray();
-                    
-                    if(!stops.isJsonNull())
-                    {    
-                        StringBuilder ss =new StringBuilder();
-                        for(JsonElement k :stops )
-                        { 
-                            // JsonObject jsontmp2 = k.getAsJsonObject();
-                             ss.append(k.toString()+"/");
-                        }
-                        ss.deleteCharAt(ss.length()-1);
-                      resultat.setOrigine(ss.toString());
-                    }
-                }
-            }
-        }
-        catch(JsonSyntaxException | NumberFormatException e){
-            e.printStackTrace();
-            exchange.getIn().setBody(resultat);
-        }
-        exchange.getIn().setBody(resultat);
-};
 }
