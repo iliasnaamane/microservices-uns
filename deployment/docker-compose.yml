@@ -66,6 +66,7 @@ services:
     volumes:
       - "../integration/input:/servicemix/camel/input"
       - "../integration/output:/servicemix/camel/output"
+      - "../integration/errors:/servicemix/camel/errors"
     #depends_on:
     #  - flightreservation-registry
     #  - database

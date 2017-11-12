@@ -42,17 +42,39 @@ public class CarProcessors {
     */
     
     public static Processor CarForm2json = (Exchange exchange) -> {
-        CarForm car = (CarForm)exchange.getIn().getBody();
+      /*  String routeBody = (String)exchange.getIn().getBody();
+        if(routeBody.equals("service car not found") ){
+            exchange.getIn().setBody(routeBody);
+        }
+        else{*/
+            String bodyJson;
+            CarForm car = (CarForm) exchange.getIn().getBody();
+            if(car.getModele().equals("fake-car-modele")){
+                  bodyJson = "	\"carRental\":    \n"
+                    + "  	{      \n"
+                    + "  		\"id_rentcar\":\"\",       \n"
+                    + "  		\"price\":\"\",       \n"
+                    + "  		\"modele\":\"\",       \n"
+                    + "  		\"marque\":\"\"    \n"
+                    + "  		\n"
+                    + "  	} ";
+                  exchange.getIn().setHeader("car-not-found", "yes");
+            }
+            else {
+                 bodyJson = "	\"carRental\":    \n"
+                        + "  	{      \n"
+                        + "  		\"id_rentcar\":\"" + car.getIdCar() + "-extern\",       \n"
+                        + "  		\"price\":\"" + car.getPrix() + "\",       \n"
+                        + "  		\"modele\":\"" + car.getModele() + "\",       \n"
+                        + "  		\"marque\":\"" + car.getMarque() + "\"    \n"
+                        + "  		\n"
+                        + "  	} ";
+            }  
+            
+            exchange.getIn().setBody(bodyJson);
+      //  }
         
-        String bodyJson = "	\"carRental\":    \n" +
-"  	{      \n" +
-"  		\"id_rentcar\":\""+car.getIdCar()+"-extern\",       \n" +
-"  		\"price\":\""+car.getPrix()+"\",       \n" +
-"  		\"modele\":\""+car.getModele()+"\",       \n" +
-"  		\"marque\":\""+car.getMarque()+"\"    \n" +
-"  		\n" +
-"  	} ";
-        exchange.getIn().setBody(bodyJson);
+        
         
     };
     
@@ -193,4 +215,20 @@ public class CarProcessors {
     System.out.println(req.getDateStart());
     exchange.getIn().setBody(req);
     };
+    
+    
+    public static   Processor fakeRentCarBuilder = (Exchange exchange)-> {
+        System.out.println("fake rent car builder");
+        CarForm cf = new CarForm();
+        cf.setIdCar(00);
+        cf.setMarque("fake-car-marque");
+        cf.setModele("fake-car-modele");
+        cf.setPlace("fake-car-place");
+        cf.setPrix(Integer.MAX_VALUE);
+        exchange.getIn().setBody(cf);
+            
+    };
+    
+    
+    
 }

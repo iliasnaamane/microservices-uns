@@ -6,7 +6,6 @@
 package esb.flows.implem;
 
 import static esb.flows.implem.utils.Endpoints.*;
-import esb.flows.implem.utils.Processors.CarProcessors;
 import esb.flows.implem.utils.Strategies.BusinessTravelStrategy;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -47,7 +46,6 @@ public class BusinessTravelFlow extends RouteBuilder {
                 .unmarshal().string()
                 .to(LETTER_OUTPUT_DIR+"?fileName=output.txt");
                 
-        ;
         
        
                 
@@ -59,8 +57,8 @@ public class BusinessTravelFlow extends RouteBuilder {
     public static Processor finalJson = (Exchange exchange) -> {
        System.out.println("final Json");
         String json = (String)exchange.getIn().getBody();
-        String finalJson = "{\n"+json+"}\n";
-        exchange.getIn().setBody(finalJson);
+        String jsonFinal = "{\n"+json+"}\n";
+        exchange.getIn().setBody(jsonFinal);
         
     };
 }
