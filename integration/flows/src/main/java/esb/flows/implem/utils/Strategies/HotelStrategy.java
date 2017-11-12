@@ -44,13 +44,13 @@ public class HotelStrategy implements AggregationStrategy{
             if(headerCh != null){
                 System.out.println("Service 1 hotel not found ");
                 oldExchange.getIn().setHeader("message","1-service-hotel-notfound");
-              //oldExchange.getIn().setBody("Both Car Rental Services  not found");
+             
                 WriteInFile(ERR_FILE_HOTEL, "service 1 hotel not found");
             }
             if(headerChe != null){
                 System.out.println("Service 2 hotel not found ");
                 oldExchange.getIn().setHeader("message","2-service-hotel-notfound");
-              //oldExchange.getIn().setBody("Both Car Rental Services  not found");
+             
                 WriteInFile(ERR_FILE_HOTEL, "service 2 hotel not found");
             }
                 
