@@ -38,6 +38,7 @@ public class RemboursementFlow extends RouteBuilder {
                 .setHeader("Accept", constant("application/json"))
         		.process(RemboursementProcessor.csv2Request)
                 .inOut(OCR_ENDPOINT) 
+                .inOut(REPORT_ENDPOINT)
                 .unmarshal().string()
                 //.to(LETTER_OUTPUT_DIR+ "?fileName=OCR.txt");
                 /*.choice()

@@ -1,0 +1,14 @@
+{"report": {
+  "ETAT": "Valide",
+  "total_cost": 1,
+  "duree_BT": 3,
+  "report_id": 1,
+  "employee_id": 1,
+  "complete": true,
+  "evidences": [{
+    "evidence_no": 1,
+    "amount": 1,
+    "evidence_desc": "image1"
+  }],
+  "BusnessTravelId": 1
+}}

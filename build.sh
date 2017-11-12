@@ -23,7 +23,7 @@ build resourceBusinessTravel result/businesstravel-resource
 build ocr ocr/mock
 build service_report result/service_report
 
-cd services
+
 cd externals
 cd cars 
 npm i

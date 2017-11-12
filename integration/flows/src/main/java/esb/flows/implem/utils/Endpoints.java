@@ -94,6 +94,7 @@ public class Endpoints {
     
     public static final String OCR_ENDPOINT = "http:ocr-mock:8080/ocr/ocr";
     
+    public static final String REPORT_ENDPOINT = "http:report-document:8080/service_report/reportspendings";
   
     
     
